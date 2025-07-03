@@ -16,7 +16,7 @@ export default function AdminPage() {
   const [newsletterData, setNewsletterData] = useState([]);
   const [emailSubscribers, setEmailSubscribers] = useState([]);
   const [popupLeads, setPopupLeads] = useState([]);
-  const [activePanel, setActivePanel] = useState("Users");
+  const [activePanel, setActivePanel] = useState("Email Subscribers");
   const [emailerData, setEmailerData] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [blogs, setBlogs] = useState([]);
@@ -143,7 +143,7 @@ export default function AdminPage() {
   }, []);
 
   const menuItems = [
-    "Users",
+    // "Users",
 
     "Email Subscribers",
     "Popup Leads",
@@ -222,7 +222,7 @@ export default function AdminPage() {
         <div className="flex flex-col md:flex-row gap-6">
           {/* SIDEBAR (Desktop Only) */}
 
-          <aside className="fixed top-32 left-10 h-fit mt-2 w-64 bg-gray-100 dark:bg-neutral-900 p-4 shadow z-40 hidden md:block overflow-y-auto">
+          <aside className="fixed top-40 left-10 h-fit mt-2 w-64 bg-gray-100 dark:bg-neutral-900 p-4 shadow z-40 hidden md:block overflow-y-auto">
             <h2 className="text-xl font-semibold mb-4 text-[var(--primary-color)]">
               Access Panel
             </h2>
@@ -245,7 +245,7 @@ export default function AdminPage() {
           </aside>
 
           {/* MAIN CONTENT */}
-          <div className="w-full mt-16 md:mt-4 md:ml-80 p-4 md:w-3/4">
+          <div className="w-full mt-16 md:mt-12 md:ml-80 p-4 md:w-3/4">
             {/* MOBILE HEADER */}
             <div className="flex fixed top-36 left-0 w-full px-5  items-center justify-between md:hidden bg-gray-100  dark:bg-neutral-900 py-4 rounded shadow mb-4">
               <h2 className="text-xl font-semibold">Access Panel</h2>
