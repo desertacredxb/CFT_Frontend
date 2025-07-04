@@ -280,7 +280,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="w-full flex justify-center">
+      {/* <div className="w-full flex justify-center">
         <a
           href="https://www.bigwigdigital.in/"
           target="_blank"
@@ -289,7 +289,7 @@ const Footer = () => {
         >
           Made & Marketed with ❤️ by Bigwig Digital
         </a>
-      </div>
+      </div> */}
     </footer>
   );
 };
