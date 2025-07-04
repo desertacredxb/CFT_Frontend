@@ -93,7 +93,7 @@ const Popup = () => {
         ) : (
           <>
             <p className="text-center mb-4 text-sm text-white">
-              0% Brokerage & Upto 500x Margin
+              0% Commission & Upto 500x Margin
             </p>
 
             <form className="space-y-3" onSubmit={handleSubmit}>
