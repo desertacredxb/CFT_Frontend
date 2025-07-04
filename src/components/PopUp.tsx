@@ -93,7 +93,6 @@ const Popup = () => {
         ) : (
           <>
             <p className="text-center mb-4 text-sm text-white">
-              100K Customers Worldwide <br />
               0% Brokerage & Upto 500x Margin
             </p>
 
