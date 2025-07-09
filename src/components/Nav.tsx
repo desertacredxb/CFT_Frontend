@@ -299,12 +299,15 @@ const Navbar = () => {
                     </button>
                     {mobileUserExpanded && (
                       <div className="pl-4 space-y-1">
-                        <Link to="/user-login/v1" className="block">
+                        <a href="https://Trade-dost.com" className="block">
                           Version 1
-                        </Link>
-                        <Link to="/user-login/v2" className="block">
+                        </a>
+                        <a
+                          href="https://tradedostfx.com/client"
+                          className="block"
+                        >
                           Version 2
-                        </Link>
+                        </a>
                       </div>
                     )}
 
@@ -318,12 +321,15 @@ const Navbar = () => {
                     </button>
                     {mobileBrokerExpanded && (
                       <div className="pl-4 space-y-1">
-                        <Link to="/broker-login/v1" className="block">
+                        <a href="https://Trade-dost.com" className="block">
                           Version 1
-                        </Link>
-                        <Link to="/broker-login/v2" className="block">
+                        </a>
+                        <a
+                          href="https://tradedostfx.com/master"
+                          className="block"
+                        >
                           Version 2
-                        </Link>
+                        </a>
                       </div>
                     )}
                   </div>
