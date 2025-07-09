@@ -39,6 +39,7 @@ import Indexes from "./pages/footerPage/products/Indexes";
 import CommodityTrading from "./pages/footerPage/knowledgeCenter/CommodityTrading";
 import TermsConditions from "./pages/footerPage/TermsConditions";
 import PrivacyPolicy from "./pages/footerPage/PrivacyPolicy";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
           <Route path="/markets/us-stocks-indices" element={<USStocks />} />
           <Route path="/markets/forex" element={<Forex />} />
           <Route path="/markets/comex" element={<ComexInfo />} />
+          <Route path="*" element={<NotFound />} />
           <Route
             path="/knowledge/commodity-trading"
             element={<CommodityTrading />}
