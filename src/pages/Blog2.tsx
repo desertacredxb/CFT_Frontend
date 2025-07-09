@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
+
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 type BlogPost = {
@@ -24,10 +25,14 @@ const Blog2 = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 9;
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const pageFromURL = parseInt(params.get("page") || "1");
+    setCurrentPage(pageFromURL);
     fetchBlogPosts();
-  }, []);
+  }, [location.search]);
 
   const fetchBlogPosts = async () => {
     try {
@@ -41,18 +46,19 @@ const Blog2 = () => {
   };
 
   const handlePostClick = (slug: string) => {
-    navigate(`/blogs/${slug}`);
+    navigate(`/blogs/${slug}?page=${currentPage}`);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    navigate(`?page=${page}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // optional: scroll to top
-  };
 
   if (loading) {
     return (
@@ -139,7 +145,7 @@ const Blog2 = () => {
                   typeof arr[i - 1] === "number" &&
                   page - (arr[i - 1] as number) > 1
                 ) {
-                  acc.push("......");
+                  acc.push("...");
                 }
                 acc.push(page);
                 return acc;
@@ -168,6 +174,7 @@ const Blog2 = () => {
               )}
           </div>
         )}
+
         {/* Talk to Support Section */}
         <div className="mt-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <div className="bg-white dark:bg-[var(--bg-color1)] rounded-xl py-5 px-6 shadow-lg">

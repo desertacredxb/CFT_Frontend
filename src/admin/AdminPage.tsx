@@ -74,7 +74,7 @@ export default function AdminPage() {
     [{ list: "ordered" }, { list: "bullet" }],
     [{ header: [1, 2, 3, 4, 5, 6, false] }],
     [{ align: [] }],
-    ["link"],
+    ["link", "image"],
   ];
 
   useEffect(() => {
@@ -999,6 +999,7 @@ export default function AdminPage() {
                   )}
                 </section>
               )}
+
               {activePanel === "Offer Data" && (
                 <section className="bg-gray-100 dark:bg-neutral-900 p-4 md:p-6 rounded shadow mb-6">
                   <div className="flex justify-between items-center mb-4">
