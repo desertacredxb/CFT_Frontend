@@ -76,7 +76,7 @@ const Blog2 = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white">
       <Navbar />
-      <div className="py-16 px-4 sm:px-6 lg:px-8 mt-24">
+      <div className="py-16 px-4 sm:px-6 lg:px-8 mt-12">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">
             Latest{" "}
