@@ -24,7 +24,7 @@ function Contact() {
 
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white transition-colors duration-300">
-      <div className="mb-24">
+      <div className="mb-12">
         <Navbar />
       </div>
 
