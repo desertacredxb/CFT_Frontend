@@ -21,13 +21,13 @@ const Navbar = () => {
   });
   const { openPopup } = usePopup();
 
-  const [showLoginDropdown, setShowLoginDropdown] = useState(false);
-  const [showUserSubMenu, setShowUserSubMenu] = useState(false);
-  const [showBrokerSubMenu, setShowBrokerSubMenu] = useState(false);
+  // const [showLoginDropdown, setShowLoginDropdown] = useState(false);
+  // const [showUserSubMenu, setShowUserSubMenu] = useState(false);
+  // const [showBrokerSubMenu, setShowBrokerSubMenu] = useState(false);
 
-  const [mobileLoginExpanded, setMobileLoginExpanded] = useState(false);
-  const [mobileUserExpanded, setMobileUserExpanded] = useState(false);
-  const [mobileBrokerExpanded, setMobileBrokerExpanded] = useState(false);
+  // const [mobileLoginExpanded, setMobileLoginExpanded] = useState(false);
+  // const [mobileUserExpanded, setMobileUserExpanded] = useState(false);
+  // const [mobileBrokerExpanded, setMobileBrokerExpanded] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -155,7 +155,7 @@ const Navbar = () => {
                 ></div>
 
                 {/* Desktop Login Dropdown */}
-                <div
+                {/* <div
                   className="relative"
                   onMouseEnter={() => setShowLoginDropdown(true)}
                   onMouseLeave={() => {
@@ -224,7 +224,7 @@ const Navbar = () => {
                       </div>
                     </div>
                   )}
-                </div>
+                </div> */}
                 <button
                   onClick={openPopup}
                   className={`text-sm border py-2 px-4 rounded-full shadow-[0_0_10px_var(--primary-color)] transition ${
@@ -276,7 +276,7 @@ const Navbar = () => {
               </button>
 
               {/* Mobile Login Dropdown */}
-              <div className="mt-4 ">
+              {/* <div className="mt-4 ">
                 <button
                   onClick={() => setMobileLoginExpanded(!mobileLoginExpanded)}
                   className="w-fit text-left border py-2 px-4 rounded-md"
@@ -329,7 +329,7 @@ const Navbar = () => {
                     )}
                   </div>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
         )}
@@ -338,7 +338,7 @@ const Navbar = () => {
       {!isOpen && (
         <div
           id="google_translate_element"
-          className="fixed z-[99] right-[100px] top-[24px] translate-x-0 md:right-[120px] md:top-[24px] lg:right-[290px] lg:top-[23px] lg:-translate-x-1/2"
+          className="fixed z-[99] right-[100px] top-[24px] translate-x-0 md:right-[120px] md:top-[24px] lg:right-[230px] lg:top-[23px] lg:-translate-x-1/2"
         />
       )}
     </>
