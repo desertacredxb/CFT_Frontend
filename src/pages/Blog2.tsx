@@ -46,7 +46,7 @@ const Blog2 = () => {
   };
 
   const handlePostClick = (slug: string) => {
-    navigate(`/blogs/${slug}?page=${currentPage}`);
+    navigate(`/blogs/${slug}`);
   };
 
   const handlePageChange = (page: number) => {
