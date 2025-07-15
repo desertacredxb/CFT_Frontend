@@ -40,6 +40,9 @@ import CommodityTrading from "./pages/footerPage/knowledgeCenter/CommodityTradin
 import TermsConditions from "./pages/footerPage/TermsConditions";
 import PrivacyPolicy from "./pages/footerPage/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
+import Market from "./pages/Market";
+import Products from "./pages/Products";
+import Knowledge from "./pages/Knowledge";
 
 function App() {
   return (
@@ -59,6 +62,7 @@ function App() {
           <Route path="/AdminPage" element={<AdminPage />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/products/cfd-instrument" element={<CFDInstrument />} />
           <Route path="/products/stocks" element={<Stocks />} />
           <Route path="/products/commodity" element={<Commodity />} />
@@ -66,9 +70,11 @@ function App() {
           <Route path="/products/Forex" element={<Forex2 />} />
           <Route path="/products/Comex" element={<Comex />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/knowledge" element={<Knowledge />} />
           <Route path="/knowledge/trading" element={<Trading />} />
           <Route path="/knowledge/equity-trading" element={<EquityTrading />} />
           <Route path="/knowledge/future-options" element={<FutureOptions />} />
+          <Route path="/market" element={<Market />} />
           <Route path="/markets/nse-f-o" element={<NSEFOInfo />} />
           <Route path="/markets/mcx" element={<Mcx />} />
           <Route path="/markets/crypto" element={<Crypto />} />

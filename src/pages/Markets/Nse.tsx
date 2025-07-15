@@ -25,9 +25,10 @@ const NSEFOInfo = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
-      <div className="mb-28">
+      <div className="mb-14">
         <Navbar />
       </div>
+
       <section className={sectionStyle}>
         <div>
           <h1 className="text-3xl font-bold mb-4 text-center">

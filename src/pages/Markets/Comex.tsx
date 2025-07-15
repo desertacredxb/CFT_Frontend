@@ -20,9 +20,10 @@ const ComexInfo = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
-      <div className="mb-28">
+      <div className="mb-14">
         <Navbar />
       </div>
+
       <section className={sectionStyle}>
         {/* Intro */}
         <div>

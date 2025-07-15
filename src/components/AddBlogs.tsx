@@ -141,7 +141,7 @@ const AddBlog = ({
           <input
             type="text"
             name="excerpt"
-            placeholder="Excerpt"
+            placeholder="Meta description"
             className="w-full p-2 border"
             value={formData.excerpt}
             onChange={handleChange}

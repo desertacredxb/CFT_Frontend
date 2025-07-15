@@ -29,9 +29,10 @@ const Forex = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
-      <div className="mb-28">
+      <div className="mb-14">
         <Navbar />
       </div>
+
       <section className={section}>
         <div>
           <h1 className="flex items-center gap-2 text-3xl font-bold mb-4">
