@@ -10,6 +10,7 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 interface BlogType {
   title: string;
+  excerpt: string;
   coverImage: string;
   author: string;
   datePublished: string;
@@ -92,6 +93,11 @@ const Blog2Details = () => {
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
       <Helmet>
         <title>{blog.title}</title>
+
+        <link
+          rel="canonical"
+          href={`https://www.closefriendstraders.com/blogs/${blog.slug}`}
+        />
       </Helmet>
       <Navbar />
       <div className="p-8 max-w-7xl mx-auto pt-28">

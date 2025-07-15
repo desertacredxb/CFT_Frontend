@@ -74,7 +74,7 @@ function App() {
           <Route path="/knowledge/trading" element={<Trading />} />
           <Route path="/knowledge/equity-trading" element={<EquityTrading />} />
           <Route path="/knowledge/future-options" element={<FutureOptions />} />
-          <Route path="/market" element={<Market />} />
+          <Route path="/markets" element={<Market />} />
           <Route path="/markets/nse-f-o" element={<NSEFOInfo />} />
           <Route path="/markets/mcx" element={<Mcx />} />
           <Route path="/markets/crypto" element={<Crypto />} />
