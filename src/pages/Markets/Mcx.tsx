@@ -1,6 +1,7 @@
 import Navbar from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { usePopup } from "../../components/PopupContext";
+import { Helmet } from "react-helmet";
 
 const sectionStyle =
   " text-black dark:text-white py-10 w-11/12 md:w-5/6 mx-auto space-y-10";
@@ -15,6 +16,17 @@ const Mcx = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
+      <Helmet>
+        <meta
+          name="description"
+          content="Master MCX trading with Close Friends Traders — get high-accuracy signals on gold, silver, crude oil, and base metals. Perfect for intraday and positional commodity traders."
+        />
+
+        <link
+          rel="canonical"
+          href="https://www.closefriendstraders.com/markets/mcx"
+        />
+      </Helmet>
       <div className="mb-14">
         <Navbar />
       </div>
