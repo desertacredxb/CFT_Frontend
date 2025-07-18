@@ -34,6 +34,15 @@ export default function AdminPage() {
   const [subscriberFilterDate, setSubscriberFilterDate] = useState("");
   const [emailerFilterDate, setEmailerFilterDate] = useState("");
 
+  const [currentLeadPage, setCurrentLeadPage] = useState(1);
+  const leadsPerPage = 20;
+
+  const totalLeadsPages = Math.ceil(filteredLeads.length / leadsPerPage);
+
+  const indexOfLastLead = currentPage * leadsPerPage;
+  const indexOfFirstLead = indexOfLastLead - leadsPerPage;
+  const currentLeads = filteredLeads.slice(indexOfFirstLead, indexOfLastLead);
+
   const postsPerPage = 20;
 
   const indexOfLastPost = currentPage * postsPerPage;
@@ -247,7 +256,7 @@ export default function AdminPage() {
           {/* MAIN CONTENT */}
           <div className="w-full mt-16 md:mt-12 md:ml-80 p-4 md:w-3/4">
             {/* MOBILE HEADER */}
-            <div className="flex fixed top-36 left-0 w-full px-5  items-center justify-between md:hidden bg-gray-100  dark:bg-neutral-900 py-4 rounded shadow mb-4">
+            <div className="flex fixed top-20 left-0 w-full px-5  items-center justify-between md:hidden bg-gray-100  dark:bg-neutral-900 py-4 rounded shadow mb-4">
               <h2 className="text-xl font-semibold">Access Panel</h2>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -564,7 +573,7 @@ export default function AdminPage() {
                         </tr>
                       </thead>
                       <tbody>
-                        {filteredLeads.map((lead: any) => (
+                        {currentLeads.map((lead: any) => (
                           <tr key={lead._id}>
                             <td className="py-2 px-2">{lead.fullName}</td>
                             <td className="py-2 px-2">{lead.email}</td>
@@ -580,7 +589,7 @@ export default function AdminPage() {
 
                   {/* Mobile Card View */}
                   <div className="md:hidden space-y-4">
-                    {filteredLeads.map((lead: any) => (
+                    {currentLeads.map((lead: any) => (
                       <div
                         key={lead._id}
                         className="border rounded p-4 shadow-sm"
@@ -604,6 +613,93 @@ export default function AdminPage() {
                       </div>
                     ))}
                   </div>
+                  {totalLeadsPages > 1 && (
+                    <div className="flex justify-center items-center gap-2 mt-6">
+                      {/* Prev Button */}
+                      <button
+                        onClick={() =>
+                          setCurrentLeadPage((prev) => Math.max(prev - 1, 1))
+                        }
+                        disabled={currentLeadPage === 1}
+                        className="px-3 py-1 rounded bg-gray-300 dark:bg-gray-700 text-black dark:text-white disabled:opacity-50"
+                      >
+                        Prev
+                      </button>
+
+                      {/* First Page */}
+                      {currentLeadPage > 2 && (
+                        <>
+                          <button
+                            onClick={() => setCurrentLeadPage(1)}
+                            className={`px-3 py-1 rounded ${
+                              currentLeadPage === 1
+                                ? "bg-blue-600 text-white"
+                                : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
+                            }`}
+                          >
+                            1
+                          </button>
+                          {currentLeadPage > 3 && (
+                            <span className="px-2">...</span>
+                          )}
+                        </>
+                      )}
+
+                      {/* Current, Previous and Next */}
+                      {[
+                        currentLeadPage - 1,
+                        currentLeadPage,
+                        currentLeadPage + 1,
+                      ].map((page) => {
+                        if (page < 1 || page > totalLeadsPages) return null;
+                        return (
+                          <button
+                            key={page}
+                            onClick={() => setCurrentLeadPage(page)}
+                            className={`px-3 py-1 rounded ${
+                              page === currentLeadPage
+                                ? "bg-blue-600 text-white"
+                                : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
+                            }`}
+                          >
+                            {page}
+                          </button>
+                        );
+                      })}
+
+                      {/* Last Page */}
+                      {currentLeadPage < totalLeadsPages - 1 && (
+                        <>
+                          {currentLeadPage < totalLeadsPages - 2 && (
+                            <span className="px-2">...</span>
+                          )}
+                          <button
+                            onClick={() => setCurrentLeadPage(totalLeadsPages)}
+                            className={`px-3 py-1 rounded ${
+                              currentLeadPage === totalLeadsPages
+                                ? "bg-blue-600 text-white"
+                                : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
+                            }`}
+                          >
+                            {totalLeadsPages}
+                          </button>
+                        </>
+                      )}
+
+                      {/* Next Button */}
+                      <button
+                        onClick={() =>
+                          setCurrentLeadPage((prev) =>
+                            Math.min(prev + 1, totalLeadsPages)
+                          )
+                        }
+                        disabled={currentLeadPage === totalLeadsPages}
+                        className="px-3 py-1 rounded bg-gray-300 dark:bg-gray-700 text-black dark:text-white disabled:opacity-50"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  )}
                 </section>
               )}
 

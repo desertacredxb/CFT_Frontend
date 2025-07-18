@@ -93,6 +93,7 @@ const Blog2Details = () => {
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
       <Helmet>
         <title>{blog.title}</title>
+        <meta name="description" content={blog.excerpt} />
 
         <link
           rel="canonical"
