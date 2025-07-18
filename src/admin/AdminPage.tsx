@@ -892,7 +892,7 @@ export default function AdminPage() {
                           onChange={(e) => setBlogFilterDate(e.target.value)}
                           className="p-2 border rounded w-full  text-black bg-transparent dark:text-white"
                         />
-                        <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 dark:text-white pointer-events-none">
+                        <span className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 dark:text-white pointer-events-none">
                           📅
                         </span>
                       </div>
