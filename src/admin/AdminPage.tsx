@@ -33,23 +33,41 @@ export default function AdminPage() {
   const [filteredLeads, setFilteredLeads] = useState([]);
   const [subscriberFilterDate, setSubscriberFilterDate] = useState("");
   const [emailerFilterDate, setEmailerFilterDate] = useState("");
+  const [blogSearchTerm, setBlogSearchTerm] = useState("");
+  const [blogFilterDate, setBlogFilterDate] = useState("");
 
   const [currentLeadPage, setCurrentLeadPage] = useState(1);
   const leadsPerPage = 20;
 
   const totalLeadsPages = Math.ceil(filteredLeads.length / leadsPerPage);
 
-  const indexOfLastLead = currentPage * leadsPerPage;
+  const indexOfLastLead = currentLeadPage * leadsPerPage;
   const indexOfFirstLead = indexOfLastLead - leadsPerPage;
   const currentLeads = filteredLeads.slice(indexOfFirstLead, indexOfLastLead);
 
   const postsPerPage = 20;
 
+  const filteredBlogs = blogs.filter((blog: BlogPost) => {
+    const matchesSearch =
+      blog.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) ||
+      blog.author.toLowerCase().includes(blogSearchTerm.toLowerCase()) ||
+      blog.content.toLowerCase().includes(blogSearchTerm.toLowerCase());
+
+    const matchesDate = blogFilterDate
+      ? new Date(blog.datePublished).toISOString().split("T")[0] ===
+        blogFilterDate
+      : true;
+
+    return matchesSearch && matchesDate;
+  });
+
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentBlogs = blogs.slice(indexOfFirstPost, indexOfLastPost);
-
-  const totalPages = Math.ceil(blogs.length / postsPerPage);
+  const currentBlogs = filteredBlogs.slice(indexOfFirstPost, indexOfLastPost);
+  const totalPages = Math.ceil(filteredBlogs.length / postsPerPage);
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [blogSearchTerm, blogFilterDate]);
 
   const navigate = useNavigate();
 
@@ -859,6 +877,27 @@ export default function AdminPage() {
                 <section className="bg-gray-100 dark:bg-neutral-900 p-4 md:p-6 rounded shadow mb-6">
                   <div className="flex justify-between items-center mb-4">
                     <h2 className="text-xl font-semibold ">Blogs</h2>
+                    <div className="flex flex-col md:flex-row gap-4 mb-4">
+                      <input
+                        type="text"
+                        placeholder="Search by title, author or content"
+                        value={blogSearchTerm}
+                        onChange={(e) => setBlogSearchTerm(e.target.value)}
+                        className="p-2 border rounded w-full  bg-transparent text-black dark:text-white"
+                      />
+                      <div className="relative">
+                        <input
+                          type="date"
+                          value={blogFilterDate}
+                          onChange={(e) => setBlogFilterDate(e.target.value)}
+                          className="p-2 border rounded w-full  text-black bg-transparent dark:text-white"
+                        />
+                        <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 dark:text-white pointer-events-none">
+                          📅
+                        </span>
+                      </div>
+                    </div>
+
                     <button
                       className="p-2 text-sm bg-green-600 text-white rounded hover:bg-green-700"
                       onClick={() => {
