@@ -2,6 +2,7 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 import { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import "../index.css";
 
 // const API_BASE = "http://localhost:8000";
 
@@ -172,15 +173,17 @@ const AddBlog = ({
 
           <div>
             <label className="block font-medium mb-2">Blog Content</label>
-            <ReactQuill
-              theme="snow"
-              value={formData.content}
-              onChange={(value) =>
-                setFormData((prev) => ({ ...prev, content: value }))
-              }
-              className="bg-white"
-              modules={{ toolbar: toolbarOptions }}
-            />
+            <div className="border rounded overflow-hidden">
+              <ReactQuill
+                theme="snow"
+                value={formData.content}
+                onChange={(value) =>
+                  setFormData((prev) => ({ ...prev, content: value }))
+                }
+                modules={{ toolbar: toolbarOptions }}
+                className="react-quill-editor"
+              />
+            </div>
           </div>
 
           <input
