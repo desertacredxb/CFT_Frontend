@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import ComparisonSection from "../components/Comparision";
 import DabbaMarkets from "../components/DabbaMarkets";
 import DownloadSection from "../components/DownloadSection";
