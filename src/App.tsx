@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { Landing } from "./pages/Landing";
 import Contact from "./pages/contact";
 import AboutUsSection from "./pages/About";
@@ -56,6 +61,15 @@ function App() {
           <Route path="/blogs" element={<Blog2 />} />
           <Route path="/blogs/:slug" element={<Blog2Details />} />
           <Route path="/:slug" element={<RedirectToBlogs />} />
+          <Route
+            path="/blogs/trade-smart-and-understand-the-best-dabba-app-in-india"
+            element={
+              <Navigate
+                to="/blogs/trade-smart-exploring-best-dabba-trading-app-and-its-benefits"
+                replace
+              />
+            }
+          />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/emailer" element={<Emailer />} />
