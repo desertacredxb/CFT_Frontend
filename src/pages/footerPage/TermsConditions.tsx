@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import PageBanner from "../../components/BannerImage";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Nav";
@@ -5,16 +6,17 @@ import Navbar from "../../components/Nav";
 function TermsConditions() {
   return (
     <div className="flex flex-col min-h-screen">
-      <meta
-        name="description"
-        content="Read the terms and conditions of using Close Friends Traders. Understand your rights, responsibilities, and how we ensure a safe and transparent trading experience."
-      />
+      <Helmet>
+        <meta
+          name="description"
+          content="Read the terms and conditions of using Close Friends Traders. Understand your rights, responsibilities, and how we ensure a safe and transparent trading experience."
+        />
 
-      <link
-        rel="canonical"
-        href="https://www.closefriendstraders.com/terms-conditions"
-      />
-
+        <link
+          rel="canonical"
+          href="https://www.closefriendstraders.com/terms-conditions"
+        />
+      </Helmet>
       <div className="mb-20">
         <Navbar />
       </div>

@@ -10,6 +10,7 @@ import PageBanner from "../../../components/BannerImage";
 import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Nav";
 import cfdImage from "../../../assets/Intraday Trading.png";
+import { Helmet } from "react-helmet";
 
 function IntradayTrading() {
   const features = [
@@ -43,16 +44,17 @@ function IntradayTrading() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <meta
-        name="description"
-        content="Learn intraday trading strategies, timing, and risk control from Close Friends Traders. Perfect for those who want to profit from daily market movements."
-      />
+      <Helmet>
+        <meta
+          name="description"
+          content="Learn intraday trading strategies, timing, and risk control from Close Friends Traders. Perfect for those who want to profit from daily market movements."
+        />
 
-      <link
-        rel="canonical"
-        href="https://www.closefriendstraders.com/knowledge/intraday-trading"
-      />
-
+        <link
+          rel="canonical"
+          href="https://www.closefriendstraders.com/knowledge/intraday-trading"
+        />
+      </Helmet>
       <div className="mb-20">
         <Navbar />
       </div>

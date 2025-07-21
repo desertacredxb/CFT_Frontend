@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import ComparisonSection from "../components/Comparision";
 import DabbaMarkets from "../components/DabbaMarkets";
 import DownloadSection from "../components/DownloadSection";
@@ -19,15 +20,16 @@ import WhyTrade from "../components/WhyTrade";
 export const Landing = () => {
   return (
     <div>
-      <meta
-        name="description"
-        content="Trade smarter  with Close Friends Traders – India’s trusted insider trading group offering premium signals, 
+      <Helmet>
+        <meta
+          name="description"
+          content="Trade smarter  with Close Friends Traders – India’s trusted insider trading group offering premium signals, 
 500× leverage, zero tax, and expert mentorship. Join our private trading community for real-time setups 
 across forex, crypto, indices, and stocks."
-      />
+        />
 
-      <link rel="canonical" href="https://www.closefriendstraders.com/" />
-
+        <link rel="canonical" href="https://www.closefriendstraders.com/" />
+      </Helmet>
       <Navbar />
       <HeroSection />
       <WhyChoose />

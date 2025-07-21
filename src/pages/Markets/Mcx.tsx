@@ -1,6 +1,7 @@
 import Navbar from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { usePopup } from "../../components/PopupContext";
+import { Helmet } from "react-helmet";
 
 const sectionStyle =
   " text-black dark:text-white py-10 w-11/12 md:w-5/6 mx-auto space-y-10";
@@ -16,17 +17,18 @@ const Mcx = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
-      <title>What is MCX Trading? Meaning, Account, Advantages & Tips</title>
-      <meta
-        name="description"
-        content="Learn what MCX is in stock market, full form of MCX, trading account types, key features & how to trade commodities like gold, crude oil & more in India."
-      />
+      <Helmet>
+        <title>What is MCX Trading? Meaning, Account, Advantages & Tips</title>
+        <meta
+          name="description"
+          content="Learn what MCX is in stock market, full form of MCX, trading account types, key features & how to trade commodities like gold, crude oil & more in India."
+        />
 
-      <link
-        rel="canonical"
-        href="https://www.closefriendstraders.com/markets/mcx"
-      />
-
+        <link
+          rel="canonical"
+          href="https://www.closefriendstraders.com/markets/mcx"
+        />
+      </Helmet>
       <div className="mb-14">
         <Navbar />
       </div>

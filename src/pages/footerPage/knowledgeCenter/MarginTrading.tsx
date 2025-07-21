@@ -10,6 +10,7 @@ import PageBanner from "../../../components/BannerImage";
 import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Nav";
 import cfdImage from "../../../assets/Margin Trading.png";
+import { Helmet } from "react-helmet";
 
 function MarginTrading() {
   const features = [
@@ -43,16 +44,17 @@ function MarginTrading() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <meta
-        name="description"
-        content="What is margin trading? Learn how leverage works, when to use it, and how to manage margin risks with expert tips from Close Friends Traders."
-      />
+      <Helmet>
+        <meta
+          name="description"
+          content="What is margin trading? Learn how leverage works, when to use it, and how to manage margin risks with expert tips from Close Friends Traders."
+        />
 
-      <link
-        rel="canonical"
-        href="https://www.closefriendstraders.com/knowledge/margin-trading"
-      />
-
+        <link
+          rel="canonical"
+          href="https://www.closefriendstraders.com/knowledge/margin-trading"
+        />
+      </Helmet>
       <div className="mb-20">
         <Navbar />
       </div>
