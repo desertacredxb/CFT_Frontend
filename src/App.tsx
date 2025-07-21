@@ -43,6 +43,7 @@ import NotFound from "./pages/NotFound";
 import Market from "./pages/Market";
 import Products from "./pages/Products";
 import Knowledge from "./pages/Knowledge";
+import RedirectToBlogs from "./components/RedirectToBlogs";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/about" element={<AboutUsSection />} />
           <Route path="/blogs" element={<Blog2 />} />
           <Route path="/blogs/:slug" element={<Blog2Details />} />
+          <Route path="/:slug" element={<RedirectToBlogs />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/emailer" element={<Emailer />} />
