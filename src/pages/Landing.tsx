@@ -8,7 +8,6 @@ import HowItWorks from "../components/HowITWork";
 import Carousel from "../components/ImageCarousel";
 import Navbar from "../components/Nav";
 // import Popup from "../components/PopUp";
-// ss
 // import RegulatoryDisclaimer from "../components/RegulatoryDisclaimer";
 import ScrollingIcons from "../components/ScrollingIcons";
 import StatsSection from "../components/Stats";
@@ -22,7 +21,7 @@ export const Landing = () => {
     <div>
       <meta
         name="description"
-        content="Trade smarter with Close Friends Traders – India’s trusted insider trading group offering premium signals, 
+        content="Trade smarter  with Close Friends Traders – India’s trusted insider trading group offering premium signals, 
 500× leverage, zero tax, and expert mentorship. Join our private trading community for real-time setups 
 across forex, crypto, indices, and stocks."
       />
