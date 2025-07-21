@@ -8,6 +8,7 @@ import HowItWorks from "../components/HowITWork";
 import Carousel from "../components/ImageCarousel";
 import Navbar from "../components/Nav";
 // import Popup from "../components/PopUp";
+// ss
 // import RegulatoryDisclaimer from "../components/RegulatoryDisclaimer";
 import ScrollingIcons from "../components/ScrollingIcons";
 import StatsSection from "../components/Stats";
