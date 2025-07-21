@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Nav";
 import { exportToExcel } from "../utils/exportToExcel";
-import { ChevronDown, ChevronUp, Trash2 } from "lucide-react";
+import { ChevronDown, ChevronUp, Code, Trash2 } from "lucide-react";
 import { Edit, Trash } from "lucide-react";
 import AddBlog from "../components/AddBlogs"; // adjust path if needed
 import ReactQuill from "react-quill";
@@ -35,6 +35,10 @@ export default function AdminPage() {
   const [emailerFilterDate, setEmailerFilterDate] = useState("");
   const [blogSearchTerm, setBlogSearchTerm] = useState("");
   const [blogFilterDate, setBlogFilterDate] = useState("");
+
+  const [showHtmlEditor, setShowHtmlEditor] = useState(false);
+  const [htmlContent, setHtmlContent] = useState("");
+  const [editingSlug, setEditingSlug] = useState<string | null>(null);
 
   const [currentLeadPage, setCurrentLeadPage] = useState(1);
   const leadsPerPage = 20;
@@ -967,6 +971,16 @@ export default function AdminPage() {
                               >
                                 <Trash2 size={16} />
                               </button>
+                              <button
+                                onClick={() => {
+                                  setHtmlContent(blog.content);
+                                  setEditingSlug(blog.slug);
+                                  setShowHtmlEditor(true);
+                                }}
+                                className="text-yellow-500 hover:text-yellow-600"
+                              >
+                                <Code size={16} />
+                              </button>
                             </td>
                           </tr>
                         ))}
@@ -1018,6 +1032,16 @@ export default function AdminPage() {
                             className="text-red-600"
                           >
                             <Trash size={16} />
+                          </button>
+                          <button
+                            onClick={() => {
+                              setHtmlContent(blog.content);
+                              setEditingSlug(blog.slug);
+                              setShowHtmlEditor(true);
+                            }}
+                            className="text-yellow-500 hover:text-yellow-600"
+                          >
+                            <Code size={16} />
                           </button>
                         </div>
                       </div>
@@ -1085,6 +1109,68 @@ export default function AdminPage() {
                             className="px-4 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700"
                           >
                             Save Changes
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {showHtmlEditor && (
+                    <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
+                      <div className="bg-white text-black rounded-lg p-6 w-full max-w-3xl shadow-xl relative">
+                        <h2 className="text-xl font-bold mb-4">
+                          Edit Blog HTML
+                        </h2>
+
+                        <textarea
+                          value={htmlContent}
+                          onChange={(e) => setHtmlContent(e.target.value)}
+                          className="w-full h-64 p-3 border border-gray-300 rounded resize-none font-mono text-sm"
+                        />
+
+                        <div className="flex justify-end gap-2 mt-4">
+                          <button
+                            onClick={() => {
+                              setShowHtmlEditor(false);
+                              setHtmlContent("");
+                              setEditingSlug(null);
+                            }}
+                            className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+                          >
+                            Cancel
+                          </button>
+                          <button
+                            onClick={async () => {
+                              if (!editingSlug) return;
+                              try {
+                                const res = await fetch(
+                                  `${baseURL}/${editingSlug}`,
+                                  {
+                                    method: "PUT",
+                                    headers: {
+                                      "Content-Type": "application/json",
+                                    },
+                                    body: JSON.stringify({
+                                      content: htmlContent,
+                                    }),
+                                  }
+                                );
+
+                                if (!res.ok)
+                                  throw new Error("Failed to update content");
+                                alert("Blog updated successfully");
+                                setShowHtmlEditor(false);
+                                setHtmlContent("");
+                                setEditingSlug(null);
+                                fetchBlogs();
+                              } catch (err) {
+                                alert("Failed to save changes");
+                                console.error(err);
+                              }
+                            }}
+                            className="bg-[var(--primary-color)] text-white px-4 py-2 rounded hover:opacity-90"
+                          >
+                            Save
                           </button>
                         </div>
                       </div>
