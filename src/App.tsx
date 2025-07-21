@@ -70,6 +70,42 @@ function App() {
               />
             }
           />
+          <Route
+            path="/blogs/dabba-trading-platform-is-profit-or-risk"
+            element={
+              <Navigate
+                to="/blogs/best-dabba-trading-platform-2025-mt-45-trading-app"
+                replace
+              />
+            }
+          />
+          <Route
+            path="/blogs/dabba-trading-app-box-trading-platform"
+            element={
+              <Navigate
+                to="/blogs/trade-smart-exploring-best-dabba-trading-app-and-its-benefits"
+                replace
+              />
+            }
+          />
+          <Route
+            path="/blogs/dabba-trading-app-in-india-a-closer-look-at-the-best-platform"
+            element={
+              <Navigate
+                to="/blogs/trade-smart-exploring-best-dabba-trading-app-and-its-benefits"
+                replace
+              />
+            }
+          />
+          <Route
+            path="/blogs/trade-smart-and-understand-the-best-dabba-app-in-india"
+            element={
+              <Navigate
+                to="/blogs/trade-smart-exploring-best-dabba-trading-app-and-its-benefits"
+                replace
+              />
+            }
+          />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/emailer" element={<Emailer />} />
