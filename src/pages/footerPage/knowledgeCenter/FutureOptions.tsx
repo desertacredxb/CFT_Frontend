@@ -10,7 +10,6 @@ import PageBanner from "../../../components/BannerImage";
 import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Nav";
 import cfdImage from "../../../assets/option & fu.png";
-import { Helmet } from "react-helmet";
 
 function FutureOptions() {
   const features = [
@@ -42,17 +41,16 @@ function FutureOptions() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <meta
-          name="description"
-          content="Master futures and options trading with simple explanations and real-life strategies. Close Friends Traders makes F&O trading easier for beginners and pros."
-        />
+      <meta
+        name="description"
+        content="Master futures and options trading with simple explanations and real-life strategies. Close Friends Traders makes F&O trading easier for beginners and pros."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/knowledge/future-options"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/knowledge/future-options"
+      />
+
       <div className="mb-20">
         <Navbar />
       </div>

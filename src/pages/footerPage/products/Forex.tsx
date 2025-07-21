@@ -4,7 +4,6 @@ import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Nav";
 import cfdImage from "../../../assets/forex.png";
 import { LucideBarChart2 } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 function Forex() {
   const features = [
@@ -39,17 +38,16 @@ function Forex() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <meta
-          name="description"
-          content="Access high-accuracy forex signals and currency trading strategies. From major pairs to cross pairs, Close Friends Traders keeps you updated 24/7."
-        />
+      <meta
+        name="description"
+        content="Access high-accuracy forex signals and currency trading strategies. From major pairs to cross pairs, Close Friends Traders keeps you updated 24/7."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/products/forex"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/products/forex"
+      />
+
       <div className="mb-20">
         <Navbar />
       </div>

@@ -3,7 +3,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -86,17 +85,12 @@ const Blog2 = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white">
-      <Helmet>
-        <title>Blogs | Close Friends Traders</title>
-        <meta
-          name="description"
-          content="Read expert-written blogs from Close Friends Traders - trading tips, intraday strategies, market updates, and everything you need to master the markets in 2025."
-        />
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/blogs"
-        />
-      </Helmet>
+      <title>Blogs | Close Friends Traders</title>
+      <meta
+        name="description"
+        content="Read expert-written blogs from Close Friends Traders - trading tips, intraday strategies, market updates, and everything you need to master the markets in 2025."
+      />
+      <link rel="canonical" href="https://www.closefriendstraders.com/blogs" />
 
       <Navbar />
 

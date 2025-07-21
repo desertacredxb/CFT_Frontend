@@ -1,7 +1,6 @@
 import Navbar from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { usePopup } from "../../components/PopupContext";
-import { Helmet } from "react-helmet";
 
 const section =
   "bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white w-11/12 md:w-5/6 mx-auto py-12 space-y-10";
@@ -19,17 +18,16 @@ const Crypto = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
-      <Helmet>
-        <meta
-          name="description"
-          content="Join India’s smartest crypto traders with Close Friends Traders. Get real-time signals, BTC/ETH setups, altcoin strategies, and 24/7 support for the global crypto market."
-        />
+      <meta
+        name="description"
+        content="Join India’s smartest crypto traders with Close Friends Traders. Get real-time signals, BTC/ETH setups, altcoin strategies, and 24/7 support for the global crypto market."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/markets/crypto"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/markets/crypto"
+      />
+
       <div className="mb-14">
         <Navbar />
       </div>

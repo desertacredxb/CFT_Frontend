@@ -13,7 +13,6 @@ import WhyChooseCFT from "../components/featurePageComponent/Why";
 import FeaturesSplit from "../components/featurePageComponent/CFTFeature";
 // import { MergedDashboardTable } from "../components/featurePageComponent/DashboardTables";
 import { usePopup } from "../components/PopupContext";
-import { Helmet } from "react-helmet";
 
 const charVariants = {
   hidden: { opacity: 0, y: -50 },
@@ -95,17 +94,16 @@ export default function Feature() {
 
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white">
-      <Helmet>
-        <meta
-          name="description"
-          content="Explore premium features of Close Friends Traders - from real-time trading signals and expert mentorship to 500× leverage and zero-tax benefits. Everything you need to trade like a pro."
-        />
+      <meta
+        name="description"
+        content="Explore premium features of Close Friends Traders - from real-time trading signals and expert mentorship to 500× leverage and zero-tax benefits. Everything you need to trade like a pro."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/features"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/features"
+      />
+
       <div>
         <Navbar />
       </div>

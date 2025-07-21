@@ -8,7 +8,6 @@ import PageBanner from "../../../components/BannerImage";
 import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Nav";
 import cfdImage from "../../../assets/03-1.webp";
-import { Helmet } from "react-helmet";
 
 function EquityTrading() {
   const features = [
@@ -41,17 +40,16 @@ function EquityTrading() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <meta
-          name="description"
-          content="Learn equity trading basics and strategies for the Indian stock market. Discover how to trade stocks, manage risk, and build confidence with Close Friends Traders."
-        />
+      <meta
+        name="description"
+        content="Learn equity trading basics and strategies for the Indian stock market. Discover how to trade stocks, manage risk, and build confidence with Close Friends Traders."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/knowledge/equity-trading"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/knowledge/equity-trading"
+      />
+
       <div className="mb-20">
         <Navbar />
       </div>

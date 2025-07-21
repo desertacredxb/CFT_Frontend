@@ -11,7 +11,6 @@ import {
   FaBullseye,
 } from "react-icons/fa";
 import { usePopup } from "../../components/PopupContext";
-import { Helmet } from "react-helmet";
 
 const USStocks = () => {
   const { openPopup } = usePopup();
@@ -28,17 +27,16 @@ const USStocks = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
-      <Helmet>
-        <meta
-          name="description"
-          content="Trade US stocks and indices like NASDAQ, S&P 500, and Dow Jones with expert guidance. Access analysis, entry-exit signals, and leverage global market opportunities."
-        />
+      <meta
+        name="description"
+        content="Trade US stocks and indices like NASDAQ, S&P 500, and Dow Jones with expert guidance. Access analysis, entry-exit signals, and leverage global market opportunities."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/markets/us-stocks-indices"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/markets/us-stocks-indices"
+      />
+
       <div className="mb-14">
         <Navbar />
       </div>

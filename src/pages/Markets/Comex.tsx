@@ -8,7 +8,6 @@ import {
   FaCogs,
 } from "react-icons/fa";
 import { usePopup } from "../../components/PopupContext";
-import { Helmet } from "react-helmet";
 
 const ComexInfo = () => {
   const { openPopup } = usePopup();
@@ -21,17 +20,16 @@ const ComexInfo = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
-      <Helmet>
-        <meta
-          name="description"
-          content="Trade gold and silver on COMEX with precision. Get expert trading signals, breakout levels, and live market insights tailored for global commodities traders."
-        />
+      <meta
+        name="description"
+        content="Trade gold and silver on COMEX with precision. Get expert trading signals, breakout levels, and live market insights tailored for global commodities traders."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/markets/comex"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/markets/comex"
+      />
+
       <div className="mb-14">
         <Navbar />
       </div>

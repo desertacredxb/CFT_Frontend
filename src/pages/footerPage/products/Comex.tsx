@@ -4,7 +4,6 @@ import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Nav";
 import cfdImage from "../../../assets/forex.png";
 import { LucideBarChart2, LucideLineChart } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 function Comex() {
   const features = [
@@ -47,17 +46,16 @@ function Comex() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <meta
-          name="description"
-          content="Get expert trade signals on COMEX gold, silver, and metals. Close Friends Traders delivers precise entry-exit levels for global commodities trading success."
-        />
+      <meta
+        name="description"
+        content="Get expert trade signals on COMEX gold, silver, and metals. Close Friends Traders delivers precise entry-exit levels for global commodities trading success."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/products/comex"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/products/comex"
+      />
+
       <div className="mb-20">
         <Navbar />
       </div>

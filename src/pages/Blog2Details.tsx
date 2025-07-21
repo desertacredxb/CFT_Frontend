@@ -4,7 +4,6 @@ import axios from "axios";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 // import { Share2 } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -91,15 +90,14 @@ const Blog2Details = () => {
 
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
-      <Helmet>
-        <title>{blog.title}</title>
-        <meta name="description" content={blog.excerpt} />
+      <title>{blog.title}</title>
+      <meta name="description" content={blog.excerpt} />
 
-        <link
-          rel="canonical"
-          href={`https://www.closefriendstraders.com/blogs/${blog.slug}`}
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href={`https://www.closefriendstraders.com/blogs/${blog.slug}`}
+      />
+
       <Navbar />
       <div className="p-8 max-w-7xl mx-auto pt-28">
         <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>

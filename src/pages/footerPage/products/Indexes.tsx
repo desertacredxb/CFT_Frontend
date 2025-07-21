@@ -3,7 +3,6 @@ import PageBanner from "../../../components/BannerImage";
 import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Nav";
 import cfdImage from "../../../assets/index.png";
-import { Helmet } from "react-helmet";
 
 function Indexes() {
   const features = [
@@ -34,17 +33,16 @@ function Indexes() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <meta
-          name="description"
-          content="Trade top indices like NIFTY, BANK NIFTY, NASDAQ & S&P 500 with real-time signals and insights. Close Friends Traders delivers actionable strategies daily."
-        />
+      <meta
+        name="description"
+        content="Trade top indices like NIFTY, BANK NIFTY, NASDAQ & S&P 500 with real-time signals and insights. Close Friends Traders delivers actionable strategies daily."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/products/indexes"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/products/indexes"
+      />
+
       <div className="mb-20">
         <Navbar />
       </div>

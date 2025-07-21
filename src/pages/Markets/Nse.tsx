@@ -11,7 +11,6 @@ import {
   FaTools,
 } from "react-icons/fa";
 import { usePopup } from "../../components/PopupContext";
-import { Helmet } from "react-helmet";
 
 const NSEFOInfo = () => {
   const { openPopup } = usePopup();
@@ -26,17 +25,16 @@ const NSEFOInfo = () => {
 
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
-      <Helmet>
-        <meta
-          name="description"
-          content="Trade NSE Futures & Options with expert signals and strategies from Close Friends Traders. Get real-time setups, risk management tips, and insider-level support daily."
-        />
+      <meta
+        name="description"
+        content="Trade NSE Futures & Options with expert signals and strategies from Close Friends Traders. Get real-time setups, risk management tips, and insider-level support daily."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/markets/nse-f-o"
-        />
-      </Helmet>
+      <link
+        rel="canonical"
+        href="https://www.closefriendstraders.com/markets/nse-f-o"
+      />
+
       <div className="mb-14">
         <Navbar />
       </div>

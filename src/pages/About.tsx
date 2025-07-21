@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Nav";
 import { FaCheckCircle } from "react-icons/fa";
 import { usePopup } from "../components/PopupContext";
-import { Helmet } from "react-helmet";
 
 const points = [
   {
@@ -81,17 +80,13 @@ const AboutUsSection = () => {
 
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
-      <Helmet>
-        <meta
-          name="description"
-          content="Close Friends Traders is India’s trusted trading community, offering expert signals, real-time strategies, and mentorship. Learn our mission and meet the team behind your trading success."
-        />
+      <meta
+        name="description"
+        content="Close Friends Traders is India’s trusted trading community, offering expert signals, real-time strategies, and mentorship. Learn our mission and meet the team behind your trading success."
+      />
 
-        <link
-          rel="canonical"
-          href="https://www.closefriendstraders.com/about"
-        />
-      </Helmet>
+      <link rel="canonical" href="https://www.closefriendstraders.com/about" />
+
       <div className="mb-20">
         <Navbar />
       </div>
