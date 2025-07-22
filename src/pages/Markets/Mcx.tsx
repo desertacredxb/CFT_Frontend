@@ -18,7 +18,7 @@ const Mcx = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
-        <title>What is MCX Trading? Meaning, Account, Advantages & Tips</title>
+        <title>MCX Commodity Trading | Close Friends Traders</title>
         <meta
           name="description"
           content="Learn what MCX is in stock market, full form of MCX, trading account types, key features & how to trade commodities like gold, crude oil & more in India."

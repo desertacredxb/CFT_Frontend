@@ -96,6 +96,7 @@ export default function Feature() {
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white">
       <Helmet>
+        <title>Platform Features | Close Friends Traders</title>
         <meta
           name="description"
           content="Explore premium features of Close Friends Traders - from real-time trading signals and expert mentorship to 500× leverage and zero-tax benefits. Everything you need to trade like a pro."

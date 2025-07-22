@@ -35,6 +35,7 @@ function Indexes() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Index Trading Services | Close Friends Traders</title>
         <meta
           name="description"
           content="Trade top indices like NIFTY, BANK NIFTY, NASDAQ & S&P 500 with real-time signals and insights. Close Friends Traders delivers actionable strategies daily."

@@ -27,6 +27,7 @@ const NSEFOInfo = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
+        <title>NSE F&O Market Insights | Close Friends Traders</title>
         <meta
           name="description"
           content="Trade NSE Futures & Options with expert signals and strategies from Close Friends Traders. Get real-time setups, risk management tips, and insider-level support daily."

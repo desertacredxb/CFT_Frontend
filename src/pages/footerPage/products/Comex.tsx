@@ -48,6 +48,7 @@ function Comex() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Comex Trading Tools | Close Friends Traders</title>
         <meta
           name="description"
           content="Get expert trade signals on COMEX gold, silver, and metals. Close Friends Traders delivers precise entry-exit levels for global commodities trading success."

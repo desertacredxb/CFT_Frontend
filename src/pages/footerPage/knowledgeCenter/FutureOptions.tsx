@@ -43,6 +43,7 @@ function FutureOptions() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Futures & Options Basics | Close Friends Traders</title>
         <meta
           name="description"
           content="Master futures and options trading with simple explanations and real-life strategies. Close Friends Traders makes F&O trading easier for beginners and pros."

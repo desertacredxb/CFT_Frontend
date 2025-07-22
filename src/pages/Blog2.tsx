@@ -87,7 +87,7 @@ const Blog2 = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white">
       <Helmet>
-        <title>Blogs | Close Friends Traders</title>
+        <title>Stock Market Blogs | Close Friends Traders</title>
         <meta
           name="description"
           content="Read expert-written blogs from Close Friends Traders - trading tips, intraday strategies, market updates, and everything you need to master the markets in 2025."

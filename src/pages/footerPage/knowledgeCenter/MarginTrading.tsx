@@ -45,6 +45,7 @@ function MarginTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Margin Trading Explained | Close Friends Traders</title>
         <meta
           name="description"
           content="What is margin trading? Learn how leverage works, when to use it, and how to manage margin risks with expert tips from Close Friends Traders."

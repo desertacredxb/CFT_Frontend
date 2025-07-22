@@ -22,6 +22,7 @@ const ComexInfo = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
+        <title>COMEX Market Overview | Close Friends Traders</title>
         <meta
           name="description"
           content="Trade gold and silver on COMEX with precision. Get expert trading signals, breakout levels, and live market insights tailored for global commodities traders."

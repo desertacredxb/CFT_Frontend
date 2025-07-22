@@ -26,6 +26,7 @@ function Contact() {
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white transition-colors duration-300">
       <Helmet>
+        <title>Contact Close Friends Traders | Get in Touch</title>
         <meta
           name="description"
           content="Get in touch with Close Friends Traders - whether you have questions, need support, or want to join our trading community. We’re here 24/7 to help you trade smarter."

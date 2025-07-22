@@ -20,6 +20,7 @@ const Crypto = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
+        <title>Crypto Trading Platform | Close Friends Traders</title>
         <meta
           name="description"
           content="Join India’s smartest crypto traders with Close Friends Traders. Get real-time signals, BTC/ETH setups, altcoin strategies, and 24/7 support for the global crypto market."
