@@ -41,6 +41,7 @@ function Commodity() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Commodity Trading Product | CFT Platform</title>
         <meta
           name="description"
           content="Stay ahead in commodity trading with premium signals on gold, silver, crude, and more. Close Friends Traders helps you navigate MCX and global markets with confidence."

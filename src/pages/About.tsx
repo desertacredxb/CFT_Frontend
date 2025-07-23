@@ -82,6 +82,7 @@ const AboutUsSection = () => {
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
       <Helmet>
+        <title>About Close Friends Traders | Who We Are</title>
         <meta
           name="description"
           content="Close Friends Traders is India’s trusted trading community, offering expert signals, real-time strategies, and mentorship. Learn our mission and meet the team behind your trading success."

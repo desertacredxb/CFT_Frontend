@@ -43,6 +43,7 @@ function CommodityTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Commodity Trading Insights | CFT Knowledge</title>
         <meta
           name="description"
           content="Explore how to trade commodities like gold, crude oil, and silver. Learn strategies, margin rules, and risk tips from Close Friends Traders."

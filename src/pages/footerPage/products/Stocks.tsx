@@ -42,6 +42,7 @@ function Stocks() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Stocks Trading Tools | Close Friends Traders</title>
         <meta
           name="description"
           content="Trade NSE & BSE stocks with precision. Get daily stock market signals, technical setups, and expert guidance from Close Friends Traders to maximize your equity gains."

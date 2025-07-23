@@ -42,6 +42,7 @@ function Trading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Trading Knowledge Hub | Close Friends Traders</title>
         <meta
           name="description"
           content="Understand the fundamentals of trading with Close Friends Traders. Learn how markets work, types of trading, key terms, and practical tips to begin your journey."

@@ -29,6 +29,7 @@ const USStocks = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
+        <title>Trade US Stocks & Indices | CFT Platform</title>
         <meta
           name="description"
           content="Trade US stocks and indices like NASDAQ, S&P 500, and Dow Jones with expert guidance. Access analysis, entry-exit signals, and leverage global market opportunities."

@@ -45,6 +45,7 @@ function IntradayTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Intraday Trading Guide | Close Friends Traders</title>
         <meta
           name="description"
           content="Learn intraday trading strategies, timing, and risk control from Close Friends Traders. Perfect for those who want to profit from daily market movements."

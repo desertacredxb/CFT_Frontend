@@ -40,6 +40,7 @@ function Forex() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Forex Trading Product | Close Friends Traders</title>
         <meta
           name="description"
           content="Access high-accuracy forex signals and currency trading strategies. From major pairs to cross pairs, Close Friends Traders keeps you updated 24/7."

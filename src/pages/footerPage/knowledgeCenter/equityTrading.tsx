@@ -42,6 +42,7 @@ function EquityTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Equity Trading Guide | Close Friends Traders</title>
         <meta
           name="description"
           content="Learn equity trading basics and strategies for the Indian stock market. Discover how to trade stocks, manage risk, and build confidence with Close Friends Traders."
