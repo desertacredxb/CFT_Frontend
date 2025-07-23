@@ -10,6 +10,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "../index.css";
 import YourOfferModalComponent from "../components/AddOffer"; // adjust path if needed
+import { formatHtml } from "../utils/formatHtml";
 
 export default function AdminPage() {
   const [users, setUsers] = useState([]);
@@ -972,8 +973,9 @@ export default function AdminPage() {
                                 <Trash2 size={16} />
                               </button>
                               <button
-                                onClick={() => {
-                                  setHtmlContent(blog.content);
+                                onClick={async () => {
+                                  const formatted = formatHtml(blog.content);
+                                  setHtmlContent(await formatted);
                                   setEditingSlug(blog.slug);
                                   setShowHtmlEditor(true);
                                 }}
@@ -1118,9 +1120,7 @@ export default function AdminPage() {
                   {showHtmlEditor && (
                     <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
                       <div className="bg-white text-black rounded-lg p-6 w-full max-w-3xl shadow-xl relative">
-                        <h2 className="text-xl font-bold mb-4">
-                          Edit Blog HTML
-                        </h2>
+                        <h2 className="text-xl font-bold mb-4">Edit Blog </h2>
 
                         <textarea
                           value={htmlContent}
@@ -1144,7 +1144,7 @@ export default function AdminPage() {
                               if (!editingSlug) return;
                               try {
                                 const res = await fetch(
-                                  `${baseURL}/${editingSlug}`,
+                                  `${baseURL}/api/blogs/${editingSlug}`,
                                   {
                                     method: "PUT",
                                     headers: {
