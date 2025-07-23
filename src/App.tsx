@@ -106,6 +106,15 @@ function App() {
               />
             }
           />
+          <Route
+            path="/category/dabba-trading/"
+            element={
+              <Navigate
+                to="/blogs/trade-smart-exploring-best-dabba-trading-app-and-its-benefits"
+                replace
+              />
+            }
+          />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/emailer" element={<Emailer />} />
