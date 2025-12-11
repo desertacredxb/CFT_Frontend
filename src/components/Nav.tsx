@@ -227,7 +227,7 @@ const Navbar = () => {
                     </div>
                   )}
                 </div>
-                <button
+                {/* <button
                   onClick={() => navigate("/signup")}
                   className={`text-sm border py-2 px-4 rounded-full shadow-[0_0_10px_var(--primary-color)] transition ${
                     darkMode
@@ -236,7 +236,7 @@ const Navbar = () => {
                   }`}
                 >
                   Sign up
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
