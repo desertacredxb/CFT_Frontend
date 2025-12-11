@@ -14,8 +14,8 @@ const Login = () => {
     return localStorage.getItem("theme") === "dark"
       ? true
       : localStorage.getItem("theme") === "light"
-      ? false
-      : true; // Default to true if not set
+        ? false
+        : true; // Default to true if not set
   });
 
   const navigate = useNavigate();
@@ -126,6 +126,17 @@ const Login = () => {
               Log In
             </button>
           </form>
+          <div className="mt-8 pt-6 border-t border-gray-200 dark:border-white/10">
+            <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
+              Don't have an account?{" "}
+              <a
+                href="/signup"
+                className="font-medium text-teal-500 hover:text-teal-600 dark:hover:text-teal-400"
+              >
+                Sign up
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 

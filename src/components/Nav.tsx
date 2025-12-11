@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import logo from "../assets/logo-01.svg";
-import { usePopup } from "../components/PopupContext";
+// import { usePopup } from "../components/PopupContext";
+import { useNavigate } from "react-router-dom";
 
 declare global {
   interface Window {
@@ -19,15 +20,16 @@ const Navbar = () => {
       ? localStorage.getItem("theme") === "dark"
       : true;
   });
-  const { openPopup } = usePopup();
+  // const { openPopup } = usePopup();
 
-  // const [showLoginDropdown, setShowLoginDropdown] = useState(false);
-  // const [showUserSubMenu, setShowUserSubMenu] = useState(false);
-  // const [showBrokerSubMenu, setShowBrokerSubMenu] = useState(false);
+  const [showLoginDropdown, setShowLoginDropdown] = useState(false);
+  const [showUserSubMenu, setShowUserSubMenu] = useState(false);
+  const [showBrokerSubMenu, setShowBrokerSubMenu] = useState(false);
 
-  // const [mobileLoginExpanded, setMobileLoginExpanded] = useState(false);
-  // const [mobileUserExpanded, setMobileUserExpanded] = useState(false);
-  // const [mobileBrokerExpanded, setMobileBrokerExpanded] = useState(false);
+  const [mobileLoginExpanded, setMobileLoginExpanded] = useState(false);
+  const [mobileUserExpanded, setMobileUserExpanded] = useState(false);
+  const [mobileBrokerExpanded, setMobileBrokerExpanded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (darkMode) {
@@ -155,7 +157,7 @@ const Navbar = () => {
                 ></div>
 
                 {/* Desktop Login Dropdown */}
-                {/* <div
+                <div
                   className="relative"
                   onMouseEnter={() => setShowLoginDropdown(true)}
                   onMouseLeave={() => {
@@ -224,16 +226,16 @@ const Navbar = () => {
                       </div>
                     </div>
                   )}
-                </div> */}
+                </div>
                 <button
-                  onClick={openPopup}
+                  onClick={() => navigate("/signup")}
                   className={`text-sm border py-2 px-4 rounded-full shadow-[0_0_10px_var(--primary-color)] transition ${
                     darkMode
                       ? "border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-white hover:text-black"
                       : "border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-black hover:text-white"
                   }`}
                 >
-                  Start Trading Now
+                  Sign up
                 </button>
               </div>
             </div>
@@ -269,14 +271,14 @@ const Navbar = () => {
                 </Link>
               ))}
               <button
-                onClick={openPopup}
+                onClick={() => navigate("/signup")}
                 className="w-fit text-left border border-[var(--primary-color)] text-[var(--primary-color)] py-2 px-4 rounded-md"
               >
-                Start Your Trading
+                Sign up
               </button>
 
               {/* Mobile Login Dropdown */}
-              {/* <div className="mt-4 ">
+              <div className="mt-4 ">
                 <button
                   onClick={() => setMobileLoginExpanded(!mobileLoginExpanded)}
                   className="w-fit text-left border py-2 px-4 rounded-md"
@@ -329,7 +331,7 @@ const Navbar = () => {
                     )}
                   </div>
                 )}
-              </div> */}
+              </div>
             </div>
           </div>
         )}
