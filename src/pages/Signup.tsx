@@ -267,7 +267,7 @@ const Signup = () => {
                           max={10}
                           onChange={(e) => setPhone(e.target.value)}
                           className="flex-1 px-4 py-3 bg-white dark:bg-white/5 text-black dark:text-white rounded-lg border border-gray-300 dark:border-white/10"
-                          placeholder="9876543210"
+                          placeholder="Enter Mobile No"
                         />
                       </div>
                     </div>
