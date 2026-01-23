@@ -38,10 +38,27 @@ const Blog2 = () => {
     fetchBlogPosts();
   }, [location.search]);
 
+  // const fetchBlogPosts = async () => {
+  //   try {
+  //     const response = await axios.get(`${baseURL}/api/blogs/viewblog`);
+  //     setBlogPosts(response.data);
+  //     setLoading(false);
+  //   } catch (err) {
+  //     setError("Failed to fetch blog posts");
+  //     setLoading(false);
+  //   }
+  // };
+
   const fetchBlogPosts = async () => {
     try {
       const response = await axios.get(`${baseURL}/api/blogs/viewblog`);
-      setBlogPosts(response.data);
+
+      // ✅ SAFETY: always ensure array
+      const posts = Array.isArray(response.data)
+        ? response.data
+        : response.data?.data || [];
+
+      setBlogPosts(posts);
       setLoading(false);
     } catch (err) {
       setError("Failed to fetch blog posts");
@@ -60,7 +77,12 @@ const Blog2 = () => {
   };
 
   // Fuzzy search using Fuse.js
-  const fuse = new Fuse(blogPosts, {
+  // const fuse = new Fuse(blogPosts, {
+  //   keys: ["title", "excerpt"],
+  //   threshold: 0.4,
+  // });
+
+  const fuse = new Fuse(blogPosts ?? [], {
     keys: ["title", "excerpt"],
     threshold: 0.4,
   });
@@ -192,7 +214,7 @@ const Blog2 = () => {
                 (page) =>
                   page <= 2 ||
                   page > totalPages - 2 ||
-                  Math.abs(currentPage - page) <= 1
+                  Math.abs(currentPage - page) <= 1,
               )
               .reduce((acc: (number | string)[], page, i, arr) => {
                 if (
@@ -225,7 +247,7 @@ const Blog2 = () => {
                   >
                     {item}
                   </button>
-                )
+                ),
               )}
           </div>
         )}

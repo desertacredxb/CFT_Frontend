@@ -49,11 +49,13 @@ import Market from "./pages/Market";
 import Products from "./pages/Products";
 import Knowledge from "./pages/Knowledge";
 import RedirectToBlogs from "./components/RedirectToBlogs";
+import MetaPixelTracker from "./components/MetaPixelTracker";
 
 function App() {
   return (
     <Router>
       <>
+        <MetaPixelTracker />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/Contact" element={<Contact />} />
