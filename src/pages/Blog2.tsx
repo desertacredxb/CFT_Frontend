@@ -6,7 +6,10 @@ import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
 
+// const baseURL = "https://cft-backend.onrender.com";
 const baseURL = import.meta.env.VITE_API_BASE_URL;
+
+console.log(baseURL);
 
 type BlogPost = {
   _id: string;
@@ -65,6 +68,8 @@ const Blog2 = () => {
       setLoading(false);
     }
   };
+
+  console.log(blogPosts);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
