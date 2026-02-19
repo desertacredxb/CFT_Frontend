@@ -57,7 +57,7 @@ const Navbar = () => {
           autoDisplay: false,
           includedLanguages: "en,hi,gu,mr,ta,te,bn,ml,pa,kn,as,or",
         },
-        "google_translate_element"
+        "google_translate_element",
       );
     };
 
@@ -193,7 +193,7 @@ const Navbar = () => {
                               Version 1
                             </a>
                             <a
-                              href="https://tradedostfx.com/client"
+                              href="https://v2-cfttraders.com/"
                               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
                             >
                               Version 2
@@ -299,10 +299,7 @@ const Navbar = () => {
                         <a href="https://V1-Cfttraders.com" className="block">
                           Version 1
                         </a>
-                        <a
-                          href="https://tradedostfx.com/client"
-                          className="block"
-                        >
+                        <a href="https://v2-cfttraders.com/" className="block">
                           Version 2
                         </a>
                       </div>
