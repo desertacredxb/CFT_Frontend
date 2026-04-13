@@ -16,7 +16,7 @@ const points = [
   },
   {
     title: "No Commission",
-    desc: "Don't spend your earnings. There are no charges, fees, or brokerage surprises when you trade with us.",
+    desc: "Don't spend your earnings. There are no charges, or hidden fees when you trade with us.",
   },
   {
     title: "500x Leverage",
@@ -60,9 +60,9 @@ const offers = [
     bullets: [
       "NSE Options & Futures",
       "MCX (Oil, Gold, etc.)",
-      "Cryptocurrencies",
-      "US Indices & Stocks",
-      "Forex Pairs",
+      "Cryptocurrencies (Comming Soon)",
+      "US Indices & Stocks (Comming Soon)",
+      "Forex Pairs (Comming Soon)",
       "Metals Comex",
     ],
   },
