@@ -9,12 +9,12 @@ function TermsConditions() {
       <Helmet>
         <meta
           name="description"
-          content="Read the terms and conditions of using Close Friends Traders. Understand your rights, responsibilities, and how we ensure a safe and transparent trading experience."
+          content="Read the terms and conditions of using Master Trader. Understand your rights, responsibilities, and how we ensure a safe and transparent trading experience."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/terms-conditions"
+          href="https://www.mastertrader.co.in/terms-conditions"
         />
       </Helmet>
       <div className="mb-20">
@@ -211,7 +211,7 @@ function TermsConditions() {
             <h2 className="text-xl font-semibold mb-3">10. Disclaimer</h2>
             <ul className="list-disc list-inside space-y-2">
               <li>
-                Close Friends Traders retains a right to change or revise these
+                Master Trader retains a right to change or revise these
                 Terms and Conditions any time. The further use of the platform
                 constitutes acceptance of the changed conditions.
               </li>
@@ -236,7 +236,7 @@ function TermsConditions() {
           </section>
 
           <p className="mt-6">
-            Your continued use of <strong>Close Friends Traders</strong>{" "}
+            Your continued use of <strong>Master Trader</strong>{" "}
             indicates that you have read, understood, and agreed to these Terms
             and Conditions.
           </p>

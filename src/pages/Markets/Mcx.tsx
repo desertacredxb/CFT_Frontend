@@ -18,7 +18,7 @@ const Mcx = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
-        <title>MCX Commodity Trading | Close Friends Traders</title>
+        <title>MCX Commodity Trading | Master Trader</title>
         <meta
           name="description"
           content="Learn what MCX is in stock market, full form of MCX, trading account types, key features & how to trade commodities like gold, crude oil & more in India."
@@ -26,7 +26,7 @@ const Mcx = () => {
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/markets/mcx"
+          href="https://www.mastertrader.co.in/markets/mcx"
         />
       </Helmet>
       <div className="mb-14">
@@ -61,7 +61,7 @@ const Mcx = () => {
             asset; instead, they trade contracts whose value fluctuates with the
             commodity’s price. This is similar to foundational concepts in{" "}
             <a
-              href="https://www.closefriendstraders.com/blogs/stock-trading-strategies-tips-insights-for-beginners"
+              href="https://www.mastertrader.co.in/blogs/stock-trading-strategies-tips-insights-for-beginners"
               className="text-blue-700"
             >
               Stock Trading: Strategies, Tips & Insights for Beginners
@@ -155,7 +155,7 @@ const Mcx = () => {
             <b> commodity trading account</b>
             activated for futures and options. A{" "}
             <a
-              href="https://www.closefriendstraders.com/blogs/demat-account-types-features-benefits-why-you-need-one"
+              href="https://www.mastertrader.co.in/blogs/demat-account-types-features-benefits-why-you-need-one"
               className="text-blue-700"
             >
               Demat account

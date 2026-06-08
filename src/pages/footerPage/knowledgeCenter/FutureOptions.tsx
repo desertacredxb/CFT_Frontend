@@ -43,15 +43,15 @@ function FutureOptions() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Futures & Options Basics | Close Friends Traders</title>
+        <title>Futures & Options Basics | Master Trader</title>
         <meta
           name="description"
-          content="Master futures and options trading with simple explanations and real-life strategies. Close Friends Traders makes F&O trading easier for beginners and pros."
+          content="Master futures and options trading with simple explanations and real-life strategies. Master Trader makes F&O trading easier for beginners and pros."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/knowledge/future-options"
+          href="https://www.mastertrader.co.in/knowledge/future-options"
         />
       </Helmet>
       <div className="mb-20">
@@ -60,7 +60,7 @@ function FutureOptions() {
 
       <PageBanner
         title="Futures & Options"
-        subtitle="Master the derivatives market with speed and confidence on Close Friends Traders."
+        subtitle="Master the derivatives market with speed and confidence on Master Trader."
       />
 
       <section className="bg-white dark:bg-[--bg-color1] py-16 transition-colors duration-300 px-4 md:px-8 lg:px-32 flex-grow">
@@ -75,7 +75,7 @@ function FutureOptions() {
             <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
               Top Perks of F&O Trading with <br />
               <span className="text-[var(--primary-color)]">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
             </h2>
 
@@ -111,7 +111,7 @@ function FutureOptions() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

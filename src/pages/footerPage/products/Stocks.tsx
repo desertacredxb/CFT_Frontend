@@ -42,15 +42,15 @@ function Stocks() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Stocks Trading Tools | Close Friends Traders</title>
+        <title>Stocks Trading Tools | Master Trader</title>
         <meta
           name="description"
-          content="Trade NSE & BSE stocks with precision. Get daily stock market signals, technical setups, and expert guidance from Close Friends Traders to maximize your equity gains."
+          content="Trade NSE & BSE stocks with precision. Get daily stock market signals, technical setups, and expert guidance from Master Trader to maximize your equity gains."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/products/stocks"
+          href="https://www.mastertrader.co.in/products/stocks"
         />
       </Helmet>
       <div className="mb-20">
@@ -74,7 +74,7 @@ function Stocks() {
             <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
               Top Perks of Trading Stocks with <br />
               <span className="text-[var(--primary-color)]">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
             </h2>
 
@@ -110,7 +110,7 @@ function Stocks() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

@@ -63,30 +63,30 @@ const Footer = () => {
         {/* Logo & Description */}
         <div>
           <div className="flex items-center space-x-2 mb-4">
-            <img src={logo} alt="Logo" className="w-40" draggable="false" />
+            <img src={"/MT-logo-transparent.png"} alt="Logo" className="w-40" draggable="false" />
           </div>
 
           <div className="flex space-x-4 mt-4">
             {[
               {
-                href: "https://www.facebook.com/newscft/",
+                href: "https://www.facebook.com/mastertrader",
                 icon: <FaFacebookF size={20} />,
               },
               {
-                href: "https://www.instagram.com/newscft/#",
+                href: "https://www.instagram.com/mastertrader/#",
                 icon: <FaInstagram size={20} />,
               },
 
               {
-                href: "https://www.youtube.com/@closefriendstraders",
+                href: "https://www.youtube.com/@mastertrader",
                 icon: <FaYoutube size={20} />,
               },
               {
-                href: "https://t.me/DabbatradingClosefriendstraders",
+                href: "https://t.me/mastertrader",
                 icon: <FaTelegram size={20} />,
               },
               {
-                href: "https://x.com/NewsCFT",
+                href: "https://x.com/mastertrader",
                 icon: <FaTwitter size={20} />,
               },
             ].map(({ href, icon }, idx) => (
@@ -268,11 +268,11 @@ const Footer = () => {
       <div className="w-11/12 mt-10 mx-auto">
         <h2 className="text-2xl mb-5">Disclaimer</h2>
         <p>
-          The content provided by Close Friends Traders does not include
+          The content provided by Master Trader does not include
           financial advice, guidance or recommendations to take, or not to take,
           any trades, investments or decisions in relation to any matter. The
           content provided is impersonal and not adapted to any specific client,
-          trader, or business. Therefore Close Friends Traders recommends that
+          trader, or business. Therefore Master Trader recommends that
           you seek professional, financial advice before making any decisions.
           Results are not guaranteed and may vary from person to person. There
           are inherent risks involved with trading, including the loss of your

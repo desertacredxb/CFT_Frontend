@@ -6,19 +6,19 @@ import { AnimatePresence, motion } from "framer-motion";
 const testimonials = [
   {
     content:
-      "Close Friends Traders transformed my trading over the past year: consistent profits, always-on payouts, zero hiccups. ",
+      "Master Trader transformed my trading over the past year: consistent profits, always-on payouts, zero hiccups. ",
     date: "April 14, 2024",
     name: "Rohan Mehta",
   },
   {
     content:
-      "I was new to trading, but the Close Friends Traders platform made it easy to learn and grow. The interface is smooth and support is always available.",
+      "I was new to trading, but the Master Trader platform made it easy to learn and grow. The interface is smooth and support is always available.",
     date: "March 2, 2025",
     name: "Priya Sharma",
   },
   {
     content:
-      "What I love most? The 500× leverage and fast withdrawals. Close Friends Traders keeps things professional and powerful.",
+      "What I love most? The 500× leverage and fast withdrawals. Master Trader keeps things professional and powerful.",
     date: "January 28, 2025",
     name: "Aditya Verma",
   },

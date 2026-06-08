@@ -63,7 +63,7 @@ const Blog2Details = () => {
   //     try {
   //       await navigator.share({
   //         title: blog?.title,
-  //         text: "Check out this blog from Close Friends Traders!",
+  //         text: "Check out this blog from Master Trader!",
   //         url,
   //       });
   //     } catch (error) {
@@ -96,7 +96,7 @@ const Blog2Details = () => {
         <meta name="description" content={blog.excerpt} />
         <link
           rel="canonical"
-          href={`https://www.closefriendstraders.com/blogs/${blog.slug}`}
+          href={`https://www.mastertrader.co.in/blogs/${blog.slug}`}
         />
       </Helmet>
       {/* ✅ Schema Markup */}

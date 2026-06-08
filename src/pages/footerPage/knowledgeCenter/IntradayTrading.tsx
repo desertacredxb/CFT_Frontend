@@ -30,7 +30,7 @@ function IntradayTrading() {
     },
     {
       icon: <BarChartBig className="text-[var(--primary-color)] w-8 h-8" />,
-      text: "Zero brokerage on intraday trades with Close Friends Traders",
+      text: "Zero brokerage on intraday trades with Master Trader",
     },
     {
       icon: <GraduationCap className="text-[var(--primary-color)] w-8 h-8" />,
@@ -45,15 +45,15 @@ function IntradayTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Intraday Trading Guide | Close Friends Traders</title>
+        <title>Intraday Trading Guide | Master Trader</title>
         <meta
           name="description"
-          content="Learn intraday trading strategies, timing, and risk control from Close Friends Traders. Perfect for those who want to profit from daily market movements."
+          content="Learn intraday trading strategies, timing, and risk control from Master Trader. Perfect for those who want to profit from daily market movements."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/knowledge/intraday-trading"
+          href="https://www.mastertrader.co.in/knowledge/intraday-trading"
         />
       </Helmet>
       <div className="mb-20">
@@ -105,7 +105,7 @@ function IntradayTrading() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

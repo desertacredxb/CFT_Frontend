@@ -43,15 +43,15 @@ function CommodityTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Commodity Trading Insights | CFT Knowledge</title>
+        <title>Commodity Trading Insights | Master Trader Knowledge</title>
         <meta
           name="description"
-          content="Explore how to trade commodities like gold, crude oil, and silver. Learn strategies, margin rules, and risk tips from Close Friends Traders."
+          content="Explore how to trade commodities like gold, crude oil, and silver. Learn strategies, margin rules, and risk tips from Master Trader."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/knowledge/commodity-trading"
+          href="https://www.mastertrader.co.in/knowledge/commodity-trading"
         />
       </Helmet>
       <div className="mb-20">
@@ -103,7 +103,7 @@ function CommodityTrading() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

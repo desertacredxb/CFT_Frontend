@@ -42,15 +42,15 @@ function EquityTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Equity Trading Guide | Close Friends Traders</title>
+        <title>Equity Trading Guide | Master Trader</title>
         <meta
           name="description"
-          content="Learn equity trading basics and strategies for the Indian stock market. Discover how to trade stocks, manage risk, and build confidence with Close Friends Traders."
+          content="Learn equity trading basics and strategies for the Indian stock market. Discover how to trade stocks, manage risk, and build confidence with Master Trader."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/knowledge/equity-trading"
+          href="https://www.mastertrader.co.in/knowledge/equity-trading"
         />
       </Helmet>
       <div className="mb-20">
@@ -74,7 +74,7 @@ function EquityTrading() {
             <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
               Top Perks of Equity Trading with <br />
               <span className="text-[var(--primary-color)]">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
             </h2>
 
@@ -110,7 +110,7 @@ function EquityTrading() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

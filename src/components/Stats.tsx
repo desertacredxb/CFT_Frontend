@@ -31,7 +31,7 @@ const StatsSection = () => {
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
           Upgrade Your Trading Experience with{" "}
           <span className="text-[var(--primary-color)] italic">
-            Close Friends Traders
+            Master Trader
           </span>
         </h2>
 

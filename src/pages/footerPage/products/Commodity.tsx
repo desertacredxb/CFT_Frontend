@@ -41,15 +41,15 @@ function Commodity() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Commodity Trading Product | CFT Platform</title>
+        <title>Commodity Trading Product | Master Trader Platform</title>
         <meta
           name="description"
-          content="Stay ahead in commodity trading with premium signals on gold, silver, crude, and more. Close Friends Traders helps you navigate MCX and global markets with confidence."
+          content="Stay ahead in commodity trading with premium signals on gold, silver, crude, and more. Master Trader helps you navigate MCX and global markets with confidence."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/products/commodity"
+          href="https://www.mastertrader.co.in/products/commodity"
         />
       </Helmet>
       <div className="mb-20">
@@ -73,7 +73,7 @@ function Commodity() {
             <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
               Top Perks of Trading Commodity with <br />
               <span className="text-[var(--primary-color)]">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
             </h2>
 
@@ -109,7 +109,7 @@ function Commodity() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

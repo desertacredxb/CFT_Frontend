@@ -55,6 +55,7 @@ const Blog2 = () => {
   const fetchBlogPosts = async () => {
     try {
       const response = await axios.get(`${baseURL}/api/blogs/viewblog`);
+      // console.log("API Response:", response.data);
 
       // ✅ SAFETY: always ensure array
       const posts = Array.isArray(response.data)
@@ -64,6 +65,7 @@ const Blog2 = () => {
       setBlogPosts(posts);
       setLoading(false);
     } catch (err) {
+      // console.error("Error fetching blog posts:", err);
       setError("Failed to fetch blog posts");
       setLoading(false);
     }
@@ -122,14 +124,14 @@ const Blog2 = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white">
       <Helmet>
-        <title>Stock Market Blogs | Close Friends Traders</title>
+        <title>Stock Market Blogs | Master Trader</title>
         <meta
           name="description"
-          content="Read expert-written blogs from Close Friends Traders - trading tips, intraday strategies, market updates, and everything you need to master the markets in 2025."
+          content="Read expert-written blogs from Master Trader - trading tips, intraday strategies, market updates, and everything you need to master the markets in 2025."
         />
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/blogs"
+          href="https://www.mastertrader.co.in/blogs"
         />
       </Helmet>
 

@@ -29,7 +29,7 @@ const USStocks = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
-        <title>Trade US Stocks & Indices | CFT Platform</title>
+        <title>Trade US Stocks & Indices | Master Trader Platform</title>
         <meta
           name="description"
           content="Trade US stocks and indices like NASDAQ, S&P 500, and Dow Jones with expert guidance. Access analysis, entry-exit signals, and leverage global market opportunities."
@@ -37,7 +37,7 @@ const USStocks = () => {
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/markets/us-stocks-indices"
+          href="https://www.mastertrader.co.in/markets/us-stocks-indices"
         />
       </Helmet>
       <div className="mb-14">

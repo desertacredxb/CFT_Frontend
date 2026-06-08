@@ -3,7 +3,7 @@ export const MergedDashboardTable = () => (
     <div className="w-11/12 md:w-5/6 mx-auto">
       <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
         <span className="text-[#01001f] dark:text-[var(--primary-color)]">
-          Close Friends Traders
+          Master Trader
         </span>{" "}
         Dashboard Summary
       </h2>
@@ -21,10 +21,10 @@ export const MergedDashboardTable = () => (
           </thead>
 
           <tbody className="divide-y divide-[#01001f] dark:divide-[var(--primary-color)]">
-            {/* Group 1: Close Friends Traders Dashboard */}
+            {/* Group 1: Master Trader Dashboard */}
             <tr className="bg-gray-50 dark:bg-[#0f0f2d]">
               <td className="p-4 font-medium" rowSpan={2}>
-                Close Friends Traders CEO Dashboard
+                Master Trader CEO Dashboard
               </td>
               <td className="p-4">Accounts Linked</td>
               <td className="p-4">32 Ad Accounts</td>

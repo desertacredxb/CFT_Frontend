@@ -20,15 +20,15 @@ const Crypto = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
-        <title>Crypto Trading Platform | Close Friends Traders</title>
+        <title>Crypto Trading Platform | Master Trader</title>
         <meta
           name="description"
-          content="Join India’s smartest crypto traders with Close Friends Traders. Get real-time signals, BTC/ETH setups, altcoin strategies, and 24/7 support for the global crypto market."
+          content="Join India’s smartest crypto traders with Master Trader. Get real-time signals, BTC/ETH setups, altcoin strategies, and 24/7 support for the global crypto market."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/markets/crypto"
+          href="https://www.mastertrader.co.in/markets/crypto"
         />
       </Helmet>
       <div className="mb-14">

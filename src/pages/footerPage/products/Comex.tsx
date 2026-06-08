@@ -48,15 +48,15 @@ function Comex() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Comex Trading Tools | Close Friends Traders</title>
+        <title>Comex Trading Tools | Master Trader</title>
         <meta
           name="description"
-          content="Get expert trade signals on COMEX gold, silver, and metals. Close Friends Traders delivers precise entry-exit levels for global commodities trading success."
+          content="Get expert trade signals on COMEX gold, silver, and metals. Master Trader delivers precise entry-exit levels for global commodities trading success."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/products/comex"
+          href="https://www.mastertrader.co.in/products/comex"
         />
       </Helmet>
       <div className="mb-20">
@@ -80,7 +80,7 @@ function Comex() {
             <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
               Top Perks of Trading COMEX with <br />
               <span className="text-[var(--primary-color)]">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
             </h2>
 
@@ -116,7 +116,7 @@ function Comex() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

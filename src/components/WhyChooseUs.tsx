@@ -45,7 +45,7 @@ const WhyChoose: React.FC = () => {
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            Why Trade With Close Friends Traders
+            Why Trade With Master Trader
           </h2>
           <p
             className="text-lg text-gray-600 dark:text-gray-300"

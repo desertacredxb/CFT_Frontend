@@ -59,7 +59,7 @@ const Chatbot: React.FC = () => {
           sender: "bot" as const,
           text: `hii ${
             userObj?.fullName || "Guest"
-          } 👋 Welcome to Close Friends Traders! May I know your name and email to assist you better?`,
+          } 👋 Welcome to Master Trader! May I know your name and email to assist you better?`,
         };
         setMessages([welcome]);
         sessionStorage.setItem(
@@ -80,7 +80,7 @@ const Chatbot: React.FC = () => {
         sender: "bot" as const,
         text: `hii ${
           userObj?.fullName || "Guest"
-        } 👋 Welcome to Close Friends Traders! May I know your name and email to assist you better?`,
+        } 👋 Welcome to Master Trader! May I know your name and email to assist you better?`,
       };
       setMessages([welcome]);
       sessionStorage.setItem("granth-chat-messages", JSON.stringify([welcome]));
@@ -100,7 +100,7 @@ const Chatbot: React.FC = () => {
           setUserDetailsCaptured(true); // so bot doesn't ask for name/email
           const welcome = {
             sender: "bot" as const,
-            text: `Hi ${parsedUser.fullName} 👋 Welcome back to Close Friends Traders!`,
+            text: `Hi ${parsedUser.fullName} 👋 Welcome back to Master Trader!`,
           };
           setMessages([welcome]);
           sessionStorage.setItem(
@@ -117,7 +117,7 @@ const Chatbot: React.FC = () => {
     // Fallback if no user data
     const fallbackWelcome = {
       sender: "bot" as const,
-      text: `Hi Guest 👋 Welcome to Close Friends Traders! May I know your name and email to assist you better?`,
+      text: `Hi Guest 👋 Welcome to Master Trader! May I know your name and email to assist you better?`,
     };
     setMessages([fallbackWelcome]);
     sessionStorage.setItem(
@@ -241,7 +241,7 @@ const Chatbot: React.FC = () => {
       {open && (
         <div className="fixed bottom-36 right-6 w-80 max-h-[500px] bg-white rounded-lg shadow-lg flex flex-col z-50">
           <div className="bg-[var(--primary-color)] text-white px-4 py-2 font-bold rounded-t-lg">
-            Chat with Close Friends Traders
+            Chat with Master Trader
           </div>
 
           <div className="flex-1 p-4 overflow-y-auto space-y-2 text-sm bg-gray-100">

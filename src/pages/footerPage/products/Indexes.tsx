@@ -35,15 +35,15 @@ function Indexes() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Index Trading Services | Close Friends Traders</title>
+        <title>Index Trading Services | Master Trader</title>
         <meta
           name="description"
-          content="Trade top indices like NIFTY, BANK NIFTY, NASDAQ & S&P 500 with real-time signals and insights. Close Friends Traders delivers actionable strategies daily."
+          content="Trade top indices like NIFTY, BANK NIFTY, NASDAQ & S&P 500 with real-time signals and insights. Master Trader delivers actionable strategies daily."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/products/indexes"
+          href="https://www.mastertrader.co.in/products/indexes"
         />
       </Helmet>
       <div className="mb-20">
@@ -67,7 +67,7 @@ function Indexes() {
             <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
               Top Perks of Trading Stocks with <br />
               <span className="text-[var(--primary-color)]">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
             </h2>
 
@@ -103,7 +103,7 @@ function Indexes() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

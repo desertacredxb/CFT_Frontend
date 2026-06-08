@@ -23,12 +23,12 @@ export const Landing = () => {
       <Helmet>
         <meta
           name="description"
-          content="Trade smarter  with Close Friends Traders – India’s trusted insider trading group offering premium signals, 
+          content="Trade smarter  with Master Trader – India’s trusted insider trading group offering premium signals, 
 500× leverage, zero tax, and expert mentorship. Join our private trading community for real-time setups 
 across forex, crypto, indices, and stocks."
         />
 
-        <link rel="canonical" href="https://www.closefriendstraders.com/" />
+        <link rel="canonical" href="https://www.mastertrader.co.in/" />
       </Helmet>
       <Navbar />
       <HeroSection />

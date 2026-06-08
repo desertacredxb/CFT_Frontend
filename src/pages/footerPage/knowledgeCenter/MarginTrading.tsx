@@ -45,15 +45,15 @@ function MarginTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Margin Trading Explained | Close Friends Traders</title>
+        <title>Margin Trading Explained | Master Trader</title>
         <meta
           name="description"
-          content="What is margin trading? Learn how leverage works, when to use it, and how to manage margin risks with expert tips from Close Friends Traders."
+          content="What is margin trading? Learn how leverage works, when to use it, and how to manage margin risks with expert tips from Master Trader."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/knowledge/margin-trading"
+          href="https://www.mastertrader.co.in/knowledge/margin-trading"
         />
       </Helmet>
       <div className="mb-20">
@@ -105,7 +105,7 @@ function MarginTrading() {
             <p className="text-xl md:text-2xl text-gray-800 dark:text-white font-medium mb-2">
               Join the{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               community to avail the benefits!
             </p>

@@ -78,7 +78,7 @@ export default function Feature() {
       style: "text-4xl font-bold",
     },
     {
-      text: "Close Friends Traders puts power, precision, and profits in your hands. ",
+      text: "Master Trader puts power, precision, and profits in your hands. ",
       style: "text-2xl",
     },
     { text: "Start smart. Scale faster.", style: "text-xl" },
@@ -96,15 +96,15 @@ export default function Feature() {
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white">
       <Helmet>
-        <title>Platform Features | Close Friends Traders</title>
+        <title>Platform Features | Master Trader</title>
         <meta
           name="description"
-          content="Explore premium features of Close Friends Traders - from real-time trading signals and expert mentorship to 500× leverage and zero-tax benefits. Everything you need to trade like a pro."
+          content="Explore premium features of Master Trader - from real-time trading signals and expert mentorship to 500× leverage and zero-tax benefits. Everything you need to trade like a pro."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/features"
+          href="https://www.mastertrader.co.in/features"
         />
       </Helmet>
       <div>
@@ -224,7 +224,7 @@ export default function Feature() {
                   color: "#facc15",
                   icon: "⚡",
                   label: "Bold & Catchy",
-                  desc: "Your money, your market, your movers: see who’s winning and what’s working, all from your CFT control panel.",
+                  desc: "Your money, your market, your movers: see who’s winning and what’s working, all from your Master Trader control panel.",
                 },
                 {
                   color: "#22c55e",
@@ -268,7 +268,7 @@ export default function Feature() {
             </h1>
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               <span className="font-semibold text-[var(--primary-color)]">
-                Close Friends Traders
+                Master Trader
               </span>{" "}
               connects your trading, CRM, and ad data into one unified
               dashboard. It processes everything in real time, giving you
@@ -292,7 +292,7 @@ export default function Feature() {
                 Upgrade Now
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold">
-                Close Friends Traders evolves with you.
+                Master Trader evolves with you.
               </h2>
               <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto">
                 Regular updates based on trader feedback, market shifts, and
@@ -309,7 +309,7 @@ export default function Feature() {
             {/* Divider Glow Line */}
             <div className="h-1 w-full bg-gradient-to-r from-transparent via-[var(--primary-color)] to-transparent blur-sm opacity-40" />
 
-            {/* Experience CFT Today */}
+            {/* Experience Master Trader Today */}
             <motion.div
               className="space-y-6"
               initial="hidden"
@@ -318,7 +318,7 @@ export default function Feature() {
               variants={fadeInUp}
             >
               <h2 className="text-3xl sm:text-4xl font-bold">
-                Experience Close Friends Traders Today
+                Experience Master Trader Today
               </h2>
               <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto">
                 <br />

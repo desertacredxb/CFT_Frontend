@@ -31,15 +31,15 @@ const Forex = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
-        <title>Forex Trading Market | Close Friends Traders</title>
+        <title>Forex Trading Market | Master Trader</title>
         <meta
           name="description"
-          content="Dominate the forex market with Close Friends Traders. Access daily signals on major pairs, smart risk-reward setups, and strategies built for both beginners and pros."
+          content="Dominate the forex market with Master Trader. Access daily signals on major pairs, smart risk-reward setups, and strategies built for both beginners and pros."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/markets/forex"
+          href="https://www.mastertrader.co.in/markets/forex"
         />
       </Helmet>
       <div className="mb-14">

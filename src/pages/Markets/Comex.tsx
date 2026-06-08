@@ -22,7 +22,7 @@ const ComexInfo = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
-        <title>COMEX Market Overview | Close Friends Traders</title>
+        <title>COMEX Market Overview | Master Trader</title>
         <meta
           name="description"
           content="Trade gold and silver on COMEX with precision. Get expert trading signals, breakout levels, and live market insights tailored for global commodities traders."
@@ -30,7 +30,7 @@ const ComexInfo = () => {
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/markets/comex"
+          href="https://www.mastertrader.co.in/markets/comex"
         />
       </Helmet>
       <div className="mb-14">

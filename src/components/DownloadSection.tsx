@@ -35,7 +35,7 @@ export default function DownloadSection() {
           <h2 className="text-3xl md:text-4xl font-semibold leading-tight mb-4">
             Grow Your Money with{" "}
             <span className="text-[var(--primary-color)] italic font-bold">
-              Close Friends Traders
+              Master Trader
             </span>
           </h2>
 
@@ -46,7 +46,7 @@ export default function DownloadSection() {
             control. No hidden fees. No unnecessary delays.
           </p>
           <i className="font-semibold block text-gray-800 dark:text-gray-200">
-            Close Friends Traders — Designed for Traders Who Mean Business.
+            Master Trader — Designed for Traders Who Mean Business.
           </i>
 
           {/* Buttons */}

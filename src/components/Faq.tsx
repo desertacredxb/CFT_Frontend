@@ -69,19 +69,19 @@ type Faq = {
 
 const faqs: Faq[] = [
   {
-    question: "Is Close Friends Traders suitable for beginners?",
+    question: "Is Master Trader suitable for beginners?",
     answer:
-      "Indeed, Close Friends Traders is made for both novice and seasoned traders. With round-the-clock assistance and a demo account for practice, the site is user-friendly.",
+      "Indeed, Master Trader is made for both novice and seasoned traders. With round-the-clock assistance and a demo account for practice, the site is user-friendly.",
   },
   {
     question: "Can I trade using a mobile device?",
     answer:
-      "Indeed, Close Friends Traders is completely mobile-friendly. You can easily trade at any time and from any location.",
+      "Indeed, Master Trader is completely mobile-friendly. You can easily trade at any time and from any location.",
   },
   {
-    question: "Does Close Friends Traders protect my money?",
+    question: "Does Master Trader protect my money?",
     answer:
-      "Secure payment methods and cutting-edge encryption safeguard your money. Your safety is always Close Friends Traders’ top priority.",
+      "Secure payment methods and cutting-edge encryption safeguard your money. Your safety is always Master Trader’ top priority.",
   },
   {
     question: "Do I need any paperwork to sign up?",

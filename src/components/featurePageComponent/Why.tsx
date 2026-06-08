@@ -56,7 +56,7 @@ const Whychoose = () => {
         <h2 className="text-4xl font-bold mb-20">
           Real Reasons Traders Are Switching to{" "}
           <span className="text-[var(--primary-color)] italic">
-            Close Friends Traders
+            Master Trader
           </span>
         </h2>
 

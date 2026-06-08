@@ -27,15 +27,15 @@ const NSEFOInfo = () => {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)]">
       <Helmet>
-        <title>NSE F&O Market Insights | Close Friends Traders</title>
+        <title>NSE F&O Market Insights | Master Trader</title>
         <meta
           name="description"
-          content="Trade NSE Futures & Options with expert signals and strategies from Close Friends Traders. Get real-time setups, risk management tips, and insider-level support daily."
+          content="Trade NSE Futures & Options with expert signals and strategies from Master Trader. Get real-time setups, risk management tips, and insider-level support daily."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/markets/nse-f-o"
+          href="https://www.mastertrader.co.in/markets/nse-f-o"
         />
       </Helmet>
       <div className="mb-14">

@@ -14,7 +14,7 @@ function RegulatoryDisclaimer() {
             Please ensure that you fully understand the risks involved, taking
             into account your financial objectives and risk appetite. Seek
             independent financial advice if necessary before starting trading.
-            Close Friends Traders does not offer financial advice.
+            Master Trader does not offer financial advice.
           </p>
         </div>
 
@@ -35,19 +35,19 @@ function RegulatoryDisclaimer() {
           <h3 className="font-semibold text-lg mb-2">Regulatory Information</h3>
           <p>
             <a
-              href="https://closefriendstraders.com/"
+              href="https://mastertrader.co.in/"
               className="text-teal-600 dark:text-teal-400 hover:underline transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
-              closefriendstraders.com
+              mastertrader.co.in
             </a>{" "}
-            is the official platform operated by Close Friends Traders. We are
+            is the official platform operated by Master Trader. We are
             committed to transparency, client safety, and strict adherence to
             all applicable financial and data protection regulations.
           </p>
           <p className="mt-4">
-            Close Friends Traders is the only authorized entity permitted to
+            Master Trader is the only authorized entity permitted to
             operate under our MetaTrader platform license. We do not partner
             with or delegate this responsibility to any third parties.
           </p>

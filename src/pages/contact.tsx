@@ -26,15 +26,15 @@ function Contact() {
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white transition-colors duration-300">
       <Helmet>
-        <title>Contact Close Friends Traders | Get in Touch</title>
+        <title>Contact Master Trader | Get in Touch</title>
         <meta
           name="description"
-          content="Get in touch with Close Friends Traders - whether you have questions, need support, or want to join our trading community. We’re here 24/7 to help you trade smarter."
+          content="Get in touch with Master Trader - whether you have questions, need support, or want to join our trading community. We’re here 24/7 to help you trade smarter."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/Contact"
+          href="https://www.mastertrader.co.in/Contact"
         />
       </Helmet>
       <div className="mb-12">
@@ -61,7 +61,7 @@ function Contact() {
               you want to quickly connect with a genuine person and not a
               chatbot? Your experience counts at{" "}
               <span className="text-[var(--primary-color)] font-semibold">
-                Close Friends Traders
+                Master Trader
               </span>
               . Don’t hesitate to reach out about trades, payments, technical
               problems, and everything else in between. Our professional staff
@@ -89,8 +89,8 @@ function Contact() {
               <ContactItem
                 icon={<Mail />}
                 label="Email Us"
-                content="info@closefriendtrader.in"
-                href="mailto:info@closefriendtrader.in"
+                content="info@mastertrader.co.in"
+                href="mailto:info@mastertrader.co.in"
               />
             </div>
             <div data-aos="zoom-in" data-aos-delay="500">

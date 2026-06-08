@@ -9,12 +9,12 @@ function PrivacyPolicy() {
       <Helmet>
         <meta
           name="description"
-          content="Your privacy is important to us. Learn how Close Friends Traders collects, uses, and protects your data to give you a secure trading experience."
+          content="Your privacy is important to us. Learn how Master Trader collects, uses, and protects your data to give you a secure trading experience."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/privacy-policy"
+          href="https://www.mastertrader.co.in/privacy-policy"
         />
       </Helmet>
       <div className="mb-20">
@@ -25,11 +25,11 @@ function PrivacyPolicy() {
 
       <main className="flex-grow bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white px-4 md:px-8 lg:px-32 py-12">
         <h1 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] mb-8">
-          Privacy Policy – Close Friends Traders (CFT)
+          Privacy Policy – Master Trader
         </h1>
 
         <p className="mb-6">
-          At <strong>Close Friends Traders</strong>, we value your privacy and
+          At <strong>Master Trader</strong>, we value your privacy and
           are committed to protecting your personal information. This Privacy
           Policy explains how we collect, use, disclose, and safeguard your data
           when you visit our website or use our services.
@@ -40,10 +40,10 @@ function PrivacyPolicy() {
           visitors to our website. If you have any questions, feel free to
           contact us at{" "}
           <a
-            href="mailto:info@closefriendtrader.in"
+            href="mailto:info@mastertrader.co.in"
             className="text-[var(--primary-color)] underline"
           >
-            info@closefriendtrader.in
+            info@mastertrader.co.in
           </a>
           .
         </p>
@@ -130,10 +130,10 @@ function PrivacyPolicy() {
         <p className="mb-6">
           For questions or concerns regarding this policy, email us at{" "}
           <a
-            href="mailto:info@closefriendtrader.in"
+            href="mailto:info@mastertrader.co.in"
             className="text-[var(--primary-color)] underline"
           >
-            info@closefriendtrader.in
+            info@mastertrader.co.in
           </a>
           .
         </p>
@@ -148,7 +148,7 @@ function PrivacyPolicy() {
           10. Advertising Partners Privacy Policies
         </h2>
         <p className="mb-6">
-          Third-party advertisers on closefriendstraders.com may use cookies,
+          Third-party advertisers on mastertrader.co.in may use cookies,
           JavaScript, or Web Beacons. These are used to personalize content and
           measure ad effectiveness. We do not control their cookies and
           recommend reviewing their individual privacy policies.

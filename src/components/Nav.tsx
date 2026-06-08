@@ -43,7 +43,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Home", path: "/" },
-    { label: "Insights", path: "/blogs" },
+    // { label: "Insights", path: "/blogs" },
     { label: "About Us", path: "/about" },
     { label: "Contact Us", path: "/Contact" },
     { label: "Features", path: "/features" },
@@ -91,9 +91,9 @@ const Navbar = () => {
             <div className="flex items-center w-full justify-between lg:hidden">
               <a href="/">
                 <img
-                  src={logo}
+                  src={"/MT-logo-transparent.png"}
                   alt="Logo"
-                  className="w-1/3"
+                  className="h-[80px] aspect-auto"
                   draggable="false"
                 />
               </a>
@@ -120,7 +120,7 @@ const Navbar = () => {
                 >
                   <a href="/">
                     <img
-                      src={logo}
+                      src={"/MT-logo-transparent.png"}
                       alt="Logo"
                       className="h-16"
                       draggable="false"
@@ -250,7 +250,7 @@ const Navbar = () => {
             }`}
           >
             <div className="flex justify-between items-center mb-6">
-              <img src={logo} alt="Logo" className="w-36" />
+              <img src={"MT-logo-transparent.png"} alt="Logo" className="w-36" />
               <button onClick={() => setIsOpen(false)} className="text-2xl">
                 ✕
               </button>

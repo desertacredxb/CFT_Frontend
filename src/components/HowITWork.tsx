@@ -23,7 +23,7 @@ export default function HowItWorks() {
         <div className="md:w-1/3 justify-center hidden md:flex">
           <img
             src={girlImage}
-            alt="Close Friends Traders"
+            alt="Master Trader"
             className="max-w-xs md:max-w-sm"
             draggable="false"
           />
@@ -34,7 +34,7 @@ export default function HowItWorks() {
           <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
             How{" "}
             <span className="text-[var(--primary-color)] italic font-bold">
-              Close Friends Traders{" "}
+              Master Trader{" "}
             </span>
             Works in 3 Simple Steps?
           </h2>

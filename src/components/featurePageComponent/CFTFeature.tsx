@@ -26,7 +26,7 @@ export default function FeaturesSplit() {
       >
         <h2 className="text-4xl  font-bold leading-tight">
           <span className="text-[var(--primary-color)]">
-            Close Friends Traders{" "}
+            Master Trader{" "}
           </span>{" "}
           System Features
         </h2>

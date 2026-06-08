@@ -39,11 +39,11 @@ const points = [
 const sections = [
   {
     title: "Our Mission",
-    text: "To provide Indian traders with an easily accessible, dependable, and goal-oriented platform. Close Friends Traders provides the groundwork for success on your terms, whether you're learning the ropes, becoming pro, or accumulating long-term riches. Our goal is to cut through the clutter and make trading easier, not easier. We're creating a community where growth is individualized, performance is important, and trust is valued.",
+    text: "To provide Indian traders with an easily accessible, dependable, and goal-oriented platform. Master Trader provides the groundwork for success on your terms, whether you're learning the ropes, becoming pro, or accumulating long-term riches. Our goal is to cut through the clutter and make trading easier, not easier. We're creating a community where growth is individualized, performance is important, and trust is valued.",
   },
   {
     title: "Our Journey",
-    text: "Well, we want to be 100% transparent with you! Close Friends Traders was born out of frustration…yes, it is! We were fed up with unstated fees, sluggish withdrawals, and trading methods that were ineffective for actual users. So, we built Close Friends Traders with the sole purpose of facilitating quick and hassle-free trading for all users. Just strong tools, real-time data, and a close-knit community of traders that appreciate control and clarity! Close Friends Traders was created by traders, for traders. And we have only just begun.",
+    text: "Well, we want to be 100% transparent with you! Master Trader was born out of frustration…yes, it is! We were fed up with unstated fees, sluggish withdrawals, and trading methods that were ineffective for actual users. So, we built Master Trader with the sole purpose of facilitating quick and hassle-free trading for all users. Just strong tools, real-time data, and a close-knit community of traders that appreciate control and clarity! Master Trader was created by traders, for traders. And we have only just begun.",
   },
 ];
 
@@ -82,15 +82,15 @@ const AboutUsSection = () => {
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
       <Helmet>
-        <title>About Close Friends Traders | Who We Are</title>
+        <title>About Master Trader | Who We Are</title>
         <meta
           name="description"
-          content="Close Friends Traders is India’s trusted trading community, offering expert signals, real-time strategies, and mentorship. Learn our mission and meet the team behind your trading success."
+          content="Master Trader is India’s trusted trading community, offering expert signals, real-time strategies, and mentorship. Learn our mission and meet the team behind your trading success."
         />
 
         <link
           rel="canonical"
-          href="https://www.closefriendstraders.com/about"
+          href="https://www.mastertrader.co.in/about"
         />
       </Helmet>
       <div className="mb-20">
@@ -122,7 +122,7 @@ const AboutUsSection = () => {
             data-aos="fade-right"
             data-aos-delay="600"
           >
-            We at <strong>Close Friends Traders</strong> think trading must be
+            We at <strong>Master Trader</strong> think trading must be
             straightforward and simple! Our goal is to provide every trader with
             the technology, transparency, and resources they need to succeed in
             the markets free from unneeded fees, delays, or distractions. aim to
@@ -167,7 +167,7 @@ const AboutUsSection = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Close Friends Traders is made for speed, clarity, and total control,
+            Master Trader is made for speed, clarity, and total control,
             in contrast to conventional stock brokers or trading apps. Sharp
             tools, immediate onboarding, and a platform that works for you
             rather than against you are what you'll discover here!
@@ -273,7 +273,7 @@ const AboutUsSection = () => {
             <h2 className="text-3xl sm:text-4xl font-semibold leading-tight mb-6">
               Join the{" "}
               <span className="text-[var(--primary-color)]">
-                Close Friends Traders Movement
+                Master Trader Movement
               </span>
             </h2>
 
@@ -289,7 +289,7 @@ const AboutUsSection = () => {
             <div className=" gap-6 mt-6">
               <div className="bg-white dark:bg-[var(--bg-color1)] border border-[var(--primary-color)] rounded-xl shadow p-5">
                 <h4 className="text-xl font-semibold text-[var(--primary-color)] mb-2">
-                  Real Trading Starts with Close Friends Traders
+                  Real Trading Starts with Master Trader
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">
                   We take pride in our accomplishments. However, we are much
@@ -298,7 +298,7 @@ const AboutUsSection = () => {
                   markets and improved education. Make wiser trades.
                 </p>
                 <p className="italic font-bold mt-5">
-                  Trade smarter. Trade bolder. Choose Close Friends Traders
+                  Trade smarter. Trade bolder. Choose Master Trader
                 </p>
               </div>
             </div>

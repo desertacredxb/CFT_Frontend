@@ -36,7 +36,7 @@ const ComparisonSection = () => {
         <h2 className="text-3xl sm:text-4xl font-semibold leading-snug">
           The Proof that Sets{" "}
           <span className="text-[var(--primary-color)]">
-            Close Friends Traders
+            Master Trader
           </span>{" "}
           Apart
         </h2>
@@ -49,7 +49,7 @@ const ComparisonSection = () => {
           Features
         </div>
         <div className="bg-gray-700 dark:bg-[#1a1a42] text-white font-semibold text-center py-4 border-r border-gray-700">
-          Close Friends Traders
+          Master Trader
         </div>
         <div className="bg-gray-900 dark:bg-[#0d0d26] text-white font-semibold text-center py-4">
           Others
@@ -95,7 +95,7 @@ const ComparisonSection = () => {
 
                 <div className="rounded-lg overflow-hidden border border-[var(--primary-color)]">
                   <div className="flex items-center justify-between bg-gray-700 text-white px-4 py-3 dark:bg-[#1a1a42]">
-                    <span className="font-medium">Close Friends Traders</span>
+                    <span className="font-medium">Master Trader</span>
                     <span className="text-sm font-semibold">{row.cft}</span>
                   </div>
                   <div className="flex items-center justify-between bg-gray-100 dark:bg-[#01001f] text-gray-800 dark:text-gray-200 px-4 py-3">

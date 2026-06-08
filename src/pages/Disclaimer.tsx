@@ -14,7 +14,7 @@ function Disclaimer() {
             Any and all liability for risks resulting from investment
             transactions or asset dispositions carried out by users based on
             information or market analysis is expressly excluded by{" "}
-            <strong>Close Friends Traders (Close Friends Traders)</strong>. All
+            <strong>Master Trader (MT)</strong>. All
             information provided is for illustrative purposes only and should
             not be interpreted as financial advice or a recommendation for
             action. Please consult a licensed financial advisor before making
@@ -48,7 +48,7 @@ function Disclaimer() {
 
           <h2 className="text-xl font-semibold mt-8">Stock Market Risks</h2>
           <p>
-            All opinions, analysis, or data shared by Close Friends Traders are
+            All opinions, analysis, or data shared by Master Trader are
             general in nature and should not be taken as investment advice. We
             are not liable for any financial losses resulting from reliance on
             this information. You are fully responsible for your trading
@@ -80,7 +80,7 @@ function Disclaimer() {
           </p>
 
           <p>
-            Close Friends Traders makes no guarantees of profitability. Trading
+            Master Trader makes no guarantees of profitability. Trading
             with leverage increases both the potential for gain and the risk of
             significant loss.
           </p>
@@ -96,7 +96,7 @@ function Disclaimer() {
 
           <h2 className="text-xl font-semibold mt-8">No Investment Advice</h2>
           <p>
-            All content on the Close Friends Traders website is for
+            All content on the Master Trader website is for
             informational and educational purposes only. It does not constitute
             personalized investment advice. We are not liable for trading
             decisions made based on our content.
