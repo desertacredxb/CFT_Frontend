@@ -161,7 +161,7 @@ const Signup = () => {
       <div className="w-full py-5 px-8 shadow-md dark:shadow-gray-200 flex justify-between items-center mb-12">
         <a href="/">
           <img
-            src={logo}
+            src={"/MT-logo-transparent.png"}
             alt="Logo"
             className="w-40 hover:scale-105 transition-all duration-300"
           />
