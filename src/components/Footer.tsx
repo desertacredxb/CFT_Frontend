@@ -62,7 +62,7 @@ const Footer = () => {
         {/* Logo & Description */}
         <div>
           <div className="flex items-center space-x-2 mb-4">
-            <img src={"/MT-logo-transparent.png"} alt="Logo" className="w-40" draggable="false" />
+            <img src={"/MT-logo.png"} alt="Logo" className="w-40" draggable="false" />
           </div>
 
           <div className="flex space-x-4 mt-4">

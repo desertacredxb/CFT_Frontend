@@ -90,7 +90,7 @@ const Navbar = () => {
             <div className="flex items-center w-full justify-between lg:hidden">
               <a href="/">
                 <img
-                  src={"/MT-logo-transparent.png"}
+                  src={"/MT-logo.png"}
                   alt="Logo"
                   className="h-[80px] aspect-auto"
                   draggable="false"
@@ -119,7 +119,7 @@ const Navbar = () => {
                 >
                   <a href="/">
                     <img
-                      src={"/MT-logo-transparent.png"}
+                      src={"/MT-logo.png"}
                       alt="Logo"
                       className="h-16"
                       draggable="false"
@@ -249,7 +249,7 @@ const Navbar = () => {
             }`}
           >
             <div className="flex justify-between items-center mb-6">
-              <img src={"MT-logo-transparent.png"} alt="Logo" className="w-36" />
+              <img src={"MT-logo.png"} alt="Logo" className="w-36" />
               <button onClick={() => setIsOpen(false)} className="text-2xl">
                 ✕
               </button>
