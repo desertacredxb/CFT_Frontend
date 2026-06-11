@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
-import logo from "../assets/logo-01.svg";
 // import { usePopup } from "../components/PopupContext";
 import { useNavigate } from "react-router-dom";
 

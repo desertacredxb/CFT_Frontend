@@ -6,7 +6,6 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
-import logo from "../assets/logo-01.svg";
 import { useState } from "react";
 import footerbg from "../assets/cft-footer.jpg";
 const baseURL = import.meta.env.VITE_API_BASE_URL;

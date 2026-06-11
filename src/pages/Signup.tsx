@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/logo-01.svg";
 import sideImage from "../assets/newabout.webp";
 import { useNavigate } from "react-router-dom";
 import { FiEye, FiEyeOff, FiMoon, FiSun } from "react-icons/fi";
