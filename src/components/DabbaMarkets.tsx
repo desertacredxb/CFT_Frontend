@@ -70,7 +70,7 @@ const DabbaMarkets: React.FC = () => {
     <div className=" bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white py-12">
       <div className="w-11/12 md:w-5/6 mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-semibold">
-          <span className="text-[#71ced0] italic">Markets </span>We Offer
+          <span className="text-[var(--primary-color)] italic">Markets </span>We Offer
         </h2>
         <p className="mt-2  max-w-2xl mx-auto">
           Explore and trade across these markets confidently:

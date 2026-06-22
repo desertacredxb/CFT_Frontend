@@ -324,7 +324,7 @@ const Signup = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 text-white py-3.5 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg"
+                className="w-full bg-gradient-to-r from-[#B37D22] via-[#E5A834] to-[#B37D22] hover:brightness-110 disabled:opacity-50 text-[#140E05] py-3.5 rounded-lg font-bold transition-all duration-300 shadow-md hover:shadow-[0_0_20px_rgba(229,168,52,0.4)]"
               >
                 {loading
                   ? step === 1
@@ -338,11 +338,10 @@ const Signup = () => {
               {/* MESSAGE */}
               {message && (
                 <div
-                  className={`p-3 rounded-lg text-center text-sm ${
-                    messageType === "success"
+                  className={`p-3 rounded-lg text-center text-sm ${messageType === "success"
                       ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400"
                       : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"
-                  }`}
+                    }`}
                 >
                   {message}
                 </div>

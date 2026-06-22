@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
 import { useState } from "react";
-import footerbg from "../assets/cft-footer.jpg";
+import footerbg from "../assets/cft-footer.png";
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const Footer = () => {

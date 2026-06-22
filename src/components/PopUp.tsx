@@ -109,9 +109,9 @@ const Popup = () => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 px-4">
-      <div className="bg-black text-white p-6 max-w-md w-full rounded shadow-lg relative border border-[#71ced0] sm:max-w-md sm:w-auto">
+      <div className="bg-[#140E05] text-white p-6 max-w-md w-full rounded shadow-lg relative border border-[var(--primary-color)] sm:max-w-md sm:w-auto">
         <button
-          className="absolute top-2 right-2 text-white hover:text-[#71ced0] text-xl"
+          className="absolute top-2 right-2 text-white hover:text-[var(--primary-color)] text-xl"
           onClick={handleClose}
         >
           &times;
@@ -119,7 +119,7 @@ const Popup = () => {
 
         {step === "done" ? (
           <div className="text-center">
-            <h2 className="text-2xl font-bold mb-3 text-[#71ced0]">
+            <h2 className="text-2xl font-bold mb-3 text-[var(--primary-color)]">
               Thank you!
             </h2>
             <p className="text-sm text-white">
@@ -128,7 +128,7 @@ const Popup = () => {
           </div>
         ) : step === "form" ? (
           <>
-            <p className="text-center mb-4 text-sm text-white">
+            <p className="text-center mb-4 text-sm text-[var(--primary-color)] font-medium">
               0% Commission & Upto 500x Margin
             </p>
             <form className="space-y-3" onSubmit={handleSubmitForm}>
@@ -137,35 +137,35 @@ const Popup = () => {
                 placeholder="Full Name*"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full border border-white bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
               />
               <input
                 type="number"
                 placeholder="Phone*"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full border border-white bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
               />
               <input
                 type="text"
                 placeholder="City*"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className="w-full border border-white bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
               />
               <input
                 type="email"
                 placeholder="Email*"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-white bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
               />
               <input
                 type="text"
                 placeholder="Market Segment?"
                 value={marketSegment}
                 onChange={(e) => setMarketSegment(e.target.value)}
-                className="w-full border border-white bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
               />
               {error && (
                 <p className="text-red-500 text-sm text-center">{error}</p>
@@ -173,7 +173,7 @@ const Popup = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#71ced0] hover:bg-[#5bb7b8] text-black font-semibold py-2 text-sm sm:text-base"
+                className="w-full bg-[var(--primary-color)] hover:bg-opacity-90 text-[#140E05] font-bold py-2 text-sm sm:text-base transition-colors"
               >
                 {loading ? "Sending OTP..." : "SUBMIT"}
               </button>
@@ -181,7 +181,7 @@ const Popup = () => {
           </>
         ) : (
           <form className="space-y-3" onSubmit={handleVerifyOtp}>
-            <h3 className="text-lg font-semibold text-center text-[#71ced0]">
+            <h3 className="text-lg font-semibold text-center text-[var(--primary-color)]">
               Enter the OTP sent to your Watsapp
             </h3>
             <input
@@ -189,7 +189,7 @@ const Popup = () => {
               placeholder="Enter OTP"
               value={otp}
               onChange={(e) => setOtp(e.target.value)}
-              className="w-full border border-white bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+              className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
             />
             {error && (
               <p className="text-red-500 text-sm text-center">{error}</p>
@@ -197,7 +197,7 @@ const Popup = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#71ced0] hover:bg-[#5bb7b8] text-black font-semibold py-2 text-sm sm:text-base"
+              className="w-full bg-[var(--primary-color)] hover:bg-opacity-90 text-[#140E05] font-bold py-2 text-sm sm:text-base transition-colors"
             >
               {loading ? "Verifying..." : "VERIFY OTP"}
             </button>

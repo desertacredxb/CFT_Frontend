@@ -156,7 +156,7 @@ const Navbar = () => {
                 ></div>
 
                 {/* Desktop Login Dropdown */}
-                <div
+                {/* <div
                   className="relative"
                   onMouseEnter={() => setShowLoginDropdown(true)}
                   onMouseLeave={() => {
@@ -225,7 +225,7 @@ const Navbar = () => {
                       </div>
                     </div>
                   )}
-                </div>
+                </div> */}
                 <button
                   onClick={() => navigate("/signup")}
                   className={`text-sm border py-2 px-4 rounded-full shadow-[0_0_10px_var(--primary-color)] transition ${
@@ -277,7 +277,7 @@ const Navbar = () => {
               </button>
 
               {/* Mobile Login Dropdown */}
-              <div className="mt-4 ">
+              {/* <div className="mt-4 ">
                 <button
                   onClick={() => setMobileLoginExpanded(!mobileLoginExpanded)}
                   className="w-fit text-left border py-2 px-4 rounded-md"
@@ -327,7 +327,7 @@ const Navbar = () => {
                     )}
                   </div>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
         )}

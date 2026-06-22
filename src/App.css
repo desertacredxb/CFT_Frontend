@@ -1,38 +1,97 @@
 :root {
-  --primary-color: #71ced0;
-  --bg-primary-gradient: linear-gradient(to right, #ce9c81, #e3c5b5, #ce9c81);
-  --bg-color1: #01001f;
+  /* Primary Brand Gold/Yellow (from the CTA and Laptop screens) */
+  --primary-color: #F5BE49; 
+  
+  /* Premium Metallic Gold Gradient (for buttons, banners, and card backgrounds) */
+  --bg-primary-gradient: linear-gradient(to right, #B37D22, #E5A834, #B37D22);
+  
+  /* Rich Deep Chocolate / Black (from your logo and mobile login button) */
+  --bg-color1: #140E05; 
 }
 
 .btn-gradient-hover:hover {
   background: var(--bg-primary-gradient);
-  color: black; /* Or white if preferred */
+  color: #140E05; /* Deep chocolate text for high contrast on gold hover */
 }
 
-/* For modern browsers */
+/* For modern browsers - Scrollbar matching the new palette */
 ::-webkit-scrollbar {
   width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #140E05; /* Rich black background */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4fc3f7; /* Light blue thumb color like your screenshot */
+  background: #B37D22; /* Premium Gold thumb color matching your dashboard cards */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #29b6f6; /* Darker blue on hover */
+  background: #E5A834; /* Brighter gold on hover */
 }
 
 /* Optional: for horizontal scrollbars */
 ::-webkit-scrollbar-horizontal {
   height: 4px;
 }
+
 @media only screen and (max-width: 768px) {
   #zsiq_float {
-    bottom: 80px !important; /* You can adjust this value */
+    bottom: 80px !important; /* Kept your floating widget adjustment for mobile */
   }
+}
+/* Container for the carousel dots */
+.slick-dots {
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual list items */
+.slick-dots li {
+  margin: 0 6px;
+  width: auto;
+  height: auto;
+}
+
+/* Base style for ALL dots (Fixed to force background color) */
+.slick-dots li button {
+  font-size: 0 !important;
+  line-height: 0 !important;
+  display: block;
+  width: 8px !important;
+  height: 8px !important;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background: #494847 !important; /* Forces muted Charcoal gray for inactive dots */
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  opacity: 1 !important; /* Overrides default Slick opacity rules */
+}
+
+/* Crucial Fix: Removes Slick's default unicode text dot matching */
+.slick-dots li button::before {
+  display: none !important;
+}
+
+/* Hover effect on inactive dots */
+.slick-dots li button:hover {
+  background: #898887 !important; /* Slightly lighter gray on hover */
+}
+
+/* Active dot styling (Matches your primary gold brand color) */
+.slick-dots li.slick-active button {
+  background: #F5BE49 !important; /* Brand Gold */
+  width: 14px; /* Pill-shaped expansion effect for the active slide */
+  height: 14px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(245, 190, 73, 0.4); /* Subtle gold glow */
 }
