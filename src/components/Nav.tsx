@@ -21,13 +21,13 @@ const Navbar = () => {
   });
   // const { openPopup } = usePopup();
 
-  const [showLoginDropdown, setShowLoginDropdown] = useState(false);
-  const [showUserSubMenu, setShowUserSubMenu] = useState(false);
-  const [showBrokerSubMenu, setShowBrokerSubMenu] = useState(false);
+  // const [showLoginDropdown, setShowLoginDropdown] = useState(false);
+  // const [showUserSubMenu, setShowUserSubMenu] = useState(false);
+  // const [showBrokerSubMenu, setShowBrokerSubMenu] = useState(false);
 
-  const [mobileLoginExpanded, setMobileLoginExpanded] = useState(false);
-  const [mobileUserExpanded, setMobileUserExpanded] = useState(false);
-  const [mobileBrokerExpanded, setMobileBrokerExpanded] = useState(false);
+  // const [mobileLoginExpanded, setMobileLoginExpanded] = useState(false);
+  // const [mobileUserExpanded, setMobileUserExpanded] = useState(false);
+  // const [mobileBrokerExpanded, setMobileBrokerExpanded] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
