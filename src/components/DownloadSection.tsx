@@ -1,4 +1,5 @@
-import gif from "../assets/trading-gif.gif"; // ✅ new gif
+// import gif from "../assets/trading-gif.gif"; // ✅ new gif
+import gif from "../assets/trading-img.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
