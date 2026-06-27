@@ -192,7 +192,7 @@ function Contact() {
           call away—reach out now and experience the difference of Master Trader.
         </p>
         <a
-          href="tel:+918368284948"
+          href="tel:+917230941008"
           className="inline-block mt-4 px-8 py-3 bg-[var(--primary-color)] text-white dark:text-black font-semibold rounded-full hover:shadow-[0_0_15px_var(--primary-color)] transition duration-300"
         >
           Talk to Support
