@@ -9,7 +9,6 @@ import {
 import PageBanner from "../../../components/BannerImage";
 import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Nav";
-import cfdImage from "../../../assets/Intraday Trading.png";
 import { Helmet } from "react-helmet-async";
 
 function IntradayTrading() {
@@ -68,7 +67,7 @@ function IntradayTrading() {
       <section className="bg-white dark:bg-[--bg-color1] py-16 transition-colors duration-300 px-4 md:px-8 lg:px-32 flex-grow">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
           <img
-            src={cfdImage}
+            src={"/prodcut.png"}
             alt="CFD Illustration"
             className="w-full max-w-md mx-auto"
           />
