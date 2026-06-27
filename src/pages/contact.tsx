@@ -189,8 +189,7 @@ function Contact() {
         <h3 className="text-3xl font-bold mb-6">Let’s Connect Today</h3>
         <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto mb-6">
           Want a walkthrough? Need help? Or just curious? We’re just a click or
-          call away—reach out now and experience the difference of Close Friends
-          Traders.
+          call away—reach out now and experience the difference of Master Trader.
         </p>
         <a
           href="tel:+918368284948"
