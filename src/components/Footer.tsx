@@ -213,12 +213,12 @@ const Footer = () => {
             <li>
               <strong>Tech / Support:</strong>
               <a
-                href="https://wa.link/ehhw8j"
+                href="https://wa.me/917045263033?text=Hi%20Support%20Team%20%21%21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" hover:underline"
               >
-                +91 72309 41008
+                +91 7045263033
               </a>
             </li>
           </ul>

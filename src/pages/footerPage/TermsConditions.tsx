@@ -231,7 +231,7 @@ function TermsConditions() {
             <ul className="list-disc list-inside space-y-2">
               <li>Pay-in: +1 (236) 305-9090</li>
               <li>Withdrawal: +1 (236) 305-9092</li>
-              <li>Tech / Support: +91 72309 41008</li>
+              <li>Tech / Support: +91 7045263033</li>
             </ul>
           </section>
 

@@ -112,12 +112,12 @@ const HeroSection: React.FC = () => {
               <div>
                 <p className="font-semibold mb-2">Customer Support</p>
                 <a
-                  href="https://wa.link/ehhw8j"
+                  href="https://wa.me/917045263033?text=Hi%20Support%20Team%20%21%21"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-[var(--primary-color)] hover:bg-[#5bb7b8] px-4 py-2 rounded-full text-black font-semibold transition"
                 >
-                  +917230941008‬
+                  +917045263033‬
                 </a>
               </div>
             </div>
