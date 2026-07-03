@@ -47,7 +47,7 @@ import NotFound from "./pages/NotFound";
 import Market from "./pages/Market";
 import Products from "./pages/Products";
 import Knowledge from "./pages/Knowledge";
-import RedirectToBlogs from "./components/RedirectToBlogs";
+// import RedirectToBlogs from "./components/RedirectToBlogs";
 import MetaPixelTracker from "./components/MetaPixelTracker";
 import Signup_V2 from "./pages/Signup_V2";
 
