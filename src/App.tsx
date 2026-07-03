@@ -62,7 +62,7 @@ function App() {
           <Route path="/about" element={<AboutUsSection />} />
           <Route path="/blogs" element={<Blog2 />} />
           <Route path="/blogs/:slug" element={<Blog2Details />} />
-          <Route path="/:slug" element={<RedirectToBlogs />} />
+          {/* <Route path="/:slug" element={<RedirectToBlogs />} /> */}
           <Route
             path="/blogs/trade-smart-and-understand-the-best-dabba-app-in-india"
             element={
