@@ -84,7 +84,7 @@ export default function HowItWorks() {
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">
                   Start trading instantly with real-time tools and more. Because
-                  trading is better with close friends.
+                  trading is better with Master Trader.
                 </p>
               </div>
             </div>
