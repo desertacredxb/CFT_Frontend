@@ -49,6 +49,7 @@ import Products from "./pages/Products";
 import Knowledge from "./pages/Knowledge";
 import RedirectToBlogs from "./components/RedirectToBlogs";
 import MetaPixelTracker from "./components/MetaPixelTracker";
+import Signup_V2 from "./pages/Signup_V2";
 
 function App() {
   return (
@@ -126,7 +127,7 @@ function App() {
             path="/blogs/news-blogs"
             element={<Navigate to="/blogs" replace />}
           />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<Signup_V2 />} />
           <Route path="/login" element={<Login />} />
           <Route path="/emailer" element={<Emailer />} />
           <Route path="/features" element={<Feature />} />
