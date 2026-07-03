@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
-import logo from "../assets/logo-01.svg";
 import sideImage from "../assets/cft-login-page-3.jpg";
 import { FiMoon, FiSun } from "react-icons/fi";
 
@@ -47,9 +46,9 @@ const Login = () => {
       <div className="w-full py-5 px-8 shadow-md dark:shadow-gray-200 flex justify-between items-center mb-12">
         <a href="/">
           <img
-            src={logo}
+            src={'/MT-logo.png'}
             alt="Logo"
-            className="w-40 transition-all duration-300 hover:scale-105"
+            className="h-20 transition-all duration-300 hover:scale-105"
           />
         </a>
         <button
