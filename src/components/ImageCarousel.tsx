@@ -40,7 +40,7 @@ const Carousel = () => {
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="w-full object-cover rounded-lg border border-gray-300 dark:border-gray-700"
+                className="w-full aspect-video object-cover rounded-lg border border-gray-300 dark:border-gray-700"
                 draggable="false"
               />
             </div>
