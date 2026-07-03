@@ -89,20 +89,24 @@ const Signup_V2 = () => {
             //     return;
             // }
 
+            const formData = new FormData();
+
+            formData.append("name", fullName);
+            formData.append("mobile", phone);
+            formData.append("email", email || "");
+            formData.append(
+                "referralcode",
+                hasReferralCode ? referralCode : ""
+            );
+
             const response = await fetch(
                 "https://v2.mastertrader.co.in/api/apiUserRegister",
                 {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json",
                         "x-api-key": import.meta.env.MT_AUTH_KEY,
                     },
-                    body: JSON.stringify({
-                        name: fullName,
-                        mobile: phone,
-                        email: email || "",
-                        referralcode: hasReferralCode ? referralCode : "", // add referral code field if available
-                    }),
+                    body: formData,
                 }
             );
 
@@ -235,7 +239,7 @@ const Signup_V2 = () => {
                                         </div>
                                     </div>
 
-                                    
+
 
 
                                     {/* Password + Confirm Password Side-by-Side (Saves vertical viewport space) */}
