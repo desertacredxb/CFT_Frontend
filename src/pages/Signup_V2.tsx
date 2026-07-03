@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react";
 import sideImage from "../assets/newabout.webp";
 import { useNavigate } from "react-router-dom";
-import { FiEye, FiEyeOff, FiMoon, FiSun } from "react-icons/fi";
-import Navbar from "../components/Nav";
+import { FiMoon, FiSun } from "react-icons/fi";
 
-const baseURL = import.meta.env.VITE_API_BASE_URL;
+// const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const Signup_V2 = () => {
     const [fullName, setFullName] = useState("");
     const [phone, setPhone] = useState("");
 
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
+    // const [password, setPassword] = useState("");
+    // const [confirmPassword, setConfirmPassword] = useState("");
 
     const [hasReferralCode, setHasReferralCode] = useState(false);
     const [referralCode, setReferralCode] = useState("");
 
 
-    const [showPassword, setShowPassword] = useState(false);
+    // const [showPassword, setShowPassword] = useState(false);
     const [message, setMessage] = useState("");
     const [messageType, setMessageType] = useState<"success" | "error" | "">("");
     const [loading, setLoading] = useState(false);

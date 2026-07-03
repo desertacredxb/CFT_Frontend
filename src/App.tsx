@@ -8,7 +8,7 @@ import {
 import { Landing } from "./pages/Landing";
 import Contact from "./pages/contact";
 import AboutUsSection from "./pages/About";
-import Signup from "./pages/Signup";
+// import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Emailer from "./pages/Emailer";
 import NewsletterForm from "./pages/Newsletter";
