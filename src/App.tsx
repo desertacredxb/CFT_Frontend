@@ -50,7 +50,6 @@ import Knowledge from "./pages/Knowledge";
 // import RedirectToBlogs from "./components/RedirectToBlogs";
 import MetaPixelTracker from "./components/MetaPixelTracker";
 import Signup_V2 from "./pages/Signup_V2";
-import ChatBot from "./components/chatbot/NewChatBot";
 
 function App() {
   return (

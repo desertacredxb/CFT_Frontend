@@ -30,7 +30,7 @@ export default function useChat() {
 
         const assistantId = Date.now() + 1;
 
-        setMessages((prev) => [
+        setMessages(() => [
             ...updatedMessages,
             {
                 id: assistantId,
