@@ -69,44 +69,29 @@ const Signup_V2 = () => {
             return;
         }
 
-        // if (password !== confirmPassword) {
-        //     setMessage("Passwords do not match");
-        //     setMessageType("error");
-        //     return;
-        // }
+      
 
         try {
+            setLoading(false); // Make sure it's resetting
             setLoading(true);
-            // if(true){
-            //     console.log(
-            //         {
-            //             name: fullName,
-            //             mobile: phone,
-            //             email: email || "",
-            //             referralcode: hasReferralCode ? referralCode : "", // add referral code field if available
-            //         }
-            //     )
-            //     return;
-            // }
 
-            const formData = new FormData();
-
-            formData.append("name", fullName);
-            formData.append("mobile", phone);
-            formData.append("email", email || "");
-            formData.append(
-                "referralcode",
-                hasReferralCode ? referralCode : ""
-            );
+            // Prepare the raw JSON payload as required by the API
+            const payload = {
+                name: fullName,
+                mobile: phone,
+                email: email || "",
+                referralcode: hasReferralCode ? referralCode : ""
+            };
 
             const response = await fetch(
                 "https://v2.mastertrader.co.in/api/apiUserRegister",
                 {
                     method: "POST",
                     headers: {
-                        "x-api-key": import.meta.env.MT_AUTH_KEY,
+                        "Content-Type": "application/json",
+                        "x-api-key": import.meta.env.MT_AUTH_KEY
                     },
-                    body: formData,
+                    body: JSON.stringify(payload), // Send body formatted as JSON string
                 }
             );
 
@@ -116,7 +101,7 @@ const Signup_V2 = () => {
                 setMessage(data.message || "Registration successful!");
                 setMessageType("success");
 
-                // Optional: redirect after success
+                // Redirect after success
                 setTimeout(() => {
                     navigate("/login");
                 }, 1500);
@@ -125,7 +110,7 @@ const Signup_V2 = () => {
                 setMessageType("error");
             }
         } catch (error) {
-            console.error(error);
+            console.error("API Integration Error:", error);
             setMessage("Something went wrong. Please try again.");
             setMessageType("error");
         } finally {
