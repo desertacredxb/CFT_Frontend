@@ -84,7 +84,7 @@ const Signup_V2 = () => {
             };
 
             const response = await fetch(
-                "https://v2.mastertrader.co.in/api/apiUserRegister",
+                "/api/apiUserRegister",
                 {
                     method: "POST",
                     headers: {
