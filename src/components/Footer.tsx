@@ -68,11 +68,11 @@ const Footer = () => {
           <div className="flex space-x-4 mt-4">
             {[
               {
-                href: "https://www.facebook.com/mastertrader",
+                href: "https://www.facebook.com/share/18mrmReDz1/",
                 icon: <FaFacebookF size={20} />,
               },
               {
-                href: "https://www.instagram.com/mastertrader/#",
+                href: "https://www.instagram.com/marketseekhoofficial?igsh=YTcydXM3enN0OG0z",
                 icon: <FaInstagram size={20} />,
               },
 
@@ -81,11 +81,11 @@ const Footer = () => {
                 icon: <FaYoutube size={20} />,
               },
               {
-                href: "https://t.me/mastertrader",
+                href: " https://t.me/Mastertraderofficial2026",
                 icon: <FaTelegram size={20} />,
               },
               {
-                href: "https://x.com/mastertrader",
+                href: "https://x.com/MasterrTraderr",
                 icon: <FaTwitter size={20} />,
               },
             ].map(({ href, icon }, idx) => (
