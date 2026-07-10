@@ -50,11 +50,15 @@ import Knowledge from "./pages/Knowledge";
 // import RedirectToBlogs from "./components/RedirectToBlogs";
 import MetaPixelTracker from "./components/MetaPixelTracker";
 import Signup_V2 from "./pages/Signup_V2";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <Router>
       <>
+      <ToastContainer position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false} />
         <MetaPixelTracker />
         <Routes>
           <Route path="/" element={<Landing />} />

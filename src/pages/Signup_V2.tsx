@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import sideImage from "../assets/newabout.webp";
 import { useNavigate } from "react-router-dom";
 import { FiMoon, FiSun } from "react-icons/fi";
-
+import { toast } from "react-toastify";
 // const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const Signup_V2 = () => {
@@ -98,6 +98,7 @@ const Signup_V2 = () => {
       if (response.ok) {
         setMessage(data.message || "Registration successful!");
         setMessageType("success");
+        toast.success("Registration successful!");
 
         // Redirect after success
         setTimeout(() => {
@@ -106,6 +107,7 @@ const Signup_V2 = () => {
       } else {
         setMessage(data.message || "Registration failed");
         setMessageType("error");
+        toast.error(data.message || "Registration failed");
       }
     } catch (error) {
       console.error("API Integration Error:", error);
