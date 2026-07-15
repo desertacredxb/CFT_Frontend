@@ -1,11 +1,12 @@
-
-
-
 {
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "https://v2.mastertrader.co.in/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
