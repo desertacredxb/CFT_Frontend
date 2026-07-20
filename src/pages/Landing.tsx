@@ -21,15 +21,24 @@ export const Landing = () => {
   return (
     <div>
       <Helmet>
+        <title>Master Trader – Online Trading Platform</title>
+
+        <meta name="title" content="Master Trader – Online Trading Platform" />
+
         <meta
           name="description"
-          content="Trade smarter  with Master Trader – India’s trusted insider trading group offering premium signals, 
-500× leverage, zero tax, and expert mentorship. Join our private trading community for real-time setups 
-across forex, crypto, indices, and stocks."
+          content="Trade Forex, Crypto, NSE, MCX & more on Master Trader, India's trusted online trading platform. Zero commission, 500x leverage, fast withdrawals. Start now."
+        />
+
+        <meta
+          name="keywords"
+          content="online trading platform, online trading, zero commission trading platform, high leverage trading, trading platform for beginners, forex trading platform, Master Trader"
         />
 
         <link rel="canonical" href="https://www.mastertrader.co.in/" />
       </Helmet>
+
+      
       <Navbar />
       <HeroSection />
       <WhyChoose />

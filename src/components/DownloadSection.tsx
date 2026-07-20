@@ -41,13 +41,10 @@ export default function DownloadSection() {
           </h2>
 
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-            Access global markets like Forex, Indices, Commodities, and Shares,
-            all from one powerful platform. Enjoy ₹0 commission, up to 500x
-            leverage, and instant, reliable payouts that put you in full
-            control. No hidden fees. No unnecessary delays.
+            Access global markets like Forex, Indices, Commodities, and Shares, all from one powerful online trading platform built for serious growth. Enjoy ₹0 commission, up to 500x leverage, and instant, reliable payouts that put you in full control, every single time you trade. No hidden fees, no unnecessary delays, and no fine print standing between you and your profits.
           </p>
           <i className="font-semibold block text-gray-800 dark:text-gray-200">
-            Master Trader — Designed for Traders Who Mean Business.
+            Master Trader - Designed for Traders Who Mean Business.
           </i>
 
           {/* Buttons */}

@@ -60,9 +60,9 @@ const HeroSection: React.FC = () => {
       {/* Main Content */}
       <div className="relative z-10  w-11/12 md:w-5/6 mx-auto  flex flex-col md:flex-row justify-between items-center gap-10 py-12 md:py-0">
         {/* Left Content */}
-        <div className="max-w-xl text-white space-y-8">
+        <div className="max-w-2xl text-white space-y-8">
           <h1 className="text-4xl font-bold leading-tight text-start md:mt-10 mt-28">
-            India’s #1 Trusted Trading Hub
+            India's #1 Online Trading Platform
           </h1>
           <h1 className="text-2xl font-semibold leading-tight text-start">
             <span className="block mb-2">
@@ -73,16 +73,31 @@ const HeroSection: React.FC = () => {
             </span>
           </h1>
 
+          <p className="text-xl">
+            Trade smarter with Master Trader, India's fastest-growing online
+            trading platform. Get up to 500x leverage, zero commission, and
+            instant execution across Forex, Crypto, NSE, MCX, and US Stocks, all
+            on one powerful dashboard, with no delays and no hidden charges.
+
+            <br />
+            <br />
+            Join 50,000+ traders who trust Master Trader for fast payouts and
+            round-the-clock support.
+          </p>
+
           <button
             onClick={openPopup}
             className="mt-5 bg-[var(--primary-color)] text-black px-8 py-3 rounded-full font-semibold hover:bg-white shadow-[0_0_25px_var(--primary-color)] transition duration-300 w-fit"
           >
             Start Trading Now
           </button>
+
+          <p className="text-sm italic">Trading involves risk, and profits are not guaranteed. Please trade responsibly.</p>
+
+
           {/* Contact Info in Flex Row */}
-          <div className="mt-10 text-white w-full max-w-4xl md:mx-auto flex justify-start">
+          {/* <div className="mt-10 text-white w-full max-w-4xl md:mx-auto flex justify-start">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              {/* Pay-in */}
               <div>
                 <p className="font-semibold mb-2">Pay-in Number</p>
                 <a
@@ -95,7 +110,6 @@ const HeroSection: React.FC = () => {
                 </a>
               </div>
 
-              {/* Withdrawal */}
               <div>
                 <p className="font-semibold mb-2">Withdrawal Number</p>
                 <a
@@ -108,7 +122,6 @@ const HeroSection: React.FC = () => {
                 </a>
               </div>
 
-              {/* Technical Support */}
               <div>
                 <p className="font-semibold mb-2">Customer Support</p>
                 <a
@@ -123,7 +136,6 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Features Row */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 text-sm sm:text-base font-medium">
             <div className="flex items-center gap-4">
               <span className="text-center sm:text-left leading-snug">
@@ -146,7 +158,7 @@ const HeroSection: React.FC = () => {
                 Fast Payouts
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {offers.length > 0 && (

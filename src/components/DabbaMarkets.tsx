@@ -7,33 +7,33 @@ import { usePopup } from "../components/PopupContext";
 const markets = [
   {
     title: "NSE(F&O)",
-    description: "Equities, indices, currencies",
+    description: "Trade equities, indices, and currencies on India's leading exchange, backed by fast, reliable execution and real-time pricing on every order.",
     image: "https://www.arrowtradefx.com/assets/images/svg/shares.svg",
   },
   {
     title: "MCX",
-    description: "Commodities like gold, oil, agri products",
+    description: "Trade commodities like gold, oil, and agri products with live pricing and secure execution, giving you a wider range of opportunities.",
     image: "https://www.arrowtradefx.com/assets/images/svg/commodities.svg",
   },
   {
     title: "Crypto",
-    description: "Secure access to digital currencies",
+    description: "Get secure, round-the-clock access to major digital currencies on our online trading platform, with fast execution whenever markets move.",
     image: "https://www.arrowtradefx.com/assets/images/svg/futures.svg",
   },
   {
     title: "US Stocks & Indices ",
-    description: "Nasdaq, S&P 500, Dow Jones",
+    description: "Trade global giants like Nasdaq, S&P 500, and Dow Jones from a single dashboard, without needing a separate international account.",
     image:
       "https://www.arrowtradefx.com/assets/images/svg/cryptocurrencies.svg",
   },
   {
     title: "Forex",
-    description: "Major, minor, and exotic currency pairs",
+    description: "Trade major, minor, and exotic currency pairs on a dedicated forex trading platform built for speed, precision, and round-the-clock access.",
     image: "https://www.arrowtradefx.com/assets/images/svg/forex.svg",
   },
   {
     title: "Comex",
-    description: "Precious and industrial metal futures",
+    description: "Access precious and industrial metal futures with fast, dependable execution and pricing you can trust on every trade.",
     image: "https://www.arrowtradefx.com/assets/images/svg/indices.svg",
   },
 ];

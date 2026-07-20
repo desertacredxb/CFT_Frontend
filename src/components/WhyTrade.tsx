@@ -16,43 +16,43 @@ const features = [
   {
     icon: register,
     title: "Register in Under 5 Sec",
-    desc: "Beginner-friendly registration straight under 5 seconds.",
+    desc: "Join India's fastest online trading platform with a beginner-friendly signup process. No lengthy paperwork, no waiting on approvals, no confusing steps. Just sign up, and you're ready to trade in under 5 seconds.",
   },
   {
     icon: support,
     title: "24×7 Customer Support",
-    desc: "Markets don’t sleep. Neither do we. Expert help, 24x7.",
+    desc: "Markets never sleep, and neither do we. Our expert support team is available round the clock to help you with account queries, trade execution, or anything else you need, any time of day or night.",
   },
   {
     icon: fivex,
     title: "500x Margin",
-    desc: "Entry-Level Capital. Pro-Level Power.",
+    desc: "Get access to high-leverage trading with entry-level capital and pro-level market power. Whether you're just starting or scaling up, our margin gives you the flexibility to trade bigger with less upfront capital.",
   },
   {
     icon: zero,
     title: "0% Commission",
-    desc: "Keep everything you earn. No cuts, we promise.",
+    desc: "Trade on a genuine zero-commission trading platform where you keep everything you earn. There are no cuts, no percentage deductions, and no surprise charges eating into your hard-earned profits.",
   },
 
   {
     icon: withdrawal,
     title: "Quick Withdrawals",
-    desc: "Seamless withdrawals. Because your time matters.",
+    desc: "Withdraw your funds quickly and without unnecessary delays. We know your time and your money matter, so we've built a withdrawal process that is smooth, fast, and hassle-free from start to finish.",
   },
   {
     icon: security,
     title: "No Hidden Charges",
-    desc: "What you see is what you get. Every rupee accounted for.",
+    desc: "What you see is exactly what you get on our platform. Every rupee is accounted for, with complete transparency in pricing so you never have to worry about unexpected deductions or fine print.",
   },
   {
     icon: zeroTax,
     title: "	0% Tax on Profits",
-    desc: "0% Tax on Profits. 100% Returns to You.",
+    desc: "Keep more of what you earn with our 0% tax on profits benefit. Every successful trade translates into full returns without deductions, giving you complete control over your earnings. It’s a smarter way to trade, where your profits stay truly yours.",
   },
   {
     icon: traders,
     title: "5M+ Happy Traders",
-    desc: "Home to a global network of 5 million+ traders.",
+    desc: "Join a thriving global community of over 5 million traders who trust our platform every day. From beginners to experienced professionals, our growing network reflects reliability, performance, and a trading experience built for success.",
   },
 ];
 
@@ -80,7 +80,7 @@ const WhyTrade: React.FC = () => {
     <section className="bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white py-12 transition-colors duration-300">
       <div className="w-11/12 md:w-5/6 mx-auto text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-semibold">
-          Why 50,000+ Traders Trust Us?
+          Why 50,000+ Traders Trust Us as an Online Trading Platform
         </h2>
       </div>
 

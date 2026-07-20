@@ -59,7 +59,7 @@ gsap.registerPlugin(
   SlowMo,
   CustomEase,
   CustomBounce,
-  CustomWiggle
+  CustomWiggle,
 );
 
 type Faq = {
@@ -71,22 +71,32 @@ const faqs: Faq[] = [
   {
     question: "Is Master Trader suitable for beginners?",
     answer:
-      "Indeed, Master Trader is made for both novice and seasoned traders. With round-the-clock assistance and a demo account for practice, the site is user-friendly.",
+      "Yes. Master Trader is built as a beginner-friendly online trading platform, with a simple signup process, an intuitive dashboard, and 24×7 support to guide you through your first trades, so you can start with confidence even with no prior experience.",
   },
   {
     question: "Can I trade using a mobile device?",
     answer:
-      "Indeed, Master Trader is completely mobile-friendly. You can easily trade at any time and from any location.",
+      "Absolutely. Our Android app gives you full access to your account, live market data, and instant order execution, so you can trade Forex, Crypto, NSE, and MCX from anywhere, anytime, without needing a desktop.",
   },
   {
     question: "Does Master Trader protect my money?",
     answer:
-      "Secure payment methods and cutting-edge encryption safeguard your money. Your safety is always Master Trader’ top priority.",
+      "Yes. We use secure, encrypted transactions and trusted payment methods to safeguard your funds at every step. Your account and transaction data are protected with bank-grade security, so you can trade with peace of mind.",
   },
   {
     question: "Do I need any paperwork to sign up?",
     answer:
-      "There is no need for extensive paperwork. Simply enter your mobile number to get started right away.",
+      "No. Registration takes just a few minutes with only the essential details required. There's no lengthy paperwork or waiting on approvals, so you can create your account and start trading on our online trading platform almost instantly.",
+  },
+  {
+    question: "What is the minimum amount required to start trading?",
+    answer:
+      "Master Trader is designed to be accessible, so you can get started with a low entry-level capital. Combined with up to 500x margin, this gives you the flexibility to trade meaningfully without needing large upfront funds.",
+  },
+  {
+    question: "How fast are withdrawals on Master Trader?",
+    answer:
+      "Withdrawals are processed quickly, without the long delays common on other platforms. Once you request a withdrawal through a verified payment method, funds are released promptly, so you always have easy access to your money when you need it.",
   },
 ];
 

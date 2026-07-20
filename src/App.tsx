@@ -51,6 +51,7 @@ import Knowledge from "./pages/Knowledge";
 import MetaPixelTracker from "./components/MetaPixelTracker";
 import Signup_V2 from "./pages/Signup_V2";
 import { ToastContainer } from "react-toastify";
+import ChatBot from "./components/chatbot/NewChatBot";
 
 function App() {
   return (
@@ -171,7 +172,7 @@ function App() {
         </Routes>
         <div>
           <WhatsAppButton />
-          {/* <ChatBot /> */}
+          <ChatBot />
         </div>
         {/* Bottom Buttons */}
         {/* <div className="fixed bottom-0 left-0 w-full flex md:hidden z-[9999]">

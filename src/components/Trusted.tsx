@@ -16,17 +16,17 @@ export default function WhyChooseUs() {
   const features = [
     {
       title: "Secure Transactions",
-      desc: "Safeguard your investments with our trusted and secure payment options.",
+      desc: "Safeguard your investments with trusted and secure payment options, built into every transaction on our online trading platform.",
       icon: <CreditCard className="w-6 h-6 text-primary" />,
     },
     {
       title: "Effortless Trading",
-      desc: "New to trading or a seasoned pro?\n You’ll feel at home.",
+      desc: "New to trading or a seasoned pro? As a true online trading platform and experts alike, you'll feel at home from your very first trade.",
       icon: <BarChart2 className="w-6 h-6 text-primary" />,
     },
     {
       title: "Real-Time Market Data",
-      desc: "The insight you need. The second you need it.",
+      desc: "Get the insight you need, the second you need it, with live market data across Forex, Crypto, NSE, and MCX.",
       icon: <Clock3 className="w-6 h-6 text-primary" />,
     },
   ];

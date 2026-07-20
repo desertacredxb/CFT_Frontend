@@ -32,7 +32,7 @@ export default function HowItWorks() {
         {/* Right: Content */}
         <div className="md:w-2/3">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
-            How{" "}
+            How Does{" "}
             <span className="text-[var(--primary-color)] italic font-bold">
               Master Trader{" "}
             </span>
@@ -51,8 +51,7 @@ export default function HowItWorks() {
                   Step 1: Join in under 5 Sec
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Sign up with just the essentials, no paperwork hassle. Get
-                  started instantly.
+                  Sign up with just the essentials, no paperwork hassle, no long forms to fill out. Get started instantly on India's fastest online trading platform and be ready to place your first trade within minutes.
                 </p>
               </div>
             </div>
@@ -67,8 +66,7 @@ export default function HowItWorks() {
                   Step 2: Fund Your Wallet
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Add funds securely through trusted payment methods and start
-                  your trading journey.
+                  Add funds securely through trusted, verified payment methods and start your trading journey with confidence. Your transactions are protected at every step, so you can focus on trading, not worrying about security.
                 </p>
               </div>
             </div>
@@ -83,8 +81,7 @@ export default function HowItWorks() {
                   Step 3: Trade with Your Inner Circle
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Start trading instantly with real-time tools and more. Because
-                  trading is better with Master Trader.
+                  Start trading instantly with real-time tools, live market data, and everything you need to make informed decisions. Because trading is better with Master Trader, and even better when you're set up to succeed from day one.
                 </p>
               </div>
             </div>

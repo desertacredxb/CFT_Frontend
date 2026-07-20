@@ -77,7 +77,7 @@ const Footer = () => {
               },
 
               {
-                href: "https://www.youtube.com/@mastertrader",
+                href: "https://www.youtube.com/@mastertraderinsights",
                 icon: <FaYoutube size={20} />,
               },
               {
