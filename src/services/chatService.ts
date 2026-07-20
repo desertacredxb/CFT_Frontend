@@ -1,7 +1,7 @@
 import axios from "axios";
 import { OpenAIMessage } from "../types/chatTypes";
 
-const API = "http://localhost:8000/api/chat";
+const API = `${import.meta.env.VITE_API_BASE_URL}/api/chat`;
 
 export async function sendMessage(messages: OpenAIMessage[]) {
   const { data } = await axios.post(API, {
