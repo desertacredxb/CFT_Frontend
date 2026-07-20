@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-xl">
+          <p className="text-md">
             Trade smarter with Master Trader, India's fastest-growing online
             trading platform. Get up to 500x leverage, zero commission, and
             instant execution across Forex, Crypto, NSE, MCX, and US Stocks, all
