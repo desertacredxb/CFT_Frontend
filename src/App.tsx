@@ -52,6 +52,7 @@ import MetaPixelTracker from "./components/MetaPixelTracker";
 import Signup_V2 from "./pages/Signup_V2";
 import { ToastContainer } from "react-toastify";
 import ChatBot from "./components/chatbot/NewChatBot";
+import LeadForm from "./components/LeadForm";
 
 function App() {
   return (
@@ -168,6 +169,10 @@ function App() {
           <Route
             path="/knowledge/intraday-trading"
             element={<IntradayTrading />}
+          />
+          <Route
+            path="/lead-form"
+            element={<LeadForm />}
           />
         </Routes>
         <div>
