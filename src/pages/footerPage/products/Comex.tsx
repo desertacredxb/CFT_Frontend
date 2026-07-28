@@ -1,8 +1,6 @@
 import {
   ArrowBigRight,
-  BarChart3,
   Globe2,
-  ShieldCheck,
   Star,
   Timer,
 } from "lucide-react";
@@ -369,7 +367,7 @@ function Comex() {
             </p>
           </div>
           <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-            {steps.map(([title, text], index) => (
+            {steps.map(([title, text]) => (
               <div
                 key={title}
                 className="rounded-2xl border border-gray-200 bg-gray-50 p-8 transition hover:-translate-y-1 hover:border-[--primary-color] dark:border-[--primary-color]/20 dark:bg-[#1B1207]"
@@ -559,30 +557,6 @@ function Cta({
         </div>
         <ActionButton label={button} onClick={onClick} />
       </div>
-    </div>
-  );
-}
-
-function InfoCard({
-  icon,
-  title,
-  text,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  text: string;
-}) {
-  return (
-    <div className="rounded-3xl border border-gray-200 bg-white p-5 shadow-lg dark:border-[--primary-color]/20 dark:bg-[--bg-color1]">
-      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-[--bg-primary-gradient] text-white">
-        {icon}
-      </div>
-      <h2 className="mb-5 text-3xl font-bold text-[--bg-color1] dark:text-white">
-        {title}
-      </h2>
-      <p className="text-lg leading-8 text-gray-700 dark:text-gray-300">
-        {text}
-      </p>
     </div>
   );
 }

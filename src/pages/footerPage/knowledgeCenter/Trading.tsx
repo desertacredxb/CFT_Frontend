@@ -261,7 +261,7 @@ We have written this content in simple language so anyone, even someone with zer
             steps.
           </p>
           <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {startSteps.map(([title, text], i) => (
+            {startSteps.map(([title, text]) => (
               <article
                 key={title}
                 className="rounded-2xl border border-gray-200 bg-white p-7 dark:border-[--primary-color]/20 dark:bg-[--bg-color1]"
