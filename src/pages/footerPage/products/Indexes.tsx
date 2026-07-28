@@ -99,6 +99,7 @@ function Indexes() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        {/* Primary Meta Tags */}
         <title>Online Indices Trading in India | Master Traders</title>
 
         <meta
@@ -116,9 +117,38 @@ function Indexes() {
           content="indices trading, index trading online, stock index trading, S&P 500 trading, Nifty 50 trading, indices vs stocks, index trading for beginners, Master Traders"
         />
 
+        {/* Canonical */}
         <link
           rel="canonical"
           href="https://www.mastertrader.co.in/products/indexes"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/products/indexes"
+        />
+        <meta
+          property="og:title"
+          content="Online Indices Trading in India | Master Traders"
+        />
+        <meta
+          property="og:description"
+          content="Learn indices trading with Master Traders; trade S&P 500, Nifty 50, and more with beginner guides, demo accounts, and expert tips."
+        />
+        <meta property="og:site_name" content="Master Traders" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta
+          name="twitter:title"
+          content="Online Indices Trading in India | Master Traders"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn indices trading with Master Traders; trade S&P 500, Nifty 50, and more with beginner guides, demo accounts, and expert tips."
         />
       </Helmet>
       <div className="mb-20">
@@ -838,16 +868,14 @@ function Indexes() {
                   </h3>
 
                   <ChevronDown
-                    className={`w-6 h-6 text-[--primary-color] transition-transform duration-300 ${
-                      active === index ? "rotate-180" : ""
-                    }`}
+                    className={`w-6 h-6 text-[--primary-color] transition-transform duration-300 ${active === index ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
                 <div
-                  className={`grid transition-all duration-300 ${
-                    active === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
+                  className={`grid transition-all duration-300 ${active === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    }`}
                 >
                   <div className="overflow-hidden">
                     <div className="px-7 pb-7 text-gray-600 dark:text-gray-400 leading-8">

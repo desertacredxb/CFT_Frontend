@@ -1,7 +1,7 @@
 interface PageBannerProps {
   title: string;
   image?: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode | string;
 }
 
 import defaultImage from "../assets/earth.jpg";
