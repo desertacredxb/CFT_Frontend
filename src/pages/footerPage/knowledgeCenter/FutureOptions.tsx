@@ -4,11 +4,8 @@ import {
   Headset,
   TrendingUp,
   TrendingDown,
-  DollarSign,
-  PieChart,
   Briefcase,
   Shield,
-  ArrowBigRight,
   ChevronDown,
 } from "lucide-react";
 import PageBanner from "../../../components/BannerImage";
