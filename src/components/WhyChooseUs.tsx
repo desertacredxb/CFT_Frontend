@@ -80,10 +80,10 @@ const WhyChoose: React.FC = () => {
 
       <section className="w-11/12 md:w-5/6 rounded-xl mx-auto bg-white dark:bg-[#140E05] text-black dark:text-white mt-10 py-5 px-6 text-center border border-gray-100 dark:border-[#211504]">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold leading-tight my-4">
+          <h2 className="text-4xl font-bold leading-tight my-4">
             Your Profits. Your Pocket.{" "}
             <span className="text-[var(--primary-color)]">ZERO COMMISSION</span>
-          </h1>
+          </h2>
           <p className="text-lg sm:text-xl text-gray-800 dark:text-gray-200 mt-5">
             As a leading online trading platform in India, Master Trader lets you trade freely across Forex, Crypto, NSE, and MCX, with 0% commission eating into your earnings. Every rupee you earn stays yours.
           </p>

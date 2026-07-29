@@ -64,14 +64,14 @@ const HeroSection: React.FC = () => {
           <h1 className="text-4xl font-bold leading-tight text-start md:mt-10 mt-28">
             India's #1 Online Trading Platform
           </h1>
-          <h1 className="text-2xl font-semibold leading-tight text-start">
+          <h2 className="text-2xl font-semibold leading-tight text-start">
             <span className="block mb-2">
               500× Leverage{" "}
               <span className="text-[var(--primary-color)]">|</span> Zero Tax{" "}
               <span className="text-[var(--primary-color)]">| </span>
               No Commission
             </span>
-          </h1>
+          </h2>
 
           <p className="text-md">
             Trade smarter with Master Trader, India's fastest-growing online
