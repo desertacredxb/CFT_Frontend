@@ -171,36 +171,68 @@ function CommodityTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Commodity Trading Guide | Master Traders</title>
+        <title>Commodity Trading: Gold to Crude Oil | Master Traders</title>
+
         <meta
           name="description"
-          content="Learn commodity trading with Master Traders. Understand gold, silver, crude oil, and agricultural commodities trading in India."
+          content="Learn commodity trading in India from gold & silver to crude oil & agri commodities. Simple, practical guides for beginners by Master Traders."
         />
+
         <meta
           name="keywords"
-          content="commodity trading, commodity trading India, gold trading, silver trading, crude oil trading, commodities trading for beginners"
+          content="commodity trading, commodity trading India, what is commodity trading, gold commodity trading, crude oil trading India, agricultural commodity trading, base metals trading, commodity market basics, commodity trading for beginners, MCX trading"
         />
+
         <link
           rel="canonical"
           href="https://www.mastertrader.co.in/knowledge/commodity-trading"
         />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Commodity Trading: Gold to Crude Oil | Master Traders"
+        />
+        <meta
+          property="og:description"
+          content="Learn commodity trading in India from gold & silver to crude oil & agri commodities. Simple, practical guides for beginners by Master Traders."
+        />
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/knowledge/commodity-trading"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Master Traders" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(({ question, answer }) => ({
+              "@type": "Question",
+              name: question,
+              acceptedAnswer: { "@type": "Answer", text: answer },
+            })),
+          })}
+        </script>
       </Helmet>
       <div className="mb-20">
         <Navbar />
       </div>
 
       <PageBanner
-        title="Commodity Trading"
-        subtitle="Trade metals, energy, and agri-markets worldwide, all in one place."
+        title="Commodity Trading India Explained: From Gold to Crude Oil"
+        subtitle="Commodity markets play an important role in the global economy. From gold and silver to crude oil and agricultural products, commodities influence prices, businesses, and investments every day. Understanding Commodity Trading India can help traders make informed decisions and learn how different markets work.
+At Master Traders, our goal is to provide educational content that helps beginners and experienced traders understand the commodity market simply and practically. Whether you are learning what is commodity trading or exploring different commodity segments, this guide will help you build a strong foundation.
+"
       />
 
       {/* What is Commodity Trading */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-gray-50 dark:bg-[--bg-color1]">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
             What is Commodity Trading?
           </h2>
-          <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+          <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed max-w-5xl mx-auto">
             <p>
               Commodity trading is the buying and selling of physical goods or commodity contracts through regulated exchanges. Instead of trading company shares, traders buy and sell commodities like:
             </p>
@@ -223,11 +255,11 @@ function CommodityTrading() {
 
       {/* Understanding Commodity Trading India */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
             Understanding Commodity Trading India
           </h2>
-          <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl">
+          <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
             <p>
               Commodity Trading India has grown significantly over the years. Indian traders can access commodity markets through recognized exchanges and trade various metals, energy products, and agricultural commodities.
             </p>
@@ -309,7 +341,7 @@ function CommodityTrading() {
       </section>
 
       {/* How Does Commodity Trading Work */}
-      <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
+      <section className="py-10 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-black dark:text-white text-center">
             How Does Commodity Trading Work?
@@ -319,7 +351,7 @@ function CommodityTrading() {
           </p>
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-700 dark:text-gray-300 mb-6">The general trading process includes:</p>
-            <div className="space-y-3">
+            <div className="space-y-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
               {tradingProcess.map((step, index) => (
                 <div key={index} className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-[--bg-color1] rounded-lg">
                   <div className="w-8 h-8 rounded-full bg-[var(--primary-color)] text-white flex items-center justify-center font-bold text-sm">
@@ -372,7 +404,7 @@ function CommodityTrading() {
       </section>
 
       {/* Why Learn Commodity Trading India */}
-      <section className="py-16 px-4 md:px-8 lg:px-32 bg-gray-50 dark:bg-[--bg-color1]">
+      <section className="py-10 px-4 md:px-8 lg:px-32 bg-gray-50 dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-black dark:text-white text-center">
             Why Learn Commodity Trading India?
@@ -392,7 +424,7 @@ function CommodityTrading() {
       </section>
 
       {/* Factors That Influence Commodity Prices */}
-      <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
+      <section className="py-10 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-black dark:text-white text-center">
             Factors That Influence Commodity Prices
@@ -435,7 +467,7 @@ function CommodityTrading() {
       </section>
 
       {/* Risks in Commodity Trading */}
-      <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
+      <section className="py-10 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-black dark:text-white text-center">
             Risks in Commodity Trading
@@ -458,7 +490,7 @@ function CommodityTrading() {
       </section>
 
       {/* CTA Block 2 */}
-      <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
+      <section className="py-10 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden bg-[--bg-color1] border border-[--primary-color]/30 p-10 lg:p-14">
             <div className="absolute inset-0 bg-[--bg-primary-gradient] opacity-10" />
