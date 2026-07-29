@@ -100,7 +100,7 @@ const AboutUsSection = () => {
       <section className="flex flex-col lg:flex-row items-center justify-between mx-auto gap-8 py-16 w-11/12 md:w-5/6">
         {/* Left: Text Content with AOS animations */}
         <div className="w-full lg:w-1/2">
-          <h2
+          <h1
             className="text-3xl sm:text-4xl font-bold mb-4"
             data-aos="fade-right"
             data-aos-delay="200"
@@ -109,7 +109,7 @@ const AboutUsSection = () => {
             <span className="text-[var(--primary-color)]">
               Leading Trading Platform
             </span>
-          </h2>
+          </h1>
           <p
             className="text-gray-700 dark:text-white text-lg mb-4"
             data-aos="fade-right"
