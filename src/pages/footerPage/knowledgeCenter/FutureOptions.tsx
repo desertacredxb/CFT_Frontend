@@ -182,7 +182,7 @@ function FutureOptions() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Futures &amp; Options Trading | Master Traders</title>
+        <title>Learn Futures &amp; Options Trading | Master Traders</title>
 
         <meta
           name="description"
@@ -202,7 +202,7 @@ function FutureOptions() {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Futures &amp; Options Trading | Master Traders"
+          content="Learn Futures &amp; Options Trading | Master Traders"
         />
         <meta
           property="og:description"
@@ -239,7 +239,7 @@ function FutureOptions() {
         />
         <meta
           name="twitter:title"
-          content="Futures &amp; Options Trading | Master Traders"
+          content="Learn Futures &amp; Options Trading | Master Traders"
         />
         <meta
           name="twitter:description"
