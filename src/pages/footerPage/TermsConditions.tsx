@@ -7,14 +7,63 @@ function TermsConditions() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Terms & Conditions - Master Trader</title>
+
         <meta
           name="description"
-          content="Read the terms and conditions of using Master Trader. Understand your rights, responsibilities, and how we ensure a safe and transparent trading experience."
+          content="Read Master Trader's terms & conditions covering trading hours, order rules, auto square-off, option selling & NSE compliance policies."
+        />
+
+        <meta
+          name="keywords"
+          content="Master Trader terms and conditions, trading rules, order rules, auto square-off policy, option selling rules, NSE compliance, trading platform terms"
         />
 
         <link
           rel="canonical"
           href="https://www.mastertrader.co.in/terms-conditions"
+        />
+
+        <meta
+          property="og:title"
+          content="Terms & Conditions - Master Trader"
+        />
+
+        <meta
+          property="og:description"
+          content="Read Master Trader's terms & conditions covering trading hours, order rules, auto square-off, option selling & NSE compliance policies."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/terms-conditions"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="Terms & Conditions - Master Trader"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Read Master Trader's terms & conditions covering trading hours, order rules, auto square-off, option selling & NSE compliance policies."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
         />
       </Helmet>
       <div className="mb-20">

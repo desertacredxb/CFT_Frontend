@@ -7,14 +7,63 @@ function PrivacyPolicy() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
+        <title>Privacy Policy - Master Trader</title>
+
         <meta
           name="description"
-          content="Your privacy is important to us. Learn how Master Trader collects, uses, and protects your data to give you a secure trading experience."
+          content="Learn how Master Trader collects, uses & protects your personal and financial data, including your GDPR rights and data security practices."
+        />
+
+        <meta
+          name="keywords"
+          content="Master Trader privacy policy, data protection, GDPR rights, personal information security, financial data privacy, trading platform privacy"
         />
 
         <link
           rel="canonical"
           href="https://www.mastertrader.co.in/privacy-policy"
+        />
+
+        <meta
+          property="og:title"
+          content="Privacy Policy - Master Trader"
+        />
+
+        <meta
+          property="og:description"
+          content="Learn how Master Trader collects, uses & protects your personal and financial data, including your GDPR rights and data security practices."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/privacy-policy"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="Privacy Policy - Master Trader"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Learn how Master Trader collects, uses & protects your personal and financial data, including your GDPR rights and data security practices."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
         />
       </Helmet>
       <div className="mb-20">

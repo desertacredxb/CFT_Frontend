@@ -96,15 +96,63 @@ export default function Feature() {
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white">
       <Helmet>
-        <title>Platform Features | Master Trader</title>
+        <title>Trading Features - Master Trader | Live Dashboard, Smart Risk Controls & More</title>
+
         <meta
           name="description"
-          content="Explore premium features of Master Trader - from real-time trading signals and expert mentorship to 500× leverage and zero-tax benefits. Everything you need to trade like a pro."
+          content="Discover Master Trader's key features: live dashboard, one-click execution, smart risk controls & real-time stock insights. Trade smarter today."
+        />
+
+        <meta
+          name="keywords"
+          content="Master Trader features, live trading dashboard, one-click order execution, smart risk controls, stop-loss automation, top stock insights, trading alerts, portfolio diagnostics, fast withdrawals, trading platform features India"
         />
 
         <link
           rel="canonical"
           href="https://www.mastertrader.co.in/features"
+        />
+
+        <meta
+          property="og:title"
+          content="Trading Features - Master Trader | Live Dashboard, Smart Risk Controls & More"
+        />
+
+        <meta
+          property="og:description"
+          content="Discover Master Trader's key features: live dashboard, one-click execution, smart risk controls & real-time stock insights. Trade smarter today."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/features"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="Trading Features - Master Trader | Live Dashboard, Smart Risk Controls & More"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Discover Master Trader's key features: live dashboard, one-click execution, smart risk controls & real-time stock insights. Trade smarter today."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
         />
       </Helmet>
       <div>

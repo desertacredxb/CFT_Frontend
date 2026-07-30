@@ -26,15 +26,63 @@ function Contact() {
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white transition-colors duration-300">
       <Helmet>
-        <title>Contact Master Trader | Get in Touch</title>
+        <title>Contact Us - Master Trader | 24x7 Trading Support</title>
+
         <meta
           name="description"
-          content="Get in touch with Master Trader - whether you have questions, need support, or want to join our trading community. We’re here 24/7 to help you trade smarter."
+          content="Get in touch with Master Trader's 24x7 support team. Call, email, or WhatsApp us for trading help, payments & technical assistance in 5 languages."
+        />
+
+        <meta
+          name="keywords"
+          content="Master Trader contact, trading support India, 24x7 customer support, trading helpline, pay-in withdrawal support, technical support trading, multilingual trading support"
         />
 
         <link
           rel="canonical"
-          href="https://www.mastertrader.co.in/Contact"
+          href="https://www.mastertrader.co.in/contact"
+        />
+
+        <meta
+          property="og:title"
+          content="Contact Us - Master Trader | 24x7 Trading Support"
+        />
+
+        <meta
+          property="og:description"
+          content="Get in touch with Master Trader's 24x7 support team. Call, email, or WhatsApp us for trading help, payments & technical assistance in 5 languages."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/contact"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="Contact Us - Master Trader | 24x7 Trading Support"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Get in touch with Master Trader's 24x7 support team. Call, email, or WhatsApp us for trading help, payments & technical assistance in 5 languages."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
         />
       </Helmet>
       <div className="mb-12">
@@ -145,7 +193,7 @@ function Contact() {
                     rel="noopener noreferrer"
                     className="inline-block bg-[var(--primary-color)] hover:bg-[#5bb7b8] px-4 py-2 rounded-full text-black font-semibold transition"
                   >
-                    +91 7045263033 
+                    +91 7045263033
                   </a>
                 </div>
               </div>

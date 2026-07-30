@@ -82,15 +82,63 @@ const AboutUsSection = () => {
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
       <Helmet>
-        <title>About Master Trader | Who We Are</title>
+        <title>About Us - Master Trader | India's No. 1 Trading Platform</title>
+
         <meta
           name="description"
-          content="Master Trader is India’s trusted trading community, offering expert signals, real-time strategies, and mentorship. Learn our mission and meet the team behind your trading success."
+          content="Built by traders, for traders. Discover Master Trader's mission to offer zero commission, 500x leverage & instant withdrawals to 5M+ Indian traders."
+        />
+
+        <meta
+          name="keywords"
+          content="About Master Trader, India trading platform, zero commission trading, 500x leverage, instant withdrawals, trading community India, Master Trader mission, no tax trading"
         />
 
         <link
           rel="canonical"
           href="https://www.mastertrader.co.in/about"
+        />
+
+        <meta
+          property="og:title"
+          content="About Us - Master Trader | India's No. 1 Trading Platform"
+        />
+
+        <meta
+          property="og:description"
+          content="Built by traders, for traders. Discover Master Trader's mission to offer zero commission, 500x leverage & instant withdrawals to 5M+ Indian traders."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/about"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="About Us - Master Trader | India's No. 1 Trading Platform"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Built by traders, for traders. Discover Master Trader's mission to offer zero commission, 500x leverage & instant withdrawals to 5M+ Indian traders."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
         />
       </Helmet>
       <div className="mb-20">
@@ -199,9 +247,8 @@ const AboutUsSection = () => {
             {sections.map((sec, index) => (
               <div
                 key={index}
-                className={`flex flex-col sm:flex-row items-center gap-10 ${
-                  index % 2 === 0 ? "sm:flex-row-reverse" : ""
-                }`}
+                className={`flex flex-col sm:flex-row items-center gap-10 ${index % 2 === 0 ? "sm:flex-row-reverse" : ""
+                  }`}
                 data-aos={index % 2 === 0 ? "flip-left" : "flip-right"}
               >
                 {/* Card content */}
