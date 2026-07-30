@@ -50,9 +50,9 @@ function Contact() {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <h2 className="text-4xl font-bold mb-6">
+            <h1 className="text-4xl font-bold mb-6">
               Got Questions? We’ve Got You 24x7
-            </h2>
+            </h1>
             <p className="italic mb-5 text-gray-700 dark:text-gray-400">
               No matter what, we're always here.
             </p>

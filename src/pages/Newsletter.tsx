@@ -95,7 +95,7 @@ const NewsletterForm = () => {
         <a href="/">
           <img
             src={logo}
-            alt="Mondus Logo"
+            alt="Master Trader Logo"
             className="h-20"
             draggable="false"
           />

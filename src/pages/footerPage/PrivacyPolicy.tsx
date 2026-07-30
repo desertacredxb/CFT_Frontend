@@ -24,9 +24,9 @@ function PrivacyPolicy() {
       <PageBanner title="Privacy Policy" />
 
       <main className="flex-grow bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white px-4 md:px-8 lg:px-32 py-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] mb-8">
           Privacy Policy – Master Trader
-        </h1>
+        </h2>
 
         <p className="mb-6">
           At <strong>Master Trader</strong>, we value your privacy and

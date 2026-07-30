@@ -47,7 +47,7 @@ const Login = () => {
         <a href="/">
           <img
             src={'/MT-logo.png'}
-            alt="Logo"
+            alt="Master Trader"
             className="h-20 transition-all duration-300 hover:scale-105"
           />
         </a>
@@ -69,7 +69,7 @@ const Login = () => {
         <div className="w-1/2 hidden md:block">
           <img
             src={sideImage}
-            alt="Login Visual"
+            alt="Master Trader - login"
             className="w-full h-full object-cover"
           />
         </div>

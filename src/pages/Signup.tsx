@@ -161,7 +161,7 @@ const Signup = () => {
         <a href="/">
           <img
             src={"/MT-logo.png"}
-            alt="Logo"
+            alt="Master Trader Signup"
             className="w-40 hover:scale-105 transition-all duration-300"
           />
         </a>
@@ -185,7 +185,7 @@ const Signup = () => {
           <div className="hidden md:block md:w-1/2 relative">
             <img
               src={sideImage}
-              alt="Side Visual"
+              alt="Master Trader"
               className="w-full h-full object-cover"
             />
           </div>
