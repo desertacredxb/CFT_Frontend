@@ -172,6 +172,11 @@ function Comex() {
           name="twitter:description"
           content="Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Learn global metal trading strategies, practice on demo & start with confidence."
         />
+        <meta name="twitter:site" content="@MasterrTraderr" />
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

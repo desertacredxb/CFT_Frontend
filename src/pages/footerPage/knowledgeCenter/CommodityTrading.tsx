@@ -202,7 +202,42 @@ function CommodityTrading() {
           content="https://www.mastertrader.co.in/knowledge/commodity-trading"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Master Traders" />
+        <meta property="og:site_name" content="Master Trader" />
+        <meta property="og:locale" content="en_IN" />
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+        <meta
+          property="og:image:alt"
+          content="Master Trader Logo"
+        />
+
+        {/* Twitter */}
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:site"
+          content="@MasterrTraderr"
+        />
+        <meta
+          name="twitter:creator"
+          content="@MasterrTraderr"
+        />
+        <meta
+          name="twitter:title"
+          content="Commodity Trading: Gold to Crude Oil | Master Traders"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn commodity trading in India from gold & silver to crude oil & agri commodities. Simple, practical guides for beginners by Master Traders."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

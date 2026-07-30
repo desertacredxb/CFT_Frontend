@@ -88,14 +88,17 @@ function Trading() {
     <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>Trading 101: Learn to Trade Smart | Master Traders</title>
+
         <meta
           name="title"
           content="Trading 101: Learn to Trade Smart | Master Traders"
         />
+
         <meta
           name="description"
           content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Simple lessons, real strategies, and step-by-step support for beginners."
         />
+
         <meta
           name="keywords"
           content="trading for beginners, online trading India, how to start trading, learn trading, stock market trading, trading platform India, types of trading, intraday trading, commodity trading, trading course"
@@ -104,6 +107,59 @@ function Trading() {
         <link
           rel="canonical"
           href="https://www.mastertrader.co.in/knowledge/trading"
+        />
+
+        <meta
+          property="og:title"
+          content="Trading 101: Learn to Trade Smart | Master Traders"
+        />
+
+        <meta
+          property="og:description"
+          content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Simple lessons, real strategies, and step-by-step support for beginners."
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/knowledge/trading"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Master Trader" />
+        <meta property="og:locale" content="en_IN" />
+
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+        <meta
+          property="og:image:alt"
+          content="Master Trader Logo"
+        />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:site"
+          content="@MasterrTraderr"
+        />
+        <meta
+          name="twitter:creator"
+          content="@MasterrTraderr"
+        />
+        <meta
+          name="twitter:title"
+          content="Trading 101: Learn to Trade Smart | Master Traders"
+        />
+        <meta
+          name="twitter:description"
+          content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Simple lessons, real strategies, and step-by-step support for beginners."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -128,7 +184,7 @@ We have written this content in simple language so anyone, even someone with zer
 "
       />
 
-      
+
 
 
       <section className="bg-white px-6 py-24 dark:bg-[--bg-color1]">
@@ -568,7 +624,7 @@ const trustPoints = [
 ];
 
 
-function SectionTitle({ title }: { title:React.ReactNode| string }) {
+function SectionTitle({ title }: { title: React.ReactNode | string }) {
   return (
     <div className="mb-6 text-center">
       <h2 className="text-4xl lg:text-5xl font-bold text-[--bg-color1] dark:text-white leading-tight">

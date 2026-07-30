@@ -67,6 +67,48 @@ function Stocks() {
           rel="canonical"
           href="https://www.mastertrader.co.in/products/stocks"
         />
+
+        <meta
+          property="og:title"
+          content="Stock Trading in India | Learn & Invest with Master Traders"
+        />
+
+        <meta
+          property="og:description"
+          content="Learn online stock trading in India with Master Traders, stock types, market analysis, charges, taxation, and global investing made simple."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/products/stocks"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="Stock Trading in India | Learn & Invest with Master Traders"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Learn online stock trading in India with Master Traders, stock types, market analysis, charges, taxation, and global investing made simple."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
       </Helmet>
 
       <div className="flex flex-col min-h-screen">

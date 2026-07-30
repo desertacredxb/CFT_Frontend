@@ -61,6 +61,48 @@ function Commodity() {
           rel="canonical"
           href="https://www.mastertrader.co.in/products/commodity"
         />
+
+        <meta
+          property="og:title"
+          content="Explore Commodity Trading in India with Master Traders"
+        />
+
+        <meta
+          property="og:description"
+          content="Learn online commodity trading with Master Traders, trade gold, oil, and agri commodities with real-time data, low fees, and expert guidance."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/products/commodity"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="Explore Commodity Trading in India with Master Traders"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Learn online commodity trading with Master Traders, trade gold, oil, and agri commodities with real-time data, low fees, and expert guidance."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
       </Helmet>
 
       <div className="flex flex-col min-h-screen">

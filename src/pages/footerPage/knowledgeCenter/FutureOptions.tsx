@@ -212,9 +212,42 @@ function FutureOptions() {
           property="og:url"
           content="https://www.mastertrader.co.in/knowledge/futures-options-trading"
         />
-        <link
-          rel="canonical"
-          href="https://www.mastertrader.co.in/knowledge/futures-options-trading"
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Master Trader" />
+        <meta property="og:locale" content="en_IN" />
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+        <meta
+          property="og:image:alt"
+          content="Master Trader Logo"
+        />
+
+        {/* Twitter */}
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:site"
+          content="@MasterrTraderr"
+        />
+        <meta
+          name="twitter:creator"
+          content="@MasterrTraderr"
+        />
+        <meta
+          name="twitter:title"
+          content="Futures &amp; Options Trading | Master Traders"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn Futures &amp; Options Trading with Master Traders, hedge risk, trade rising or falling markets &amp; build strategy with expert-led, easy-to-follow guidance."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -630,7 +663,7 @@ function FutureOptions() {
         </div>
       </section>
 
-      
+
 
       <Footer />
     </div>

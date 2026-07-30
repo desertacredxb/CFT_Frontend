@@ -150,6 +150,11 @@ function Indexes() {
           name="twitter:description"
           content="Learn indices trading with Master Traders; trade S&P 500, Nifty 50, and more with beginner guides, demo accounts, and expert tips."
         />
+        <meta name="twitter:site" content="@MasterrTraderr" />
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
       </Helmet>
       <div className="mb-20">
         <Navbar />
