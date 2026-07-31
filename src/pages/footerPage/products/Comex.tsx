@@ -188,6 +188,27 @@ function Comex() {
             })),
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "COMEX Trading",
+            url: "https://www.mastertrader.co.in/products/comex",
+            description:
+              "Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Learn global metal trading strategies, practice on demo & start with confidence",
+            brand: {
+              "@type": "Brand",
+              name: "Master Trader",
+            },
+            offers: {
+              "@type": "Offer",
+              url: "https://www.mastertrader.co.in/products/comex",
+              priceCurrency: "INR",
+              price: "0",
+              availability: "https://schema.org/InStock",
+            },
+          })}
+        </script>
       </Helmet>
 
       <div className="mb-20">
@@ -398,9 +419,9 @@ function Comex() {
         </div>
       </section>
 
-      
+
       <section className="bg-gray-50 px-6 py-24 dark:bg-[#0F0903]">
-         <div className="mx-auto max-w-5xl text-center mb-20">
+        <div className="mx-auto max-w-5xl text-center mb-20">
           <Star className="mx-auto mb-6 h-16 w-16 rounded-2xl bg-[--bg-primary-gradient] p-4 text-white" />
           <h2 className="text-4xl font-bold text-[--bg-color1] dark:text-white lg:text-5xl">
             The {" "}

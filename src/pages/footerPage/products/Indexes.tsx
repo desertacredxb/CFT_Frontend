@@ -155,6 +155,41 @@ function Indexes() {
           name="twitter:image"
           content="https://www.mastertrader.co.in/MT-logo.png"
         />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(({ question, answer }) => ({
+              "@type": "Question",
+              name: question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: answer,
+              },
+            })),
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Index Trading",
+            url: "https://www.mastertrader.co.in/products/indexes",
+            description:
+              "Learn indices trading with Master Traders; trade S&P 500, Nifty 50, and more with beginner guides, demo accounts, and expert tips.",
+            brand: {
+              "@type": "Brand",
+              name: "Master Trader",
+            },
+            offers: {
+              "@type": "Offer",
+              url: "https://www.mastertrader.co.in/products/indexes",
+              priceCurrency: "INR",
+              price: "0",
+              availability: "https://schema.org/InStock",
+            },
+          })}
+        </script>
       </Helmet>
       <div className="mb-20">
         <Navbar />

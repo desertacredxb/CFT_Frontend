@@ -7,6 +7,75 @@ import { ArrowBigRight, LucideBarChart2, LucideLineChart } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
+
+const faqs = [
+  {
+    question: "How can I buy stocks online in India?",
+    answer:
+      "Open a Demat account and a trading account with a registered broker. Once your accounts are verified and funded, you can search for a stock and place your buy order through the trading platform.",
+  },
+  {
+    question: "How much money do I need to start buying stocks?",
+    answer:
+      "There is no fixed minimum amount. You can begin with the price of a single share and gradually increase your investment over time.",
+  },
+  {
+    question: "Which stocks should I buy as a beginner?",
+    answer:
+      "Many beginners prefer large-cap companies because they are generally more stable. Always research a company before investing rather than relying on market tips.",
+  },
+  {
+    question: "Can I buy US stocks from India on Master Traders?",
+    answer:
+      "Yes. Through the Reserve Bank of India's Liberalised Remittance Scheme (LRS), Indian residents can invest in US stocks. Master Traders provides educational guidance to help you understand the process.",
+  },
+  {
+    question: "What is the difference between equity and stocks?",
+    answer:
+      "Equity represents ownership in a company, while stocks are the individual shares that represent that ownership. In everyday investing, both terms are often used interchangeably.",
+  },
+  {
+    question: "How do stock prices change?",
+    answer:
+      "Stock prices move because of supply and demand, company performance, economic conditions, investor sentiment, industry developments, and global news.",
+  },
+  {
+    question: "What are dividends?",
+    answer:
+      "Dividends are a portion of a company's profits distributed to shareholders, usually on a quarterly or annual basis.",
+  },
+  {
+    question: "Are stocks safe to invest in?",
+    answer:
+      "Stocks carry investment risk because prices can rise or fall. Diversifying your investments and maintaining a long-term perspective can help manage risk.",
+  },
+  {
+    question: "What is a Demat account?",
+    answer:
+      "A Demat account securely stores your shares and securities electronically, similar to how a bank account stores your money.",
+  },
+  {
+    question: "What is the difference between NSE and BSE?",
+    answer:
+      "The National Stock Exchange (NSE) and Bombay Stock Exchange (BSE) are India's two major stock exchanges. Both are regulated by SEBI and allow trading in many of the same listed companies.",
+  },
+  {
+    question: "Can I sell a stock the same day I buy it?",
+    answer:
+      "Yes. This is known as intraday trading, where shares are bought and sold during the same trading session.",
+  },
+  {
+    question: "What is a stop-loss in stock trading?",
+    answer:
+      "A stop-loss is an order that automatically sells a stock once it reaches a price you set, helping limit potential losses.",
+  },
+  {
+    question: "How are stock profits taxed in India?",
+    answer:
+      "Profits are generally taxed as capital gains. Short-term and long-term investments are taxed under different rules, so it's important to check the latest tax regulations.",
+  },
+];
+
 function Stocks() {
   const navigate = useNavigate();
   const features = [
@@ -109,6 +178,43 @@ function Stocks() {
           name="twitter:image"
           content="https://www.mastertrader.co.in/MT-logo.png"
         />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(({ question, answer }) => ({
+              "@type": "Question",
+              name: question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: answer,
+              },
+            })),
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Stocks Trading",
+            url: "https://www.mastertrader.co.in/products/stocks",
+            description:
+              "Learn online stock trading in India with Master Traders, stock types, market analysis, charges, taxation, and global investing made simple.",
+            brand: {
+              "@type": "Brand",
+              name: "Master Trader",
+            },
+            offers: {
+              "@type": "Offer",
+              url: "https://www.mastertrader.co.in/products/stocks",
+              priceCurrency: "INR",
+              price: "0",
+              availability: "https://schema.org/InStock",
+            },
+          })}
+        </script>
       </Helmet>
 
       <div className="flex flex-col min-h-screen">
@@ -1247,73 +1353,7 @@ function Stocks() {
             {/* FAQ */}
 
             <div className="space-y-5">
-              {[
-                {
-                  question: "How can I buy stocks online in India?",
-                  answer:
-                    "Open a Demat account and a trading account with a registered broker. Once your accounts are verified and funded, you can search for a stock and place your buy order through the trading platform.",
-                },
-                {
-                  question: "How much money do I need to start buying stocks?",
-                  answer:
-                    "There is no fixed minimum amount. You can begin with the price of a single share and gradually increase your investment over time.",
-                },
-                {
-                  question: "Which stocks should I buy as a beginner?",
-                  answer:
-                    "Many beginners prefer large-cap companies because they are generally more stable. Always research a company before investing rather than relying on market tips.",
-                },
-                {
-                  question: "Can I buy US stocks from India on Master Traders?",
-                  answer:
-                    "Yes. Through the Reserve Bank of India's Liberalised Remittance Scheme (LRS), Indian residents can invest in US stocks. Master Traders provides educational guidance to help you understand the process.",
-                },
-                {
-                  question: "What is the difference between equity and stocks?",
-                  answer:
-                    "Equity represents ownership in a company, while stocks are the individual shares that represent that ownership. In everyday investing, both terms are often used interchangeably.",
-                },
-                {
-                  question: "How do stock prices change?",
-                  answer:
-                    "Stock prices move because of supply and demand, company performance, economic conditions, investor sentiment, industry developments, and global news.",
-                },
-                {
-                  question: "What are dividends?",
-                  answer:
-                    "Dividends are a portion of a company's profits distributed to shareholders, usually on a quarterly or annual basis.",
-                },
-                {
-                  question: "Are stocks safe to invest in?",
-                  answer:
-                    "Stocks carry investment risk because prices can rise or fall. Diversifying your investments and maintaining a long-term perspective can help manage risk.",
-                },
-                {
-                  question: "What is a Demat account?",
-                  answer:
-                    "A Demat account securely stores your shares and securities electronically, similar to how a bank account stores your money.",
-                },
-                {
-                  question: "What is the difference between NSE and BSE?",
-                  answer:
-                    "The National Stock Exchange (NSE) and Bombay Stock Exchange (BSE) are India's two major stock exchanges. Both are regulated by SEBI and allow trading in many of the same listed companies.",
-                },
-                {
-                  question: "Can I sell a stock the same day I buy it?",
-                  answer:
-                    "Yes. This is known as intraday trading, where shares are bought and sold during the same trading session.",
-                },
-                {
-                  question: "What is a stop-loss in stock trading?",
-                  answer:
-                    "A stop-loss is an order that automatically sells a stock once it reaches a price you set, helping limit potential losses.",
-                },
-                {
-                  question: "How are stock profits taxed in India?",
-                  answer:
-                    "Profits are generally taxed as capital gains. Short-term and long-term investments are taxed under different rules, so it's important to check the latest tax regulations.",
-                },
-              ].map((faq, index) => (
+              {faqs.map((faq, index) => (
                 <details
                   key={index}
                   className="group rounded-2xl border border-gray-200 dark:border-[--primary-color]/20 bg-white dark:bg-[#1B1207] shadow-lg overflow-hidden"

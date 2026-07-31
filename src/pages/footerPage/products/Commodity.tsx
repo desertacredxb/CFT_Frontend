@@ -10,6 +10,51 @@ import PageBanner from "../../../components/BannerImage";
 import Footer from "../../../components/Footer";
 import { Helmet } from "react-helmet-async";
 
+const faqs = [
+  {
+    question: "What is a commodity trade?",
+    answer:
+      "A commodity trade is the buying or selling of a raw material such as gold, crude oil, silver or wheat through a trading platform. In most cases, traders buy and sell contracts linked to the commodity's price rather than taking physical delivery of the goods.",
+  },
+  {
+    question: "Is online commodity trading safe for beginners?",
+    answer:
+      "Yes. When you use a trusted platform like Master Traders, start with a small amount and learn the basics first, commodity trading can be a suitable way to begin exploring financial markets.",
+  },
+  {
+    question:
+      "How much money do I need to start commodity trading?",
+    answer:
+      "You can begin with a modest investment on Master Traders. Many new traders start small while gaining experience and building confidence.",
+  },
+  {
+    question: "Can I trade commodities alongside stocks?",
+    answer:
+      "Yes. Many traders combine commodities with stocks because the two markets often respond differently to economic conditions, helping create a more diversified portfolio.",
+  },
+  {
+    question: "What are the main risks of commodity trading?",
+    answer:
+      "Commodity prices can move quickly because of weather conditions, geopolitical events, supply disruptions and economic data. Using risk management tools such as stop-loss orders is always recommended.",
+  },
+  {
+    question:
+      "Do I need experience to start online commodity trading?",
+    answer:
+      "No. Master Traders provides beginner-friendly educational resources and an easy-to-use platform so you can learn step by step as you gain experience.",
+  },
+  {
+    question: "What commodities are best for beginners?",
+    answer:
+      "Many beginners choose gold or silver because they are among the world's most actively traded commodities and are widely covered in financial news.",
+  },
+  {
+    question: "How is commodity trading regulated?",
+    answer:
+      "Commodity markets are supervised by financial regulators that establish rules for fair and transparent trading. Choosing a trusted platform that follows recognised regulatory standards helps improve security and reliability.",
+  },
+]
+
 function Commodity() {
   const features = [
     {
@@ -103,6 +148,41 @@ function Commodity() {
           name="twitter:image"
           content="https://www.mastertrader.co.in/MT-logo.png"
         />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(({ question, answer }) => ({
+              "@type": "Question",
+              name: question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: answer,
+              },
+            })),
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Commodity Trading",
+            url: "https://www.mastertrader.co.in/products/commodity",
+            description:
+              "Learn online commodity trading with Master Traders, trade gold, oil, and agri commodities with real-time data, low fees, and expert guidance.",
+            brand: {
+              "@type": "Brand",
+              name: "Master Trader",
+            },
+            offers: {
+              "@type": "Offer",
+              url: "https://www.mastertrader.co.in/products/commodity",
+              priceCurrency: "INR",
+              price: "0",
+              availability: "https://schema.org/InStock",
+            },
+          })}
+        </script>
       </Helmet>
 
       <div className="flex flex-col min-h-screen">
@@ -1121,50 +1201,7 @@ function Commodity() {
             {/* FAQ */}
 
             <div className="space-y-5">
-              {[
-                {
-                  question: "What is a commodity trade?",
-                  answer:
-                    "A commodity trade is the buying or selling of a raw material such as gold, crude oil, silver or wheat through a trading platform. In most cases, traders buy and sell contracts linked to the commodity's price rather than taking physical delivery of the goods.",
-                },
-                {
-                  question: "Is online commodity trading safe for beginners?",
-                  answer:
-                    "Yes. When you use a trusted platform like Master Traders, start with a small amount and learn the basics first, commodity trading can be a suitable way to begin exploring financial markets.",
-                },
-                {
-                  question:
-                    "How much money do I need to start commodity trading?",
-                  answer:
-                    "You can begin with a modest investment on Master Traders. Many new traders start small while gaining experience and building confidence.",
-                },
-                {
-                  question: "Can I trade commodities alongside stocks?",
-                  answer:
-                    "Yes. Many traders combine commodities with stocks because the two markets often respond differently to economic conditions, helping create a more diversified portfolio.",
-                },
-                {
-                  question: "What are the main risks of commodity trading?",
-                  answer:
-                    "Commodity prices can move quickly because of weather conditions, geopolitical events, supply disruptions and economic data. Using risk management tools such as stop-loss orders is always recommended.",
-                },
-                {
-                  question:
-                    "Do I need experience to start online commodity trading?",
-                  answer:
-                    "No. Master Traders provides beginner-friendly educational resources and an easy-to-use platform so you can learn step by step as you gain experience.",
-                },
-                {
-                  question: "What commodities are best for beginners?",
-                  answer:
-                    "Many beginners choose gold or silver because they are among the world's most actively traded commodities and are widely covered in financial news.",
-                },
-                {
-                  question: "How is commodity trading regulated?",
-                  answer:
-                    "Commodity markets are supervised by financial regulators that establish rules for fair and transparent trading. Choosing a trusted platform that follows recognised regulatory standards helps improve security and reliability.",
-                },
-              ].map((faq, index) => (
+              {faqs.map((faq, index) => (
                 <details
                   key={index}
                   className="group rounded-2xl border border-gray-200 dark:border-[--primary-color]/20 bg-white dark:bg-[#1B1207] shadow-lg overflow-hidden"

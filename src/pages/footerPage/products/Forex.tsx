@@ -138,6 +138,27 @@ function Forex() {
             })),
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Forex Trading",
+            url: "https://www.mastertrader.co.in/products/forex",
+            description:
+              "Master forex trading with expert mentors, live strategies & risk-free demo practice. Join thousands of Indian traders building real skills. Start free today!",
+            brand: {
+              "@type": "Brand",
+              name: "Master Trader",
+            },
+            offers: {
+              "@type": "Offer",
+              url: "https://www.mastertrader.co.in/products/forex",
+              priceCurrency: "INR",
+              price: "0",
+              availability: "https://schema.org/InStock",
+            },
+          })}
+        </script>
       </Helmet>
       <div className="mb-20">
         <Navbar />
