@@ -17,6 +17,17 @@ import cfdImage from "../../../assets/03-1.webp";
 import { Helmet } from "react-helmet-async";
 import FaqSection from "../../../components/FaqSection";
 
+
+function SectionTitle({ title }: { title: React.ReactNode | string }) {
+  return (
+    <div className="mb-6 text-center">
+      <h2 className="text-4xl lg:text-5xl font-bold text-[--bg-color1] dark:text-white leading-tight">
+        {title}
+      </h2>
+    </div>
+  );
+}
+
 function EquityTrading() {
   const features = [
     {
@@ -181,9 +192,8 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* What is Equity Trading Section */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-gray-50 dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
-            What is Equity Trading?
-          </h2>
+          <SectionTitle title={<>What is <span className="text-[--primary-color]"> Equity Trading?</span></>} />
+
           <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
               Equity trading simply means buying and selling shares of a company on the stock exchange. When you buy a share, you own a small part of that company. If the company grows and performs well, the value of your share usually goes up. If you sell that share at a higher price than you bought it, you make a profit.
@@ -201,9 +211,7 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* Top Reasons for Equity Trading */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-black dark:text-white text-center">
-            Top Reasons for Equity Trading Everyone Should Know
-          </h2>
+          <SectionTitle title={<>Top Reasons for <span className="text-[--primary-color]"> Equity Trading  </span>Everyone Should Know</>} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-6 bg-gray-50 dark:bg-[--bg-color1] rounded-xl shadow-md">
               <TrendingUp className="text-[var(--primary-color)] w-10 h-10 mb-4" />
@@ -313,9 +321,8 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* Understanding Trading on Equity */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
-            Understanding Trading on Equity
-          </h2>
+          
+          <SectionTitle title={<>Understanding Trading on <span className="text-[--primary-color]">Equity</span></>}/>
           <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
               Trading on equity is a strategy where a company or an investor uses borrowed money along with their own funds to increase potential returns. In simple terms, it means using a small amount of your own capital and a larger amount of borrowed capital to try to earn bigger profits.
@@ -330,9 +337,7 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* Comparison Table */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-gray-50 dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-black dark:text-white text-center">
-            Equity Trading Compared to Other Investment Options
-          </h2>
+          <SectionTitle title={<><span className="text-[--primary-color]">Equity Trading</span> Compared to Other Investment Options</>}/>
           <p className="mt-6 text-gray-700 dark:text-gray-300 text-center max-w-3xl mx-auto mb-6">
             One of the clearest reasons for trading on equity is how it compares to other common ways of growing your money. Here is a simple side-by-side look.
           </p>
@@ -389,9 +394,7 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* Key Terms */}
       <section className="py-16 pt-10 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-black dark:text-white text-center">
-            Key Terms Every Equity Trader Should Know
-          </h2>
+          <SectionTitle title={"Key Terms Every Equity Trader Should Know"}/>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               "Bid Price, the highest price a buyer is willing to pay for a share.",
@@ -419,9 +422,7 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* Taxation */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-gray-50 dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
-            Taxation on Equity Trading
-          </h2>
+          <SectionTitle title={"Taxation on Equity Trading"}/>
           <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl">
             <p>
               Profits from equity trading are taxed based on how long you hold your shares.
@@ -447,9 +448,7 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* Why Choose Master Traders */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-black dark:text-white text-center">
-            Why Choose Master Traders for Equity Trading?
-          </h2>
+          <SectionTitle title={<>Why Choose <span className="text-[--primary-color]">Master Traders</span> for Equity Trading?</>}/>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl">
               <Briefcase className="text-[var(--primary-color)] w-12 h-12 mb-4" />
@@ -529,9 +528,7 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* Things to Keep in Mind */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-white dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-black dark:text-white text-center">
-            Things to Keep in Mind Before You Start Equity Trading
-          </h2>
+          <SectionTitle title={<>Things to Keep in Mind Before You Start<span className="text-[--primary-color]"> Equity Trading</span> </>}/>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="flex items-start gap-3">
               <TrendingDown className="text-[var(--primary-color)] w-6 h-6 flex-shrink-0 mt-1" />
@@ -563,9 +560,7 @@ In this guide, we will walk you through what equity trading really means, why it
       {/* How Master Traders Helps */}
       <section className="py-16 px-4 md:px-8 lg:px-32 bg-gray-50 dark:bg-[--bg-color1]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">
-            How Master Traders Helps You Trade Smarter
-          </h2>
+          <SectionTitle title={<> How Master Traders Helps You <span className="text-[--primary-color]"> Trade Smarter</span></>}/>
           <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl">
             <p>
               At Master Traders, our goal is simple. We want to help you understand the real reasons for equity trading and guide you with honest, easy-to-understand information. From beginner-friendly tutorials to expert market analysis, we support you at every stage of your trading journey.
