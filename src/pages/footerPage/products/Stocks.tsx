@@ -199,6 +199,7 @@ function Stocks() {
             "@context": "https://schema.org",
             "@type": "Product",
             name: "Stocks Trading",
+            image: "https://www.mastertrader.co.in/MT-logo.png",
             url: "https://www.mastertrader.co.in/products/stocks",
             description:
               "Learn online stock trading in India with Master Traders, stock types, market analysis, charges, taxation, and global investing made simple.",

@@ -168,6 +168,7 @@ function Commodity() {
             "@type": "Product",
             name: "Commodity Trading",
             url: "https://www.mastertrader.co.in/products/commodity",
+            image: "https://www.mastertrader.co.in/MT-logo.png",
             description:
               "Learn online commodity trading with Master Traders, trade gold, oil, and agri commodities with real-time data, low fees, and expert guidance.",
             brand: {

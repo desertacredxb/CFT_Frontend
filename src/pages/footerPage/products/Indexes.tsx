@@ -175,6 +175,7 @@ function Indexes() {
             "@type": "Product",
             name: "Index Trading",
             url: "https://www.mastertrader.co.in/products/indexes",
+            image: "https://www.mastertrader.co.in/MT-logo.png",
             description:
               "Learn indices trading with Master Traders; trade S&P 500, Nifty 50, and more with beginner guides, demo accounts, and expert tips.",
             brand: {

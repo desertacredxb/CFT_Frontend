@@ -194,6 +194,8 @@ function Comex() {
             "@type": "Product",
             name: "COMEX Trading",
             url: "https://www.mastertrader.co.in/products/comex",
+            image: "https://www.mastertrader.co.in/MT-logo.png",
+
             description:
               "Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Learn global metal trading strategies, practice on demo & start with confidence",
             brand: {

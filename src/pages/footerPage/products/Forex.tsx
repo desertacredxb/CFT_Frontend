@@ -144,6 +144,7 @@ function Forex() {
             "@type": "Product",
             name: "Forex Trading",
             url: "https://www.mastertrader.co.in/products/forex",
+            image: "https://www.mastertrader.co.in/MT-logo.png",
             description:
               "Master forex trading with expert mentors, live strategies & risk-free demo practice. Join thousands of Indian traders building real skills. Start free today!",
             brand: {

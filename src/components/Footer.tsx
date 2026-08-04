@@ -10,6 +10,31 @@ import { useState } from "react";
 import footerbg from "../assets/cft-footer.png";
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
+
+const footerLinks = [
+  {
+    label: "About Us",
+    href: "/about",
+  },
+  {
+    label: "Insights",
+    href: "/blogs",
+  },
+  {
+    label: "Contact Us",
+    href: "/contact",
+  },
+  {
+    label: "Terms & Conditions",
+    href: "/terms-and-conditions",
+  },
+  {
+    label: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+];
+
+
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -107,25 +132,19 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold mb-4">Useful Links</h3>
           <ul className="space-y-3 text-sm text-white">
-            {["Contact", "About", "Terms & Conditions", "Privacy Policy"].map(
-              (link, idx) => {
-                const formatted = link
-                  .toLowerCase()
-                  .replace(/[^a-z0-9\s]/gi, "") // remove special characters
-                  .replace(/\s+/g, "-"); // replace spaces with hyphens
 
-                return (
-                  <li key={idx}>
-                    <a
-                      href={`/${formatted}`}
-                      className="hover:text-[var(--primary-color)] transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                );
-              }
-            )}
+            <ul className="space-y-2">
+              {footerLinks.map(({ label, href }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="transition-colors hover:text-[var(--primary-color)]"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </ul>
         </div>
 
