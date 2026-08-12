@@ -14,10 +14,10 @@ import Underline from "@tiptap/extension-underline";
 import Link from "@tiptap/extension-link";
 import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
-import {TextStyle} from "@tiptap/extension-text-style";
+import { TextStyle } from "@tiptap/extension-text-style";
 import Color from "@tiptap/extension-color";
 import Highlight from "@tiptap/extension-highlight";
-import {Table} from "@tiptap/extension-table";
+import { Table } from "@tiptap/extension-table";
 import TableRow from "@tiptap/extension-table-row";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
@@ -30,6 +30,11 @@ import {
   X, Trash2, Rows3, Columns3, Palette, Highlighter, Loader2, UploadCloud,
 } from "lucide-react";
 import "../index.css";
+
+import CodeMirror from "@uiw/react-codemirror";
+import { html } from "@codemirror/lang-html";
+import prettier from "prettier/standalone";
+import * as parserHtml from "prettier/plugins/html";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -152,9 +157,9 @@ function EditorToolbar({
           className="h-8 rounded-md border-0 bg-transparent px-1 text-sm text-slate-700 hover:bg-slate-100 focus:outline-none"
           value={
             editor.isActive("heading", { level: 1 }) ? "1" :
-            editor.isActive("heading", { level: 2 }) ? "2" :
-            editor.isActive("heading", { level: 3 }) ? "3" :
-            editor.isActive("heading", { level: 4 }) ? "4" : "paragraph"
+              editor.isActive("heading", { level: 2 }) ? "2" :
+                editor.isActive("heading", { level: 3 }) ? "3" :
+                  editor.isActive("heading", { level: 4 }) ? "4" : "paragraph"
           }
           onChange={(e) => {
             const v = e.target.value;
@@ -392,10 +397,13 @@ const AddBlog = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [existingBlog, editor]);
 
-  const toggleSourceMode = () => {
+  const toggleSourceMode = async () => {
     if (!editor) return;
     if (!sourceMode) {
-      setSourceHtml(editor.getHTML());
+      setShowPreview(false)
+      const html = editor.getHTML();
+      const formatted = await formatHtml(html);
+      setSourceHtml(formatted);
       setSourceMode(true);
     } else {
       editor.commands.setContent(sourceHtml);
@@ -494,6 +502,22 @@ const AddBlog = ({
   const chars = editor?.storage.characterCount?.characters() ?? 0;
   const readingTime = Math.max(1, Math.round(words / 200));
 
+
+  const formatHtml = async (html: string) => {
+    try {
+      return await prettier.format(html, {
+        parser: "html",
+        plugins: [parserHtml],
+        printWidth: 100,
+        tabWidth: 2,
+        useTabs: false,
+      });
+    } catch (error) {
+      console.error("HTML formatting failed:", error);
+      return html;
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-sm">
       <div className="flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
@@ -556,18 +580,52 @@ const AddBlog = ({
                     sourceMode={sourceMode}
                     onToggleSource={toggleSourceMode}
                     showPreview={showPreview}
-                    onTogglePreview={() => setShowPreview((s) => !s)}
+                    onTogglePreview={() => {setShowPreview((s) => !s); setSourceMode(false)}}
                   />
 
                   {showPreview ? (
                     <div className="blog-prose max-h-[480px] overflow-y-auto px-4 py-3" dangerouslySetInnerHTML={{ __html: formData.content }} />
                   ) : sourceMode ? (
-                    <textarea
-                      className="min-h-[360px] w-full resize-y bg-slate-900 px-4 py-3 font-mono text-[13px] text-emerald-300 focus:outline-none"
-                      value={sourceHtml}
-                      onChange={(e) => setSourceHtml(e.target.value)}
-                      spellCheck={false}
-                    />
+                    <>
+                      {/* <textarea
+                        className="min-h-[360px] w-full resize-y bg-slate-900 px-4 py-3 font-mono text-[13px] text-emerald-300 focus:outline-none"
+                        value={sourceHtml}
+                        onChange={(e) => setSourceHtml(e.target.value)}
+                        spellCheck={false}
+                      /> */}
+                      <CodeMirror
+                        value={sourceHtml}
+                        height="360px"
+                        extensions={[html()]}
+                        onChange={(value) => setSourceHtml(value)}
+                        theme="dark"
+                        basicSetup={{
+                          lineNumbers: true,
+                          foldGutter: true,
+                          highlightActiveLine: true,
+                          bracketMatching: true,
+                          closeBrackets: true,
+                          autocompletion: true,
+                        }}
+                        className="overflow-hidden"
+                      />
+                      <style>
+                        {`
+                        .cm-editor .cm-scroller::-webkit-scrollbar {
+                            height: 6px;
+                          }
+
+                          .cm-editor .cm-scroller::-webkit-scrollbar-track {
+                            background: transparent;
+                          }
+
+                          .cm-editor .cm-scroller::-webkit-scrollbar-thumb {
+                            background: #64748b;
+                            border-radius: 999px;
+                          }
+                        `}
+                      </style>
+                    </>
                   ) : (
                     <EditorContent editor={editor} className="max-h-[480px] overflow-y-auto" />
                   )}
