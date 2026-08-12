@@ -123,9 +123,36 @@ const Blog2Details = () => {
         />
 
         <div
-          className="prose prose-lg dark:prose-invert max-w-none mb-6"
+          className="blog-prose prose prose-lg dark:prose-invert max-w-none mb-6"
           dangerouslySetInnerHTML={{ __html: blog.content }}
         />
+        <style>{`
+        .blog-prose { font-size: 1.125rem; line-height: 1.75; color: #FFFFFFCC; }
+        .blog-prose h1 { font-size: 1.86667em; font-weight: 700; margin: 1em 0 0.5em; }
+        .blog-prose h2 { font-size: 1.66667em; font-weight: 700; margin: 1em 0 0.5em; }
+        .blog-prose h3 { font-size: 1.46667em; font-weight: 600; margin: 1em 0 0.4em; }
+        .blog-prose h4 { font-size: 1.26667em; font-weight: 600; margin: 1em 0 0.4em; }
+        .blog-prose p { margin: 0.6em 0; }
+        .blog-prose ul { list-style: disc; padding-left: 1.4em; margin: 0.6em 0; }
+        .blog-prose ol { list-style: decimal; padding-left: 1.4em; margin: 0.6em 0; }
+        .blog-prose blockquote { border-left: 3px solid #6366f1; padding-left: 1em; color: #475569; font-style: italic; margin: 0.8em 0; }
+        .blog-prose pre { background: #0f172a; color: #6ee7b7; padding: 0.9em 1em; border-radius: 0.5em; overflow-x: auto; font-size: 0.85em; margin: 0.8em 0; }
+        .blog-prose code { background: #f1f5f9; padding: 0.15em 0.4em; border-radius: 0.3em; font-size: 0.85em; }
+        .blog-prose pre code { background: none; padding: 0; }
+        .blog-prose a { color: #4f46e5; text-decoration: underline; }
+        .blog-prose img { border-radius: 0.6em; max-width: 100%; margin: 0.8em 0; }
+        .blog-prose hr { border: none; border-top: 1px solid #e2e8f0; margin: 1.5em 0; }
+        .blog-prose table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 0.9em; }
+        .blog-prose th, .blog-prose td { border: 1px solid #e2e8f0; padding: 0.5em 0.7em; }
+        .blog-prose th { background: #f8fafc; font-weight: 600; }
+        .blog-prose p.is-editor-empty:first-child::before {
+          content: attr(data-placeholder);
+          color: #94a3b8;
+          float: left;
+          height: 0;
+          pointer-events: none;
+        }
+      `}</style>
         {/* <button
           onClick={handleShare}
           className="flex items-center gap-2 px-4 py-2 rounded"
