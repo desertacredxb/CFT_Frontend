@@ -290,17 +290,17 @@ export default function AdminPage() {
 
   const filteredSubscribers = subscriberFilterDate
     ? emailSubscribers.filter((sub: any) => {
-        const subDate = new Date(sub.createdAt).toISOString().split("T")[0];
-        return subDate === subscriberFilterDate;
-      })
+      const subDate = new Date(sub.createdAt).toISOString().split("T")[0];
+      return subDate === subscriberFilterDate;
+    })
     : emailSubscribers;
 
   const filteredEmailerData = emailerFilterDate
     ? emailerData.filter(
-        (item: any) =>
-          new Date(item.createdAt).toLocaleDateString() ===
-          new Date(emailerFilterDate).toLocaleDateString()
-      )
+      (item: any) =>
+        new Date(item.createdAt).toLocaleDateString() ===
+        new Date(emailerFilterDate).toLocaleDateString()
+    )
     : emailerData;
 
   return (
@@ -319,11 +319,10 @@ export default function AdminPage() {
                 <li key={item}>
                   <button
                     onClick={() => setActivePanel(item)}
-                    className={`w-full text-left px-2 py-1 rounded ${
-                      activePanel === item
+                    className={`w-full text-left px-2 py-1 rounded ${activePanel === item
                         ? "bg-neutral-200 dark:bg-neutral-800 font-semibold"
                         : "hover:bg-gray-100 dark:hover:bg-neutral-800"
-                    }`}
+                      }`}
                   >
                     {item}
                   </button>
@@ -355,11 +354,10 @@ export default function AdminPage() {
                         setActivePanel(item);
                         setMobileMenuOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2 ${
-                        activePanel === item
+                      className={`w-full text-left px-4 py-2 ${activePanel === item
                           ? "bg-blue-200 font-semibold"
                           : "hover:bg-gray-100"
-                      }`}
+                        }`}
                     >
                       {item}
                     </button>
@@ -634,10 +632,9 @@ export default function AdminPage() {
                     <button
                       onClick={() =>
                         exportToExcel(
-                          `Email Subscribers${
-                            subscriberFilterDate
-                              ? ` ${subscriberFilterDate}`
-                              : ""
+                          `Email Subscribers${subscriberFilterDate
+                            ? ` ${subscriberFilterDate}`
+                            : ""
                           }`,
                           filteredSubscribers,
                           ["Email", "Subscribed"],
@@ -830,11 +827,10 @@ export default function AdminPage() {
                         <>
                           <button
                             onClick={() => setCurrentLeadPage(1)}
-                            className={`px-3 py-1 rounded ${
-                              currentLeadPage === 1
+                            className={`px-3 py-1 rounded ${currentLeadPage === 1
                                 ? "bg-blue-600 text-white"
                                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-                            }`}
+                              }`}
                           >
                             1
                           </button>
@@ -855,11 +851,10 @@ export default function AdminPage() {
                           <button
                             key={page}
                             onClick={() => setCurrentLeadPage(page)}
-                            className={`px-3 py-1 rounded ${
-                              page === currentLeadPage
+                            className={`px-3 py-1 rounded ${page === currentLeadPage
                                 ? "bg-blue-600 text-white"
                                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-                            }`}
+                              }`}
                           >
                             {page}
                           </button>
@@ -874,11 +869,10 @@ export default function AdminPage() {
                           )}
                           <button
                             onClick={() => setCurrentLeadPage(totalLeadsPages)}
-                            className={`px-3 py-1 rounded ${
-                              currentLeadPage === totalLeadsPages
+                            className={`px-3 py-1 rounded ${currentLeadPage === totalLeadsPages
                                 ? "bg-blue-600 text-white"
                                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-                            }`}
+                              }`}
                           >
                             {totalLeadsPages}
                           </button>
@@ -1115,19 +1109,21 @@ export default function AdminPage() {
                           <tr key={blog._id} className=" align-top">
                             <td className="px-4 py-2 w-1/5">{blog.title}</td>
                             <td
-                              className="px-4 py-2 break-words max-w-[250px] cursor-pointer"
+                              className="px-4 py-2 dark:text-white text-black break-words max-w-[250px] cursor-pointer"
                               onClick={() => {
                                 setSelectedBlog(blog);
                                 setEditorContent(blog.content);
                                 setShowContentEditor(true);
                               }}
-                              dangerouslySetInnerHTML={{
+                              
+                            >
+                              <div dangerouslySetInnerHTML={{
                                 __html:
                                   blog.content.length > 150
                                     ? blog.content.slice(0, 140) + "..."
                                     : blog.content,
-                              }}
-                            />
+                              }}/>
+                            </td>
 
                             <td className="px-4 py-2 whitespace-nowrap">
                               {blog.author}
@@ -1398,11 +1394,10 @@ export default function AdminPage() {
                           </button>
                           <button
                             onClick={handleUpdateImage}
-                            className={`px-4 py-2 text-white rounded ${
-                              loading
+                            className={`px-4 py-2 text-white rounded ${loading
                                 ? "bg-blue-400"
                                 : "bg-blue-600 hover:bg-blue-700"
-                            }`}
+                              }`}
                             disabled={loading}
                           >
                             {loading ? "Updating..." : "Update"}
@@ -1441,11 +1436,10 @@ export default function AdminPage() {
                             <button
                               key={item}
                               onClick={() => setCurrentPage(item as number)}
-                              className={`px-3 py-1 rounded border ${
-                                currentPage === item
+                              className={`px-3 py-1 rounded border ${currentPage === item
                                   ? "bg-[var(--primary-color)] text-white"
                                   : "bg-gray-200 dark:bg-gray-700"
-                              }`}
+                                }`}
                             >
                               {item}
                             </button>

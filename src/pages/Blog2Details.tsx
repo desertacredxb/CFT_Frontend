@@ -127,32 +127,111 @@ const Blog2Details = () => {
           dangerouslySetInnerHTML={{ __html: blog.content }}
         />
         <style>{`
-        .blog-prose { font-size: 1.125rem; line-height: 1.75; color: #FFFFFFCC; }
-        .blog-prose h1 { font-size: 1.86667em; font-weight: 700; margin: 1em 0 0.5em; }
-        .blog-prose h2 { font-size: 1.66667em; font-weight: 700; margin: 1em 0 0.5em; }
-        .blog-prose h3 { font-size: 1.46667em; font-weight: 600; margin: 1em 0 0.4em; }
-        .blog-prose h4 { font-size: 1.26667em; font-weight: 600; margin: 1em 0 0.4em; }
-        .blog-prose p { margin: 0.6em 0; }
-        .blog-prose ul { list-style: disc; padding-left: 1.4em; margin: 0.6em 0; }
-        .blog-prose ol { list-style: decimal; padding-left: 1.4em; margin: 0.6em 0; }
-        .blog-prose blockquote { border-left: 3px solid #6366f1; padding-left: 1em; color: #475569; font-style: italic; margin: 0.8em 0; }
-        .blog-prose pre { background: #0f172a; color: #6ee7b7; padding: 0.9em 1em; border-radius: 0.5em; overflow-x: auto; font-size: 0.85em; margin: 0.8em 0; }
-        .blog-prose code { background: #f1f5f9; padding: 0.15em 0.4em; border-radius: 0.3em; font-size: 0.85em; }
-        .blog-prose pre code { background: none; padding: 0; }
-        .blog-prose a { color: #4f46e5; text-decoration: underline; }
-        .blog-prose img { border-radius: 0.6em; max-width: 100%; margin: 0.8em 0; }
-        .blog-prose hr { border: none; border-top: 1px solid #e2e8f0; margin: 1.5em 0; }
-        .blog-prose table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 0.9em; }
-        .blog-prose th, .blog-prose td { border: 1px solid #e2e8f0; padding: 0.5em 0.7em; }
-        .blog-prose th { background: #f8fafc; font-weight: 600; }
-        .blog-prose p.is-editor-empty:first-child::before {
-          content: attr(data-placeholder);
-          color: #94a3b8;
-          float: left;
-          height: 0;
-          pointer-events: none;
-        }
-      `}</style>
+  /* ===================================================
+     1. THEME VARIABLES (Default: Light Mode)
+     =================================================== */
+  :root {
+    --prose-text: #1e293b;
+    --prose-heading: #0f172a;
+    --prose-link: #4f46e5;
+    --prose-quote-border: #6366f1;
+    --prose-quote-text: #475569;
+    --prose-code-bg: #f1f5f9;
+    --prose-code-text: #0f172a;
+    --prose-border: #e2e8f0;
+    --prose-table-th-bg: #f8fafc;
+    --prose-placeholder: #94a3b8;
+  }
+
+  /* Dark Theme Trigger via class on <body>, <html>, or wrapper */
+  .dark, [data-theme="dark"] {
+    --prose-text: #e2e8f0;
+    --prose-heading: #f8fafc;
+    --prose-link: #818cf8;
+    --prose-quote-border: #818cf8;
+    --prose-quote-text: #cbd5e1;
+    --prose-code-bg: #1e293b;
+    --prose-code-text: #f1f5f9;
+    --prose-border: #334155;
+    --prose-table-th-bg: #0f172a;
+    --prose-placeholder: #64748b;
+  }
+
+  /* Optional: Automatic system dark mode preference */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --prose-text: #e2e8f0;
+      --prose-heading: #f8fafc;
+      --prose-link: #818cf8;
+      --prose-quote-border: #818cf8;
+      --prose-quote-text: #cbd5e1;
+      --prose-code-bg: #1e293b;
+      --prose-code-text: #f1f5f9;
+      --prose-border: #334155;
+      --prose-table-th-bg: #0f172a;
+      --prose-placeholder: #64748b;
+    }
+  }
+
+  /* ===================================================
+     2. PROSE STYLES
+     =================================================== */
+  .blog-prose { font-size: 0.95rem; line-height: 1.75; color: var(--prose-text); }
+  .blog-prose h1 { font-size: 1.75rem; font-weight: 700; margin: 1em 0 0.5em; color: var(--prose-heading); }
+  .blog-prose h2 { font-size: 1.4rem; font-weight: 700; margin: 1em 0 0.5em; color: var(--prose-heading); }
+  .blog-prose h3 { font-size: 1.15rem; font-weight: 600; margin: 1em 0 0.4em; color: var(--prose-heading); }
+  .blog-prose h4 { font-size: 1rem; font-weight: 600; margin: 1em 0 0.4em; color: var(--prose-heading); }
+  .blog-prose p { margin: 0.6em 0; }
+  .blog-prose ul { list-style: disc; padding-left: 1.4em; margin: 0.6em 0; }
+  .blog-prose ol { list-style: decimal; padding-left: 1.4em; margin: 0.6em 0; }
+  .blog-prose blockquote { border-left: 3px solid var(--prose-quote-border); padding-left: 1em; color: var(--prose-quote-text); font-style: italic; margin: 0.8em 0; }
+  
+  /* Code blocks maintain dark styling across both modes for consistency */
+  .blog-prose pre { background: #0f172a; color: #6ee7b7; padding: 0.9em 1em; border-radius: 0.5em; overflow-x: auto; font-size: 0.85em; margin: 0.8em 0; }
+  
+  /* Inline code snippet */
+  .blog-prose code { background: var(--prose-code-bg); color: var(--prose-code-text); padding: 0.15em 0.4em; border-radius: 0.3em; font-size: 0.85em; }
+  .blog-prose pre code { background: none; padding: 0; color: inherit; }
+  
+  .blog-prose a { color: var(--prose-link); text-decoration: underline; }
+  .blog-prose img { border-radius: 0.6em; max-width: 100%; margin: 0.8em 0; }
+  .blog-prose hr { border: none; border-top: 1px solid var(--prose-border); margin: 1.5em 0; }
+  .blog-prose table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 0.9em; }
+  .blog-prose th, .blog-prose td { border: 1px solid var(--prose-border); padding: 0.5em 0.7em; }
+  .blog-prose th { background: var(--prose-table-th-bg); font-weight: 600; color: var(--prose-heading); }
+  
+  .blog-prose p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    color: var(--prose-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+  }
+
+  /* ===================================================
+     3. PASTED CONTENT DARK MODE OVERRIDES
+     =================================================== */
+  /* Ensures pasted black/dark text and white highlight boxes remain readable in Dark Mode */
+  .dark .blog-prose [style*="color: rgb(0, 0, 0)"],
+  .dark .blog-prose [style*="color:#000000"],
+  .dark .blog-prose [style*="color: #000000"],
+  .dark .blog-prose [style*="color: black"],
+  .dark .blog-prose [style*="color: rgb(30, 41, 59)"],
+  [data-theme="dark"] .blog-prose [style*="color: rgb(0, 0, 0)"],
+  [data-theme="dark"] .blog-prose [style*="color:#000000"],
+  [data-theme="dark"] .blog-prose [style*="color: #000000"],
+  [data-theme="dark"] .blog-prose [style*="color: black"] {
+    color: var(--prose-text) !important;
+  }
+
+  .dark .blog-prose [style*="background-color: rgb(255, 255, 255)"],
+  .dark .blog-prose [style*="background-color: #ffffff"],
+  .dark .blog-prose [style*="background-color: white"],
+  [data-theme="dark"] .blog-prose [style*="background-color: rgb(255, 255, 255)"],
+  [data-theme="dark"] .blog-prose [style*="background-color: #ffffff"] {
+    background-color: transparent !important;
+  }
+`}</style>
         {/* <button
           onClick={handleShare}
           className="flex items-center gap-2 px-4 py-2 rounded"
