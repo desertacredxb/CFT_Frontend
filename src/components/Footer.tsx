@@ -26,7 +26,7 @@ const footerLinks = [
   },
   {
     label: "Terms & Conditions",
-    href: "/terms-and-conditions",
+    href: "/terms-conditions",
   },
   {
     label: "Privacy Policy",

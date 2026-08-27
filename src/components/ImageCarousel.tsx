@@ -7,7 +7,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../index.css";
 
-const images = [image1, image2, image3, image4];
+// Updated to an array of objects containing src and descriptive alt text
+const slides = [
+  { src: image1, alt: "500x intraday trading app" },
+  { src: image2, alt: "24/7 trading support expert" },
+  { src: image3, alt: "Easy demat account opening app" },
+  { src: image4, alt: "High leverage trading platform" },
+];
 
 const Carousel = () => {
   const settings = {
@@ -35,11 +41,11 @@ const Carousel = () => {
     <div className="bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white transition-colors duration-500">
       <div className="w-11/12 md:w-5/6 mx-auto py-6">
         <Slider {...settings}>
-          {images.map((src, index) => (
+          {slides.map((slide, index) => (
             <div key={index} className="p-2">
               <img
-                src={src}
-                alt={`Slide ${index + 1}`}
+                src={slide.src}
+                alt={slide.alt}
                 className="w-full aspect-video object-cover rounded-lg border border-gray-300 dark:border-gray-700"
                 draggable="false"
               />

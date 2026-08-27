@@ -35,10 +35,55 @@ export const Landing = () => {
           content="online trading platform, online trading, zero commission trading platform, high leverage trading, trading platform for beginners, forex trading platform, Master Trader"
         />
 
-        <link rel="canonical" href="https://www.mastertrader.co.in/" />
+        <link
+          rel="canonical"
+          href="https://www.mastertrader.co.in/"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Master Trader – Online Trading Platform"
+        />
+        <meta
+          property="og:description"
+          content="Trade Forex, Crypto, NSE, MCX & more on Master Trader, India's trusted online trading platform. Zero commission, 500x leverage, fast withdrawals. Start now."
+        />
+        <meta
+          property="og:url"
+          content="https://www.mastertrader.co.in/"
+        />
+        <meta
+          property="og:site_name"
+          content="Master Trader"
+        />
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+        <meta
+          property="og:image:alt"
+          content="Master Trader – Online Trading Platform"
+        />
+
+        {/* Twitter / X */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Master Trader – Online Trading Platform"
+        />
+        <meta
+          name="twitter:description"
+          content="Trade Forex, Crypto, NSE, MCX & more on Master Trader, India's trusted online trading platform. Zero commission, 500x leverage, fast withdrawals. Start now."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
       </Helmet>
 
-      
+
       <Navbar />
       <HeroSection />
       <WhyChoose />
