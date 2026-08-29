@@ -154,6 +154,10 @@ function Comex() {
           content="https://www.mastertrader.co.in/products/comex"
         />
         <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+        <meta
           property="og:title"
           content="COMEX Trading India | Gold & Silver | Master Traders"
         />

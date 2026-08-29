@@ -196,7 +196,7 @@ function FutureOptions() {
 
         <link
           rel="canonical"
-          href="https://www.mastertrader.co.in/knowledge/futures-options-trading"
+          href="https://www.mastertrader.co.in/knowledge/future-options"
         />
 
         {/* Open Graph */}
@@ -210,7 +210,7 @@ function FutureOptions() {
         />
         <meta
           property="og:url"
-          content="https://www.mastertrader.co.in/knowledge/futures-options-trading"
+          content="https://www.mastertrader.co.in/knowledge/future-options"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Master Trader" />

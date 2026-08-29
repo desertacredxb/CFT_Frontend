@@ -83,7 +83,7 @@ const Footer = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-5">
+      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-5 gap-5">
         {/* Logo & Description */}
         <div>
           <div className="flex items-center space-x-2 mb-4">
@@ -150,7 +150,14 @@ const Footer = () => {
 
         {/* Market we Serve */}
         <div>
-          <h3 className="text-lg font-bold mb-4">Products</h3>
+          <h3 className="text-lg font-bold mb-4">
+            <a
+              href="/products"
+              className="hover:text-[var(--primary-color)] transition-colors"
+            >
+              Products
+            </a>
+          </h3>
           <ul className="space-y-3 text-sm text-white">
             {["Stocks", "Commodity", "Indexes", "Forex", "Comex"].map(
               (market, idx) => {
@@ -175,7 +182,44 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-lg font-bold mb-4">Knowledge Center</h3>
+          <h3 className="text-lg font-bold mb-4">
+            <a
+              href="/markets"
+              className="hover:text-[var(--primary-color)] transition-colors"
+            >
+              Markets We Serve
+            </a>
+          </h3>
+          <ul className="space-y-3 text-sm text-white">
+            {[
+              { name: "Stocks (NSE F&O)", path: "/markets/nse-f-o" },
+              { name: "Commodity (MCX)", path: "/markets/mcx" },
+              { name: "US Stocks & Indices", path: "/markets/us-stocks-indices" },
+              { name: "Forex", path: "/markets/forex" },
+              { name: "Comex", path: "/markets/comex" },
+              { name: "Crypto", path: "/markets/crypto" },
+            ].map((item, idx) => (
+              <li key={idx}>
+                <a
+                  href={item.path}
+                  className="hover:text-[var(--primary-color)] transition-colors"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-bold mb-4">
+            <a
+              href="/knowledge"
+              className="hover:text-[var(--primary-color)] transition-colors"
+            >
+              Knowledge Center
+            </a>
+          </h3>
           <ul className="space-y-3 text-sm text-white">
             {[
               "Trading",

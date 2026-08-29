@@ -30,8 +30,6 @@ import FutureOptions from "./pages/footerPage/knowledgeCenter/FutureOptions";
 import MarginTrading from "./pages/footerPage/knowledgeCenter/MarginTrading";
 import IntradayTrading from "./pages/footerPage/knowledgeCenter/IntradayTrading";
 import NSEFOInfo from "./pages/Markets/Nse";
-import Mcx from "./pages/Markets/Mcx";
-import Crypto from "./pages/Markets/Crypto";
 import USStocks from "./pages/Markets/UsStocks";
 import Forex from "./pages/Markets/Forex";
 import Forex2 from "./pages/footerPage/products/Forex";
@@ -53,6 +51,8 @@ import Signup_V2 from "./pages/Signup_V2";
 import { ToastContainer } from "react-toastify";
 import ChatBot from "./components/chatbot/NewChatBot";
 import LeadForm from "./components/LeadForm";
+import McxTradingPage from "./pages/Markets/Mcx";
+import CryptoTradingPage from "./pages/Markets/Crypto";
 
 function App() {
   return (
@@ -155,8 +155,8 @@ function App() {
           <Route path="/knowledge/future-options" element={<FutureOptions />} />
           <Route path="/markets" element={<Market />} />
           <Route path="/markets/nse-f-o" element={<NSEFOInfo />} />
-          <Route path="/markets/mcx" element={<Mcx />} />
-          <Route path="/markets/crypto" element={<Crypto />} />
+          <Route path="/markets/mcx" element={<McxTradingPage />} />
+          <Route path="/markets/crypto" element={<CryptoTradingPage />} />
           <Route path="/markets/us-stocks-indices" element={<USStocks />} />
           <Route path="/markets/forex" element={<Forex />} />
           <Route path="/markets/comex" element={<ComexInfo />} />

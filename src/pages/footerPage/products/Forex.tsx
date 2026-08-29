@@ -104,7 +104,7 @@ function Forex() {
         />
         <meta
           property="og:image"
-          content={cfdImage}
+          content="https://www.mastertrader.co.in/MT-logo.png"
         />
         <meta property="og:site_name" content="Master Traders" />
         <meta property="og:locale" content="en_IN" />
@@ -121,7 +121,7 @@ function Forex() {
         />
         <meta
           name="twitter:image"
-          content={cfdImage}
+          content={"https://www.mastertrader.co.in/MT-logo.png"}
         />
 
         <script type="application/ld+json">

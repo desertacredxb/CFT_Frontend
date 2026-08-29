@@ -127,12 +127,12 @@ const Blog2 = () => {
       <main className="py-16 px-4 sm:px-6 lg:px-8 mt-12">
         {/* Header Section */}
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold">
+          <h1 className="text-3xl sm:text-4xl font-bold">
             Latest{" "}
             <span className="text-[var(--primary-color)] italic">
               Blog Updates
             </span>
-          </h2>
+          </h1>
           <p className="mt-2 max-w-2xl mx-auto text-gray-500 dark:text-gray-300">
             Stay informed with the latest updates in trading, markets, and the
             economy.

@@ -89,16 +89,34 @@ const Blog2Details = () => {
         <p className="text-white mt-4">Loading....</p>
       </div>
     );
+
+  const currentUrl = `https://www.mastertrader.co.in/blogs/${blog.slug}`;
+
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
       <Helmet>
+        {/* Basic SEO */}
         <title>{blog.title}</title>
         <meta name="description" content={blog.excerpt} />
-        <link
-          rel="canonical"
-          href={`https://www.mastertrader.co.in/blogs/${blog.slug}`}
-        />
+        <link rel="canonical" href={currentUrl} />
+
+        {/* Open Graph (OG) Meta Tags */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.excerpt} />
+        <meta property="og:image" content={blog.coverImage} />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:site_name" content="Master Trader" />
+        <meta property="article:published_time" content={blog.datePublished} />
+        <meta property="article:author" content={blog.author} />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={blog.title} />
+        <meta name="twitter:description" content={blog.excerpt} />
+        <meta name="twitter:image" content={blog.coverImage} />
       </Helmet>
+
       {/* ✅ Schema Markup */}
       {Array.isArray(blog.schemaMarkup) &&
         blog.schemaMarkup.map((markup, idx) => (
