@@ -1,103 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.mastertrader.co.in/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/blogs</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/blogs/the-best-stock-broker-in-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/features</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/disclaimer</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/terms-conditions</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/markets/nse-f-o</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/products/stocks</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/products/commodity</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/products/indexes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/products/forex</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/products/comex</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/knowledge/trading</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/knowledge/equity-trading</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/knowledge/future-options</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/knowledge/commodity-trading</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/knowledge/margin-trading</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.mastertrader.co.in/knowledge/intraday-trading</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+  <loc>https://www.mastertrader.co.in/</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/about</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/features</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/Products</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+
+<url>
+  <loc>https://www.mastertrader.co.in/products/stocks</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/products/commodity</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/products/indexes</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/products/forex</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/products/comex</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/markets/</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/markets/mcx</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/markets/crypto</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/markets/us-stocks-indices</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/markets/forex</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/markets/comex</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/markets/nse-f-o</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/knowledge</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/knowledge/trading</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/knowledge/equity-trading</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/knowledge/future-options</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/knowledge/commodity-trading</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/knowledge/margin-trading</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/knowledge/intraday-trading</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/blogs</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/blogs/the-best-stock-broker-in-india</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/blogs/best-time-frame-for-intraday-trading</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/blogs/futures-and-options-trading-for-beginners-a-complete-guide</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/blogs/complete-guide-to-trading-on-margin-for-beginners</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/blogs/what-is-trading</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/blogs/what-is-cas-in-the-stock-market-closing-auction-session</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/privacy-policy</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/terms-conditions</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>https://www.mastertrader.co.in/disclaimer</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+
 </urlset>
