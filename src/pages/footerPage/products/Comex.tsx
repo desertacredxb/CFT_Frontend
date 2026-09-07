@@ -131,14 +131,14 @@ function Comex() {
   return (
     <div className="flex min-h-screen flex-col bg-white dark:bg-[--bg-color1]">
       <Helmet>
-        <title>COMEX Trading India | Gold & Silver | Master Traders</title>
+        <title>Trade COMEX Gold & Silver | Open Account | Master Traders</title>
         <meta
           name="title"
-          content="COMEX Trading India | Gold & Silver | Master Traders"
+          content="Trade COMEX Gold & Silver | Open Account | Master Traders"
         />
         <meta
           name="description"
-          content="Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Learn global metal trading strategies, practice on demo & start with confidence."
+          content="Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Open a free demo account and start trading today."
         />
         <meta
           name="keywords"
@@ -159,22 +159,22 @@ function Comex() {
         />
         <meta
           property="og:title"
-          content="COMEX Trading India | Gold & Silver | Master Traders"
+          content="Trade COMEX Gold & Silver | Open Account | Master Traders"
         />
         <meta
           property="og:description"
-          content="Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Learn global metal trading strategies, practice on demo & start with confidence."
+          content="Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Open a free demo account and start trading today."
         />
         <meta property="og:site_name" content="Master Traders" />
         <meta property="og:locale" content="en_IN" />
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:title"
-          content="COMEX Trading India | Gold & Silver | Master Traders"
+          content="Trade COMEX Gold & Silver | Open Account | Master Traders"
         />
         <meta
           name="twitter:description"
-          content="Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Learn global metal trading strategies, practice on demo & start with confidence."
+          content="Trade gold, silver & copper on COMEX with expert guidance from Master Traders. Open a free demo account and start trading today."
         />
         <meta name="twitter:site" content="@MasterrTraderr" />
         <meta

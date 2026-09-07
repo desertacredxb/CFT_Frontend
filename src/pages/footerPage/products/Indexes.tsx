@@ -100,16 +100,16 @@ function Indexes() {
     <div className="flex flex-col min-h-screen">
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>Online Indices Trading in India | Master Traders</title>
+        <title>Trade Indices Online | Open Free Account | Master Traders</title>
 
         <meta
           name="title"
-          content="Online Indices Trading in India | Master Traders"
+          content="Trade Indices Online | Open Free Account | Master Traders"
         />
 
         <meta
           name="description"
-          content="Learn indices trading with Master Traders; trade S&P 500, Nifty 50, and more with beginner guides, demo accounts, and expert tips."
+          content="Trade S&P 500, Nifty 50 & more with Master Traders. Real-time data, expert guidance & a free demo account. Start indices trading today."
         />
 
         <meta
@@ -131,12 +131,18 @@ function Indexes() {
         />
         <meta
           property="og:title"
-          content="Online Indices Trading in India | Master Traders"
+          content="Trade Indices Online | Open Free Account | Master Traders"
         />
         <meta
           property="og:description"
-          content="Learn indices trading with Master Traders; trade S&P 500, Nifty 50, and more with beginner guides, demo accounts, and expert tips."
+          content="Trade S&P 500, Nifty 50 & more with Master Traders. Real-time data, expert guidance & a free demo account. Start indices trading today."
         />
+
+         <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+        
         <meta property="og:site_name" content="Master Traders" />
         <meta property="og:locale" content="en_IN" />
 
@@ -144,11 +150,11 @@ function Indexes() {
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:title"
-          content="Online Indices Trading in India | Master Traders"
+          content="Trade Indices Online | Open Free Account | Master Traders"
         />
         <meta
           name="twitter:description"
-          content="Learn indices trading with Master Traders; trade S&P 500, Nifty 50, and more with beginner guides, demo accounts, and expert tips."
+          content="Trade S&P 500, Nifty 50 & more with Master Traders. Real-time data, expert guidance & a free demo account. Start indices trading today."
         />
         <meta name="twitter:site" content="@MasterrTraderr" />
         <meta

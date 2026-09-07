@@ -63,16 +63,16 @@ function Forex() {
     <div className="flex flex-col min-h-screen">
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>Learn Forex Trading & Start Earning | Master Traders</title>
+        <title>Start Forex Trading Today | Master Traders</title>
 
         <meta
           name="title"
-          content="Learn Forex Trading & Start Earning | Master Traders"
+          content="Start Forex Trading Today | Master Traders"
         />
 
         <meta
           name="description"
-          content="Master forex trading with expert mentors, live strategies & risk-free demo practice. Join thousands of Indian traders building real skills. Start free today!"
+          content="Trade forex with expert mentors and live strategies at Master Traders. Open a free demo account and start earning. Sign up free today."
         />
 
         <meta
@@ -96,11 +96,11 @@ function Forex() {
         />
         <meta
           property="og:title"
-          content="Learn Forex Trading & Start Earning | Master Traders"
+          content="Start Forex Trading Today | Master Traders"
         />
         <meta
           property="og:description"
-          content="Master forex trading with expert mentors, live strategies & risk-free demo practice. Join thousands of Indian traders building real skills. Start free today!"
+          content="Trade forex with expert mentors and live strategies at Master Traders. Open a free demo account and start earning. Sign up free today!"
         />
         <meta
           property="og:image"
@@ -113,11 +113,11 @@ function Forex() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Learn Forex Trading & Start Earning | Master Traders"
+          content="Start Forex Trading Today | Master Traders"
         />
         <meta
           name="twitter:description"
-          content="Master forex trading with expert mentors, live strategies & risk-free demo practice. Join thousands of Indian traders building real skills. Start free today!"
+          content="Trade forex with expert mentors and live strategies at Master Traders. Open a free demo account and start earning. Sign up free today!"
         />
         <meta
           name="twitter:image"

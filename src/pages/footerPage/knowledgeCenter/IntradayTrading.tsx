@@ -159,14 +159,14 @@ function IntradayTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Intraday Trading Guide | Master Trader</title>
+        <title>Start Intraday Trading Today | Master Traders</title>
         <meta
           name="title"
-          content="Intraday Trading Guide | Master Trader"
+          content="Start Intraday Trading Today | Master Traders"
         />
         <meta
           name="description"
-          content="Learn intraday trading strategies, timing, and risk control from Master Trader. Perfect for those who want to profit from daily market movements."
+          content="Trade intraday with Master Traders. Get expert strategies, real-time data & risk tools. Open a free account and start trading today."
         />
         <meta
           name="keywords"
@@ -183,11 +183,11 @@ function IntradayTrading() {
         />
         <meta
           property="og:title"
-          content="Intraday Trading Guide | Master Trader"
+          content="Start Intraday Trading Today | Master Traders"
         />
         <meta
           property="og:description"
-          content="Learn intraday trading strategies, timing, and risk control from Master Trader. Perfect for those who want to profit from daily market movements."
+          content="Trade intraday with Master Traders. Get expert strategies, real-time data & risk tools. Open a free account and start trading today."
         />
         <meta property="og:site_name" content="Master Traders" />
         <meta property="og:locale" content="en_IN" />
@@ -198,11 +198,11 @@ function IntradayTrading() {
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:title"
-          content="Intraday Trading Guide | Master Trader"
+          content="Start Intraday Trading Today | Master Traders"
         />
         <meta
           name="twitter:description"
-          content="Learn intraday trading strategies, timing, and risk control from Master Trader. Perfect for those who want to profit from daily market movements."
+          content="Trade intraday with Master Traders. Get expert strategies, real-time data & risk tools. Open a free account and start trading today."
         />
         <meta name="twitter:site" content="@MasterrTraderr" />
         <meta

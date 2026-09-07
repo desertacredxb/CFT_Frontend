@@ -99,11 +99,16 @@ function EquityTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Equity Trading: Grow Your Wealth | Master Traders</title>
+        <title>Open a Free Equity Trading Account | Master Traders</title>
 
         <meta
+          name="title"
+          content="Open a Free Equity Trading Account | Master Traders"
+        />
+        
+        <meta
           name="description"
-          content="Learn equity trading with Master Traders, buy shares, build wealth & earn dividends with expert guidance. Simple, honest lessons for every Indian investor."
+          content="Start equity trading with Master Traders. Buy shares, build wealth & earn dividends with low brokerage. Open your free account today."
         />
 
         <meta
@@ -119,11 +124,11 @@ function EquityTrading() {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Equity Trading: Grow Your Wealth | Master Traders"
+          content="Open a Free Equity Trading Account | Master Traders"
         />
         <meta
           property="og:description"
-          content="Learn equity trading with Master Traders, buy shares, build wealth & earn dividends with expert guidance. Simple, honest lessons for every Indian investor."
+          content="Start equity trading with Master Traders. Buy shares, build wealth & earn dividends with low brokerage. Open your free account today."
         />
         <meta
           property="og:url"
@@ -156,11 +161,11 @@ function EquityTrading() {
         />
         <meta
           name="twitter:title"
-          content="Equity Trading: Grow Your Wealth | Master Traders"
+          content="Open a Free Equity Trading Account | Master Traders"
         />
         <meta
           name="twitter:description"
-          content="Learn equity trading with Master Traders, buy shares, build wealth & earn dividends with expert guidance. Simple, honest lessons for every Indian investor."
+          content="Start equity trading with Master Traders. Buy shares, build wealth & earn dividends with low brokerage. Open your free account today."
         />
         <meta
           name="twitter:image"

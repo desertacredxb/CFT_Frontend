@@ -87,16 +87,16 @@ function Trading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Trading 101: Learn to Trade Smart | Master Traders</title>
+        <title>Learn to Trade & Start Investing | Master Traders</title>
 
         <meta
           name="title"
-          content="Trading 101: Learn to Trade Smart | Master Traders"
+          content="Learn to Trade & Start Investing | Master Traders"
         />
 
         <meta
           name="description"
-          content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Simple lessons, real strategies, and step-by-step support for beginners."
+          content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Open a free demo account and trade with confidence."
         />
 
         <meta
@@ -111,12 +111,12 @@ function Trading() {
 
         <meta
           property="og:title"
-          content="Trading 101: Learn to Trade Smart | Master Traders"
+          content="Trade Smarter with Expert Guidance | Master Traders"
         />
 
         <meta
           property="og:description"
-          content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Simple lessons, real strategies, and step-by-step support for beginners."
+          content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Open a free demo account and trade with confidence."
         />
 
         <meta
@@ -151,11 +151,11 @@ function Trading() {
         />
         <meta
           name="twitter:title"
-          content="Trading 101: Learn to Trade Smart | Master Traders"
+          content="Trade Smarter with Expert Guidance | Master Traders"
         />
         <meta
           name="twitter:description"
-          content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Simple lessons, real strategies, and step-by-step support for beginners."
+          content="Start trading stocks, commodities & more with expert-led guidance from Master Traders. Open a free demo account and trade with confidence."
         />
         <meta
           name="twitter:image"

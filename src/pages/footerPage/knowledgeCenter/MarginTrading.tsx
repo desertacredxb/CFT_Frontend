@@ -161,8 +161,8 @@ function MarginTrading() {
     },
   ];
 
-  const title = "Margin Trading: Borrow, Trade, Grow | Master Traders";
-  const desc = "Understand what margin trading really means, how it works, the risks, and the golden rules to trade responsibly. Clear, honest guidance from Master Traders."
+  const title = "Trade on Margin | Open a Free Account | Master Traders";
+  const desc = "Boost your buying power with margin trading at Master Traders. Open a free demo account today."
   const keywords = "margin trading, margin trading India, what is margin trading, margin trading meaning, margin trading vs cash trading, MTF margin trading, SEBI margin trading rules, Master Traders margin"
 
   return (

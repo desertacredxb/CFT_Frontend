@@ -22,8 +22,7 @@ const faqs = [
       "Yes. When you use a trusted platform like Master Traders, start with a small amount and learn the basics first, commodity trading can be a suitable way to begin exploring financial markets.",
   },
   {
-    question:
-      "How much money do I need to start commodity trading?",
+    question: "How much money do I need to start commodity trading?",
     answer:
       "You can begin with a modest investment on Master Traders. Many new traders start small while gaining experience and building confidence.",
   },
@@ -38,8 +37,7 @@ const faqs = [
       "Commodity prices can move quickly because of weather conditions, geopolitical events, supply disruptions and economic data. Using risk management tools such as stop-loss orders is always recommended.",
   },
   {
-    question:
-      "Do I need experience to start online commodity trading?",
+    question: "Do I need experience to start online commodity trading?",
     answer:
       "No. Master Traders provides beginner-friendly educational resources and an easy-to-use platform so you can learn step by step as you gain experience.",
   },
@@ -53,7 +51,7 @@ const faqs = [
     answer:
       "Commodity markets are supervised by financial regulators that establish rules for fair and transparent trading. Choosing a trusted platform that follows recognised regulatory standards helps improve security and reliability.",
   },
-]
+];
 
 function Commodity() {
   const features = [
@@ -85,11 +83,11 @@ function Commodity() {
   return (
     <>
       <Helmet>
-        <title>Explore Commodity Trading in India with Master Traders</title>
+        <title>Start Commodity Trading | Free Account | Master Traders</title>
 
         <meta
           name="title"
-          content="Explore Commodity Trading in India with Master Traders"
+          content="Start Commodity Trading | Free Account | Master Traders"
         />
 
         <meta
@@ -99,7 +97,7 @@ function Commodity() {
 
         <meta
           name="keywords"
-          content="online commodity trading, commodity trading India, gold trading online, oil trading, agricultural commodities, precious metals trading, commodity trading platform, commodity vs stock trading, Master Traders"
+          content="Trade gold, oil & agri commodities online with Master Traders. Real-time data, low fees & expert guidance. Open your free account today."
         />
 
         <link
@@ -109,12 +107,12 @@ function Commodity() {
 
         <meta
           property="og:title"
-          content="Explore Commodity Trading in India with Master Traders"
+          content="Start Commodity Trading | Free Account | Master Traders"
         />
 
         <meta
           property="og:description"
-          content="Learn online commodity trading with Master Traders, trade gold, oil, and agri commodities with real-time data, low fees, and expert guidance."
+          content="Trade gold, oil & agri commodities online with Master Traders. Real-time data, low fees & expert guidance. Open your free account today."
         />
 
         <meta
@@ -129,19 +127,16 @@ function Commodity() {
 
         <meta property="og:type" content="website" />
 
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
+        <meta name="twitter:card" content="summary_large_image" />
 
         <meta
           name="twitter:title"
-          content="Explore Commodity Trading in India with Master Traders"
+          content="Start Commodity Trading | Free Account | Master Traders"
         />
 
         <meta
           name="twitter:description"
-          content="Learn online commodity trading with Master Traders, trade gold, oil, and agri commodities with real-time data, low fees, and expert guidance."
+          content="Trade gold, oil & agri commodities online with Master Traders. Real-time data, low fees & expert guidance. Open your free account today."
         />
 
         <meta

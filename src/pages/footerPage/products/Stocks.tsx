@@ -7,7 +7,6 @@ import { ArrowBigRight, LucideBarChart2, LucideLineChart } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
-
 const faqs = [
   {
     question: "How can I buy stocks online in India?",
@@ -113,43 +112,45 @@ function Stocks() {
   return (
     <>
       <Helmet>
-        <title>
-          Stock Trading in India | Learn & Invest with Master Traders
-        </title>
+        {/* Primary SEO */}
+        <title>Open a Stock Trading Account | Master Traders</title>
 
         <meta
           name="title"
-          content="Stock Trading in India | Learn & Invest with Master Traders"
+          content="Open a Stock Trading Account | Master Traders"
         />
 
         <meta
           name="description"
-          content="Learn online stock trading in India with Master Traders, stock types, market analysis, charges, taxation, and global investing made simple."
+          content="Start stock trading in India with Master Traders. Real-time data, expert guidance & low brokerage. Open your free trading account today."
         />
 
         <meta
           name="keywords"
-          content="online stock trading, stock trading India, how to buy stocks online, Demat account, NSE BSE trading, stock market for beginners, invest in US stocks from India, stock market taxation India, types of stocks, Master Traders"
+          content="stock trading account, stock trading in India, online stock trading, open trading account, stock broker India, stock market trading, equity trading, Master Traders"
         />
 
+        {/* Canonical */}
         <link
           rel="canonical"
           href="https://www.mastertrader.co.in/products/stocks"
         />
 
+        {/* Robots */}
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+
+        {/* Open Graph */}
         <meta
           property="og:title"
-          content="Stock Trading in India | Learn & Invest with Master Traders"
+          content="Open a Stock Trading Account | Master Traders"
         />
 
         <meta
           property="og:description"
-          content="Learn online stock trading in India with Master Traders, stock types, market analysis, charges, taxation, and global investing made simple."
-        />
-
-        <meta
-          property="og:image"
-          content="https://www.mastertrader.co.in/MT-logo.png"
+          content="Start stock trading in India with Master Traders. Real-time data, expert guidance & low brokerage. Open your free trading account today."
         />
 
         <meta
@@ -157,65 +158,32 @@ function Stocks() {
           content="https://www.mastertrader.co.in/products/stocks"
         />
 
+        <meta
+          property="og:image"
+          content="https://www.mastertrader.co.in/MT-logo.png"
+        />
+
         <meta property="og:type" content="website" />
 
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
+        <meta property="og:site_name" content="Master Traders" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
 
         <meta
           name="twitter:title"
-          content="Stock Trading in India | Learn & Invest with Master Traders"
+          content="Open a Stock Trading Account | Master Traders"
         />
 
         <meta
           name="twitter:description"
-          content="Learn online stock trading in India with Master Traders, stock types, market analysis, charges, taxation, and global investing made simple."
+          content="Start stock trading in India with Master Traders. Real-time data, expert guidance & low brokerage. Open your free trading account today."
         />
 
         <meta
           name="twitter:image"
           content="https://www.mastertrader.co.in/MT-logo.png"
         />
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map(({ question, answer }) => ({
-              "@type": "Question",
-              name: question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: answer,
-              },
-            })),
-          })}
-        </script>
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Stocks Trading",
-            image: "https://www.mastertrader.co.in/MT-logo.png",
-            url: "https://www.mastertrader.co.in/products/stocks",
-            description:
-              "Learn online stock trading in India with Master Traders, stock types, market analysis, charges, taxation, and global investing made simple.",
-            brand: {
-              "@type": "Brand",
-              name: "Master Trader",
-            },
-            offers: {
-              "@type": "Offer",
-              url: "https://www.mastertrader.co.in/products/stocks",
-              priceCurrency: "INR",
-              price: "0",
-              availability: "https://schema.org/InStock",
-            },
-          })}
-        </script>
       </Helmet>
 
       <div className="flex flex-col min-h-screen">

@@ -171,11 +171,16 @@ function CommodityTrading() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Commodity Trading: Gold to Crude Oil | Master Traders</title>
+        <title>Start Commodity Trading | Open Free Account | Master Traders</title>
+
+        <meta
+          name="title"
+          content="Start Commodity Trading | Open Free Account | Master Traders"
+        />
 
         <meta
           name="description"
-          content="Learn commodity trading in India from gold & silver to crude oil & agri commodities. Simple, practical guides for beginners by Master Traders."
+          content="Trade gold, silver & crude oil with Master Traders. Real-time prices, low fees & expert guidance. Open your free trading account today."
         />
 
         <meta
@@ -191,11 +196,11 @@ function CommodityTrading() {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Commodity Trading: Gold to Crude Oil | Master Traders"
+          content="Start Commodity Trading | Open Free Account | Master Traders"
         />
         <meta
           property="og:description"
-          content="Learn commodity trading in India from gold & silver to crude oil & agri commodities. Simple, practical guides for beginners by Master Traders."
+          content="Trade gold, silver & crude oil with Master Traders. Real-time prices, low fees & expert guidance. Open your free trading account today."
         />
         <meta
           property="og:url"
@@ -228,11 +233,11 @@ function CommodityTrading() {
         />
         <meta
           name="twitter:title"
-          content="Commodity Trading: Gold to Crude Oil | Master Traders"
+          content="Start Commodity Trading | Open Free Account | Master Traders"
         />
         <meta
           name="twitter:description"
-          content="Learn commodity trading in India from gold & silver to crude oil & agri commodities. Simple, practical guides for beginners by Master Traders."
+          content="Trade gold, silver & crude oil with Master Traders. Real-time prices, low fees & expert guidance. Open your free trading account today."
         />
         <meta
           name="twitter:image"

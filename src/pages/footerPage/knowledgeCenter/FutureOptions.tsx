@@ -182,11 +182,16 @@ function FutureOptions() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Learn Futures &amp; Options Trading | Master Traders</title>
+        <title>Trade Futures & Options | Open Account | Master Traders</title>
+
+        <meta
+          name="title"
+          content="Trade Futures & Options | Open Account | Master Traders"
+        />
 
         <meta
           name="description"
-          content="Learn Futures &amp; Options Trading with Master Traders, hedge risk, trade rising or falling markets &amp; build strategy with expert-led, easy-to-follow guidance."
+          content="Hedge risk and trade any market direction with Master Traders. Expert-led strategies & a free demo account. Start trading F&O today."
         />
 
         <meta
@@ -202,11 +207,11 @@ function FutureOptions() {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Learn Futures &amp; Options Trading | Master Traders"
+          content="Trade Futures & Options | Open Account | Master Traders"
         />
         <meta
           property="og:description"
-          content="Learn Futures &amp; Options Trading with Master Traders, hedge risk, trade rising or falling markets &amp; build strategy with expert-led, easy-to-follow guidance."
+          content="Hedge risk and trade any market direction with Master Traders. Expert-led strategies & a free demo account. Start trading F&O today."
         />
         <meta
           property="og:url"
@@ -239,11 +244,11 @@ function FutureOptions() {
         />
         <meta
           name="twitter:title"
-          content="Learn Futures &amp; Options Trading | Master Traders"
+          content="Trade Futures & Options | Open Account | Master Traders"
         />
         <meta
           name="twitter:description"
-          content="Learn Futures &amp; Options Trading with Master Traders, hedge risk, trade rising or falling markets &amp; build strategy with expert-led, easy-to-follow guidance."
+          content="Hedge risk and trade any market direction with Master Traders. Expert-led strategies & a free demo account. Start trading F&O today."
         />
         <meta
           name="twitter:image"
