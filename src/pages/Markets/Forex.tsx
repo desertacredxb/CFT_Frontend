@@ -113,7 +113,7 @@ function ForexTradingPage() {
           name="keywords"
           content="Forex market, Forex trading India, currency pairs, EUR/USD, USD/INR, Forex trading legal India, SEBI Forex brokers, leverage Forex, Forex risks, MetaTrader"
         />
-        <link rel="canonical" href="https://www.mastertrader.co.in/forex-market" />
+        <link rel="canonical" href="https://www.mastertrader.co.in/markets/forex" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Forex Market Guide: Trading, Risks & Legality in India | Master Trader" />
@@ -121,7 +121,7 @@ function ForexTradingPage() {
           property="og:description"
           content="Learn how the Forex market works, major currency pairs, risks, and legal trading rules for India."
         />
-        <meta property="og:url" content="https://www.mastertrader.co.in/forex-market" />
+        <meta property="og:url" content="https://www.mastertrader.co.in/markets/forex" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Master Trader" />
         <meta property="og:locale" content="en_IN" />

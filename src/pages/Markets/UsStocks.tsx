@@ -123,7 +123,7 @@ function UsStocksIndicesPage() {
           name="keywords"
           content="US stocks, US indices, S&P 500, NASDAQ, NYSE, invest in US stocks from India, LRS investment, US stock market timings, Indian brokers for US stocks, US stocks tax India"
         />
-        <link rel="canonical" href="https://www.mastertrader.co.in/us-stocks-indices" />
+        <link rel="canonical" href="https://www.mastertrader.co.in/markets/us-stocks-indices" />
 
         {/* Open Graph */}
         <meta property="og:title" content="US Stocks & Indices: How Indians Can Invest | Master Trader" />
@@ -131,7 +131,7 @@ function UsStocksIndicesPage() {
           property="og:description"
           content="Learn how Indians can invest in US stocks and indices like the S&P 500, NASDAQ, and top companies."
         />
-        <meta property="og:url" content="https://www.mastertrader.co.in/us-stocks-indices" />
+        <meta property="og:url" content="https://www.mastertrader.co.in/markets/us-stocks-indices" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Master Trader" />
         <meta property="og:locale" content="en_IN" />

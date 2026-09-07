@@ -79,7 +79,7 @@ function McxTradingPage() {
           name="keywords"
           content="MCX Trading, MCX full form, Multi Commodity Exchange, commodity trading India, MCX gold trading, MCX silver, crude oil trading, commodity futures, commodity options, MCX trading account, MCX trading hours"
         />
-        <link rel="canonical" href="https://www.mastertrader.co.in/mcx-trading" />
+        <link rel="canonical" href="https://www.mastertrader.co.in/markets/mcx" />
 
         {/* Open Graph */}
         <meta property="og:title" content="MCX Trading: Commodity Futures & Options Guide | Master Trader" />
@@ -87,7 +87,7 @@ function McxTradingPage() {
           property="og:description"
           content="Learn what MCX Trading is, how commodity futures & options work, and how to start trading gold, silver & crude oil."
         />
-        <meta property="og:url" content="https://www.mastertrader.co.in/mcx-trading" />
+        <meta property="og:url" content="https://www.mastertrader.co.in/markets/mcx" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Master Trader" />
         <meta property="og:locale" content="en_IN" />
