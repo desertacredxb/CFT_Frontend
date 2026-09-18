@@ -13,6 +13,9 @@ import {
 } from "react-icons/fi";
 import { toast } from "react-toastify";
 
+const BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://cft-backend.onrender.com";
+
 const Signup_V2 = () => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
@@ -87,7 +90,9 @@ const Signup_V2 = () => {
       };
 
       // Prepare both requests to run in parallel
-      const thirdPartyPromise = fetch("/api/leads/register-user", {
+
+      // 1. Third Party API (Needs full URL in production)
+      const thirdPartyPromise = fetch(`${BASE_URL}/api/leads/register-user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,8 +100,8 @@ const Signup_V2 = () => {
         body: JSON.stringify(payload),
       });
 
-      // Your local backend lead management request
-      const localLeadPromise = fetch("/api/leads", {
+      // 2. Local Express Backend API
+      const localLeadPromise = fetch(`${BASE_URL}/api/leads`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

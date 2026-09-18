@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "../index.css";
 import { usePopup } from "../components/PopupContext";
 import { toast } from "react-toastify";
+const BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://cft-backend.onrender.com";
 
 const Popup = () => {
   const navigate = useNavigate();
@@ -88,9 +90,8 @@ const Popup = () => {
         referralcode: hasReferralCode ? referralCode : "",
       };
 
-
       // 1. Third Party API (Needs full URL in production)
-      const thirdPartyPromise = fetch("/api/leads/register-user", {
+      const thirdPartyPromise = fetch(`${BASE_URL}/api/leads/register-user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -99,7 +100,7 @@ const Popup = () => {
       });
 
       // 2. Local Express Backend API
-      const localLeadPromise = fetch("/api/leads", {
+      const localLeadPromise = fetch(`${BASE_URL}/api/leads`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
