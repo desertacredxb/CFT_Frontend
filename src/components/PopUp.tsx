@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "../index.css";
 import { usePopup } from "../components/PopupContext";
 import { toast } from "react-toastify";
+const BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://cft-backend.onrender.com";
 
 const Popup = () => {
   const navigate = useNavigate();
@@ -89,17 +91,35 @@ const Popup = () => {
       };
 
       // Prepare requests to run in parallel
-      const thirdPartyPromise = fetch("/api/apiUserRegister", {
+      // const thirdPartyPromise = fetch("/api/apiUserRegister", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     "x-api-key":
+      //       import.meta.env.VITE_MT_AUTH_KEY ||
+      //       "X9dPa4Lm7QvR2nHt8YsK5cZw1FuJ6eGb",
+      //   },
+      //   body: JSON.stringify(payload),
+      // });
+
+      // const localLeadPromise = fetch("/api/leads", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(payload),
+      // });
+
+      // 1. Third Party API (Needs full URL in production)
+      const thirdPartyPromise = fetch("/api/leads/register-user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key":
-            import.meta.env.VITE_MT_AUTH_KEY ||
-            "X9dPa4Lm7QvR2nHt8YsK5cZw1FuJ6eGb",
         },
         body: JSON.stringify(payload),
       });
 
+      // 2. Local Express Backend API
       const localLeadPromise = fetch("/api/leads", {
         method: "POST",
         headers: {
