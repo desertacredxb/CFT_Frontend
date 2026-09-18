@@ -1,232 +1,27 @@
-// import { useEffect, useState } from "react";
-// import "../index.css";
-// import { usePopup } from "../components/PopupContext";
-
-// const baseURL = import.meta.env.VITE_API_BASE_URL;
-
-// const Popup = () => {
-//   const { showPopup, openPopup, closePopup } = usePopup();
-
-//   const [fullName, setFullName] = useState("");
-//   const [phone, setPhone] = useState("");
-//   const [city, setCity] = useState("");
-//   const [marketSegment, setMarketSegment] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [otp, setOtp] = useState("");
-
-//   const [step, setStep] = useState<"form" | "otp" | "done">("form");
-//   const [error, setError] = useState("");
-//   const [loading, setLoading] = useState(false);
-
-//   useEffect(() => {
-//     const hasShown = sessionStorage.getItem("bonusPopupShown");
-//     if (!hasShown) {
-//       const timer = setTimeout(() => {
-//         sessionStorage.setItem("bonusPopupShown", "true");
-//         openPopup();
-//       }, 7000);
-//       return () => clearTimeout(timer);
-//     }
-//   }, [openPopup]);
-
-//   const handleClose = () => {
-//     closePopup();
-//     setStep("form");
-//     setFullName("");
-//     setPhone("");
-//     setCity("");
-//     setMarketSegment("");
-//     setEmail("");
-//     setOtp("");
-//     setError("");
-//   };
-
-//   const handleSubmitForm = async (e: React.FormEvent) => {
-//     e.preventDefault();
-
-//     if (!fullName || !phone || !city || !email || !marketSegment) {
-//       setError("Please fill all fields.");
-//       return;
-//     }
-
-//     setLoading(true);
-//     setError("");
-
-//     try {
-//       const res = await fetch(`${baseURL}/api/send-otp`, {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({ fullName, phone, city, email, marketSegment }),
-//       });
-
-//       const data = await res.json();
-
-//       if (res.ok) {
-//         setStep("otp");
-//       } else {
-//         setError(data.error || "Failed to send OTP.");
-//       }
-//     } catch {
-//       setError("Server error. Try again later.");
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   const handleVerifyOtp = async (e: React.FormEvent) => {
-//     e.preventDefault();
-
-//     if (!otp.trim()) {
-//       setError("Please enter the OTP.");
-//       return;
-//     }
-
-//     setLoading(true);
-//     setError("");
-
-//     try {
-//       const res = await fetch(`${baseURL}/api/verify-otp`, {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({ email, otp }),
-//       });
-
-//       const data = await res.json();
-
-//       if (res.ok) {
-//         setStep("done");
-//       } else {
-//         setError(data.error || "Invalid OTP.");
-//       }
-//     } catch {
-//       setError("Verification failed. Try again.");
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   if (!showPopup) return null;
-
-//   return (
-//     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 px-4">
-//       <div className="bg-[#140E05] text-white p-6 max-w-md w-full rounded shadow-lg relative border border-[var(--primary-color)] sm:max-w-md sm:w-auto">
-//         <button
-//           className="absolute top-2 right-2 text-white hover:text-[var(--primary-color)] text-xl"
-//           onClick={handleClose}
-//         >
-//           &times;
-//         </button>
-
-//         {step === "done" ? (
-//           <div className="text-center">
-//             <h2 className="text-2xl font-bold mb-3 text-[var(--primary-color)]">
-//               Thank you!
-//             </h2>
-//             <p className="text-sm text-white">
-//               Your account is verified. We’ll contact you shortly.
-//             </p>
-//           </div>
-//         ) : step === "form" ? (
-//           <>
-//             <p className="text-center mb-4 text-sm text-[var(--primary-color)] font-medium">
-//               0% Commission & Upto 500x Margin
-//             </p>
-//             <form className="space-y-3" onSubmit={handleSubmitForm}>
-//               <input
-//                 type="text"
-//                 placeholder="Full Name*"
-//                 value={fullName}
-//                 onChange={(e) => setFullName(e.target.value)}
-//                 className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
-//               />
-//               <input
-//                 type="number"
-//                 placeholder="Phone*"
-//                 value={phone}
-//                 onChange={(e) => setPhone(e.target.value)}
-//                 className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
-//               />
-//               <input
-//                 type="text"
-//                 placeholder="City*"
-//                 value={city}
-//                 onChange={(e) => setCity(e.target.value)}
-//                 className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
-//               />
-//               <input
-//                 type="email"
-//                 placeholder="Email*"
-//                 value={email}
-//                 onChange={(e) => setEmail(e.target.value)}
-//                 className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
-//               />
-//               <input
-//                 type="text"
-//                 placeholder="Market Segment?"
-//                 value={marketSegment}
-//                 onChange={(e) => setMarketSegment(e.target.value)}
-//                 className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
-//               />
-//               {error && (
-//                 <p className="text-red-500 text-sm text-center">{error}</p>
-//               )}
-//               <button
-//                 type="submit"
-//                 disabled={loading}
-//                 className="w-full bg-[var(--primary-color)] hover:bg-opacity-90 text-[#140E05] font-bold py-2 text-sm sm:text-base transition-colors"
-//               >
-//                 {loading ? "Sending OTP..." : "SUBMIT"}
-//               </button>
-//             </form>
-//           </>
-//         ) : (
-//           <form className="space-y-3" onSubmit={handleVerifyOtp}>
-//             <h3 className="text-lg font-semibold text-center text-[var(--primary-color)]">
-//               Enter the OTP sent to your Watsapp
-//             </h3>
-//             <input
-//               type="text"
-//               placeholder="Enter OTP"
-//               value={otp}
-//               onChange={(e) => setOtp(e.target.value)}
-//               className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
-//             />
-//             {error && (
-//               <p className="text-red-500 text-sm text-center">{error}</p>
-//             )}
-//             <button
-//               type="submit"
-//               disabled={loading}
-//               className="w-full bg-[var(--primary-color)] hover:bg-opacity-90 text-[#140E05] font-bold py-2 text-sm sm:text-base transition-colors"
-//             >
-//               {loading ? "Verifying..." : "VERIFY OTP"}
-//             </button>
-//           </form>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Popup;
-
-
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../index.css";
 import { usePopup } from "../components/PopupContext";
+import { toast } from "react-toastify";
 
 const Popup = () => {
+  const navigate = useNavigate();
   const { showPopup, openPopup, closePopup } = usePopup();
+
+  const [step, setStep] = useState<"form" | "done">("form");
+  const [loading, setLoading] = useState(false);
 
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [marketSegment, setMarketSegment] = useState("");
-  const [email, setEmail] = useState("");
 
-  const [step, setStep] = useState<"form" | "done">("form");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [hasReferralCode] = useState(false);
+  const [referralCode] = useState("");
+
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState<"success" | "error" | "">("");
 
   useEffect(() => {
     const hasShown = sessionStorage.getItem("bonusPopupShown");
@@ -247,50 +42,116 @@ const Popup = () => {
     setCity("");
     setMarketSegment("");
     setEmail("");
-    setError("");
+    setMessage("");
+    setMessageType("");
   };
+
+  const validateEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validatePhone = (phone: string) => /^[0-9]{10}$/.test(phone);
 
   const handleSubmitForm = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    setMessage("");
+    setMessageType("");
+
     // Field Validation
-    if (!fullName.trim() || !phone.trim()) {
-      setError("Name and Phone number are required.");
+    if (!fullName.trim()) {
+      setMessage("Full name is required");
+      setMessageType("error");
       return;
     }
 
-    setLoading(true);
-    setError("");
+    if (!validatePhone(phone)) {
+      setMessage("Please enter a valid 10-digit mobile number");
+      setMessageType("error");
+      return;
+    }
 
-    // Prepare JSON payload strictly matching the API expectations
-    const payload = {
-      name: fullName,
-      mobile: phone,
-      email: email || "",
-      referralcode: "" // Left empty or can be mapped if you have a referral system
-    };
+    if (email && !validateEmail(email)) {
+      setMessage("Please enter a valid email address");
+      setMessageType("error");
+      return;
+    }
 
     try {
-      // Routes seamlessly through your Vite Proxy (Local) or Vercel Rewrite (Live)
-      const res = await fetch("/api/apiUserRegister", {
+      setLoading(true);
+
+      const payload = {
+        fullName: fullName,
+        phone: phone,
+        mobile: phone,
+        email: email || "",
+        city: city || "",
+        marketSegment: marketSegment || "",
+        referralcode: hasReferralCode ? referralCode : "",
+      };
+
+      // Prepare requests to run in parallel
+      const thirdPartyPromise = fetch("/api/apiUserRegister", {
         method: "POST",
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
-          "x-api-key": import.meta.env.VITE_MT_AUTH_KEY || "X9dPa4Lm7QvR2nHt8YsK5cZw1FuJ6eGb"
+          "x-api-key":
+            import.meta.env.VITE_MT_AUTH_KEY ||
+            "X9dPa4Lm7QvR2nHt8YsK5cZw1FuJ6eGb",
         },
         body: JSON.stringify(payload),
       });
 
-      const data = await res.json();
+      const localLeadPromise = fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
-      if (res.ok) {
-        setStep("done");
-      } else {
-        setError(data.message || "Registration failed. Please try again.");
+      const [thirdPartyResult, localLeadResult] = await Promise.allSettled([
+        thirdPartyPromise,
+        localLeadPromise,
+      ]);
+
+      if (localLeadResult.status === "rejected") {
+        console.warn("Local Lead API network error:", localLeadResult.reason);
+      } else if (!localLeadResult.value.ok) {
+        console.warn(
+          "Local Lead API returned error response:",
+          localLeadResult.value.status,
+        );
       }
-    } catch (err) {
-      console.error("Popup API Integration Error:", err);
-      setError("Server error. Try again later.");
+
+      if (thirdPartyResult.status === "fulfilled") {
+        const response = thirdPartyResult.value;
+        const text = await response.text();
+        const data = text ? JSON.parse(text) : {};
+
+        if (response.ok) {
+          setMessage(data.message || "Registration successful!");
+          setMessageType("success");
+          toast.success("Registration successful!");
+
+          // Switch view to thank-you modal confirmation
+          setStep("done");
+
+          // Navigate after brief delay and auto-close modal
+          setTimeout(() => {
+            handleClose();
+            navigate("/login");
+          }, 2000);
+        } else {
+          setMessage(data.message || "Registration failed");
+          setMessageType("error");
+          toast.error(data.message || "Registration failed");
+        }
+      } else {
+        throw thirdPartyResult.reason;
+      }
+    } catch (error) {
+      console.error("API Integration Error:", error);
+      setMessage("Something went wrong. Please try again.");
+      setMessageType("error");
     } finally {
       setLoading(false);
     }
@@ -302,19 +163,22 @@ const Popup = () => {
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 px-4">
       <div className="bg-[#140E05] text-white p-6 max-w-md w-full rounded shadow-lg relative border border-[var(--primary-color)] sm:max-w-md sm:w-auto">
         <button
-          className="absolute top-2 right-2 text-white hover:text-[var(--primary-color)] text-xl"
+          className="absolute top-2 right-2 text-white hover:text-[var(--primary-color)] text-xl cursor-pointer"
           onClick={handleClose}
         >
           &times;
         </button>
 
         {step === "done" ? (
-          <div className="text-center p-4">
-            <h2 className="text-2xl font-bold mb-3 text-[var(--primary-color)]">
-              Thank you!
+          <div className="text-center p-6 space-y-3">
+            <div className="mx-auto w-12 h-12 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-2xl font-bold border border-green-500">
+              ✓
+            </div>
+            <h2 className="text-2xl font-bold text-[var(--primary-color)]">
+              Registration Successful!
             </h2>
-            <p className="text-sm text-white">
-              Your registration is successful. We’ll contact you shortly.
+            <p className="text-sm text-gray-300">
+              Thank you for registering. Redirecting you shortly...
             </p>
           </div>
         ) : (
@@ -322,6 +186,19 @@ const Popup = () => {
             <p className="text-center mb-4 text-sm text-[var(--primary-color)] font-medium">
               0% Commission & Upto 500x Margin
             </p>
+
+            {message && (
+              <div
+                className={`mb-4 text-xs sm:text-sm p-2.5 rounded text-center font-medium ${
+                  messageType === "success"
+                    ? "bg-green-950/80 text-green-400 border border-green-700"
+                    : "bg-red-950/80 text-red-400 border border-red-700"
+                }`}
+              >
+                {message}
+              </div>
+            )}
+
             <form className="space-y-3" onSubmit={handleSubmitForm}>
               <input
                 type="text"
@@ -329,7 +206,7 @@ const Popup = () => {
                 required
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base rounded"
               />
               <input
                 type="tel"
@@ -338,36 +215,33 @@ const Popup = () => {
                 maxLength={10}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base rounded"
               />
               <input
                 type="text"
                 placeholder="City (Optional)"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base rounded"
               />
               <input
                 type="email"
                 placeholder="Email (Optional)"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base rounded"
               />
               <input
                 type="text"
                 placeholder="Market Segment? (Optional)"
                 value={marketSegment}
                 onChange={(e) => setMarketSegment(e.target.value)}
-                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base"
+                className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base rounded"
               />
-              {error && (
-                <p className="text-red-500 text-sm text-center">{error}</p>
-              )}
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[var(--primary-color)] hover:bg-opacity-90 text-[#140E05] font-bold py-2 text-sm sm:text-base transition-colors"
+                className="w-full bg-[var(--primary-color)] hover:bg-opacity-90 text-[#140E05] font-bold py-2 text-sm sm:text-base transition-colors rounded disabled:opacity-50"
               >
                 {loading ? "Registering..." : "SUBMIT"}
               </button>

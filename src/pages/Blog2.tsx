@@ -71,7 +71,7 @@ const Blog2 = () => {
     }
   };
 
-  console.log(blogPosts);
+  // console.log(blogPosts);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);

@@ -53,14 +53,18 @@ import ChatBot from "./components/chatbot/NewChatBot";
 import LeadForm from "./components/LeadForm";
 import McxTradingPage from "./pages/Markets/Mcx";
 import CryptoTradingPage from "./pages/Markets/Crypto";
+import Popup from "./components/PopUp";
 
 function App() {
   return (
     <Router>
+      <Popup />
       <>
-      <ToastContainer position="bottom-center"
-        autoClose={5000}
-        hideProgressBar={false} />
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+        />
         <MetaPixelTracker />
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -170,10 +174,7 @@ function App() {
             path="/knowledge/intraday-trading"
             element={<IntradayTrading />}
           />
-          <Route
-            path="/lead-form"
-            element={<LeadForm />}
-          />
+          <Route path="/lead-form" element={<LeadForm />} />
         </Routes>
         <div>
           <WhatsAppButton />
@@ -200,7 +201,6 @@ function App() {
         </div> */}
         {/* <ZohoSalesIQ /> */}
         <OfferPopup />
-        
       </>
     </Router>
   );

@@ -15,6 +15,7 @@ import LeadsGraph from "../components/LeadsGraph";
 import { FaBlog, FaEnvelope, FaUsers } from "react-icons/fa";
 import Fuse from "fuse.js";
 import "../App.css";
+import { LeadManagement } from "./LeadManagement";
 
 export default function AdminPage() {
   const [users, setUsers] = useState([]);
@@ -161,15 +162,25 @@ export default function AdminPage() {
       })
       .catch((err) => console.error("Subscribers error:", err));
 
+    // axios
+    //   .get(`${baseURL}/api/leads`)
+    //   .then((res) => {
+    //     // Filter only verified leads
+    //     const verifiedLeads = res.data.filter(
+    //       (lead: { isVerified: boolean }) => lead.isVerified === true,
+    //     );
+    //     setPopupLeads(verifiedLeads);
+    //     // console.log("Verified Leads:", verifiedLeads);
+    //   })
+    //   .catch((err) => console.error("Leads error:", err));
+
     axios
-      .get(`${baseURL}/api/popup-lead`)
+      .get(`${baseURL}/api/leads`)
       .then((res) => {
-        // Filter only verified leads
-        const verifiedLeads = res.data.filter(
-          (lead: { isVerified: boolean }) => lead.isVerified === true
-        );
-        setPopupLeads(verifiedLeads);
-        // console.log("Verified Leads:", verifiedLeads);
+        // Extract array from response object { success: true, data: [...] }
+        const leadsArray = res.data?.data || res.data || [];
+
+        setPopupLeads(leadsArray);
       })
       .catch((err) => console.error("Leads error:", err));
 
@@ -200,8 +211,9 @@ export default function AdminPage() {
     // "Users",
 
     "Dashboard",
+    "Lead Management",
     "Email Subscribers",
-    "Popup Leads",
+    // "Popup Leads",
     "Emailer Data",
     "Newsletter Data",
     "Blog Data",
@@ -290,23 +302,23 @@ export default function AdminPage() {
 
   const filteredSubscribers = subscriberFilterDate
     ? emailSubscribers.filter((sub: any) => {
-      const subDate = new Date(sub.createdAt).toISOString().split("T")[0];
-      return subDate === subscriberFilterDate;
-    })
+        const subDate = new Date(sub.createdAt).toISOString().split("T")[0];
+        return subDate === subscriberFilterDate;
+      })
     : emailSubscribers;
 
   const filteredEmailerData = emailerFilterDate
     ? emailerData.filter(
-      (item: any) =>
-        new Date(item.createdAt).toLocaleDateString() ===
-        new Date(emailerFilterDate).toLocaleDateString()
-    )
+        (item: any) =>
+          new Date(item.createdAt).toLocaleDateString() ===
+          new Date(emailerFilterDate).toLocaleDateString(),
+      )
     : emailerData;
 
   return (
     <div className="text-black dark:text-white">
       <Navbar />
-      <div className="min-h-screen bg-white dark:bg-black py-6 mt-20">
+      <div className="min-h-screen bg-white dark:bg-black py-6">
         <div className="flex flex-col md:flex-row gap-6">
           {/* SIDEBAR (Desktop Only) */}
 
@@ -319,10 +331,11 @@ export default function AdminPage() {
                 <li key={item}>
                   <button
                     onClick={() => setActivePanel(item)}
-                    className={`w-full text-left px-2 py-1 rounded ${activePanel === item
+                    className={`w-full text-left px-2 py-1 rounded ${
+                      activePanel === item
                         ? "bg-neutral-200 dark:bg-neutral-800 font-semibold"
                         : "hover:bg-gray-100 dark:hover:bg-neutral-800"
-                      }`}
+                    }`}
                   >
                     {item}
                   </button>
@@ -354,10 +367,11 @@ export default function AdminPage() {
                         setActivePanel(item);
                         setMobileMenuOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2 ${activePanel === item
+                      className={`w-full text-left px-4 py-2 ${
+                        activePanel === item
                           ? "bg-blue-200 font-semibold"
                           : "hover:bg-gray-100"
-                        }`}
+                      }`}
                     >
                       {item}
                     </button>
@@ -420,6 +434,12 @@ export default function AdminPage() {
                 </div>
               )}
 
+              <main className="flex-1 min-w-0">
+                {activePanel === "Lead Management" && (
+                  <LeadManagement baseURL={baseURL} />
+                )}
+              </main>
+
               {activePanel === "Users" && (
                 <section className="bg-gray-100 dark:bg-neutral-900  p-4 rounded shadow mb-6">
                   <div className="flex justify-between items-center mb-2">
@@ -430,7 +450,7 @@ export default function AdminPage() {
                           "User Logins",
                           users,
                           ["Name", "Email", "Phone"],
-                          ["fullName", "email", "Phone"]
+                          ["fullName", "email", "Phone"],
                         )
                       }
                       className="px-4 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700"
@@ -489,7 +509,7 @@ export default function AdminPage() {
                               "ctaUrl",
                               "sent",
                               "emails",
-                            ]
+                            ],
                           )
                         }
                         className="px-4 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700"
@@ -632,13 +652,14 @@ export default function AdminPage() {
                     <button
                       onClick={() =>
                         exportToExcel(
-                          `Email Subscribers${subscriberFilterDate
-                            ? ` ${subscriberFilterDate}`
-                            : ""
+                          `Email Subscribers${
+                            subscriberFilterDate
+                              ? ` ${subscriberFilterDate}`
+                              : ""
                           }`,
                           filteredSubscribers,
                           ["Email", "Subscribed"],
-                          ["email", "createdAt"]
+                          ["email", "createdAt"],
                         )
                       }
                       className="p-2 text-sm bg-green-600 text-white rounded hover:bg-green-700"
@@ -711,7 +732,7 @@ export default function AdminPage() {
                             "phone",
                             "marketSegment",
                             "createdAt",
-                          ]
+                          ],
                         )
                       }
                       className="px-4 py-2 text-sm bg-green-600 text-white rounded hover:bg-green-700"
@@ -827,10 +848,11 @@ export default function AdminPage() {
                         <>
                           <button
                             onClick={() => setCurrentLeadPage(1)}
-                            className={`px-3 py-1 rounded ${currentLeadPage === 1
+                            className={`px-3 py-1 rounded ${
+                              currentLeadPage === 1
                                 ? "bg-blue-600 text-white"
                                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-                              }`}
+                            }`}
                           >
                             1
                           </button>
@@ -851,10 +873,11 @@ export default function AdminPage() {
                           <button
                             key={page}
                             onClick={() => setCurrentLeadPage(page)}
-                            className={`px-3 py-1 rounded ${page === currentLeadPage
+                            className={`px-3 py-1 rounded ${
+                              page === currentLeadPage
                                 ? "bg-blue-600 text-white"
                                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-                              }`}
+                            }`}
                           >
                             {page}
                           </button>
@@ -869,10 +892,11 @@ export default function AdminPage() {
                           )}
                           <button
                             onClick={() => setCurrentLeadPage(totalLeadsPages)}
-                            className={`px-3 py-1 rounded ${currentLeadPage === totalLeadsPages
+                            className={`px-3 py-1 rounded ${
+                              currentLeadPage === totalLeadsPages
                                 ? "bg-blue-600 text-white"
                                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-                              }`}
+                            }`}
                           >
                             {totalLeadsPages}
                           </button>
@@ -883,7 +907,7 @@ export default function AdminPage() {
                       <button
                         onClick={() =>
                           setCurrentLeadPage((prev) =>
-                            Math.min(prev + 1, totalLeadsPages)
+                            Math.min(prev + 1, totalLeadsPages),
                           )
                         }
                         disabled={currentLeadPage === totalLeadsPages}
@@ -926,7 +950,7 @@ export default function AdminPage() {
                               "ctaUrl",
                               "recipients",
                               "createdAt",
-                            ]
+                            ],
                           )
                         }
                         className="px-4 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700"
@@ -1115,14 +1139,15 @@ export default function AdminPage() {
                                 setEditorContent(blog.content);
                                 setShowContentEditor(true);
                               }}
-                              
                             >
-                              <div dangerouslySetInnerHTML={{
-                                __html:
-                                  blog.content.length > 150
-                                    ? blog.content.slice(0, 140) + "..."
-                                    : blog.content,
-                              }}/>
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html:
+                                    blog.content.length > 150
+                                      ? blog.content.slice(0, 140) + "..."
+                                      : blog.content,
+                                }}
+                              />
                             </td>
 
                             <td className="px-4 py-2 whitespace-nowrap">
@@ -1284,12 +1309,12 @@ export default function AdminPage() {
                                     body: JSON.stringify({
                                       content: editorContent,
                                     }),
-                                  }
+                                  },
                                 );
 
                                 if (!res.ok)
                                   throw new Error(
-                                    "Failed to update blog content"
+                                    "Failed to update blog content",
                                   );
 
                                 setShowContentEditor(false);
@@ -1343,7 +1368,7 @@ export default function AdminPage() {
                                     body: JSON.stringify({
                                       content: htmlContent,
                                     }),
-                                  }
+                                  },
                                 );
 
                                 if (!res.ok)
@@ -1394,10 +1419,11 @@ export default function AdminPage() {
                           </button>
                           <button
                             onClick={handleUpdateImage}
-                            className={`px-4 py-2 text-white rounded ${loading
+                            className={`px-4 py-2 text-white rounded ${
+                              loading
                                 ? "bg-blue-400"
                                 : "bg-blue-600 hover:bg-blue-700"
-                              }`}
+                            }`}
                             disabled={loading}
                           >
                             {loading ? "Updating..." : "Update"}
@@ -1422,7 +1448,7 @@ export default function AdminPage() {
                       ]
                         .filter(
                           (item, i, self) =>
-                            item !== null && self.indexOf(item) === i
+                            item !== null && self.indexOf(item) === i,
                         )
                         .map((item, idx) =>
                           item === "..." ? (
@@ -1436,14 +1462,15 @@ export default function AdminPage() {
                             <button
                               key={item}
                               onClick={() => setCurrentPage(item as number)}
-                              className={`px-3 py-1 rounded border ${currentPage === item
+                              className={`px-3 py-1 rounded border ${
+                                currentPage === item
                                   ? "bg-[var(--primary-color)] text-white"
                                   : "bg-gray-200 dark:bg-gray-700"
-                                }`}
+                              }`}
                             >
                               {item}
                             </button>
-                          )
+                          ),
                         )}
                     </div>
                   )}
@@ -1506,10 +1533,10 @@ export default function AdminPage() {
                                   if (confirm("Delete this offer?")) {
                                     try {
                                       await axios.delete(
-                                        `${baseURL}/api/offer/${offer._id}`
+                                        `${baseURL}/api/offer/${offer._id}`,
                                       );
                                       setOffers((prev) =>
-                                        prev.filter((o) => o._id !== offer._id)
+                                        prev.filter((o) => o._id !== offer._id),
                                       );
                                     } catch (err) {
                                       alert("Delete failed");
