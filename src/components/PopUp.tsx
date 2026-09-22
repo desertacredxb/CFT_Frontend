@@ -6,6 +6,25 @@ import { toast } from "react-toastify";
 const BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "https://cft-backend.onrender.com";
 
+type ApiResponse = {
+  message?: string;
+  status?: boolean | string;
+  success?: boolean;
+  duplicate?: boolean;
+  field?: string;
+};
+
+// Both APIs can answer with an empty or non-JSON body, so never let a parse
+// failure surface as "Something went wrong".
+const parseResponse = async (response: Response): Promise<ApiResponse> => {
+  try {
+    const text = await response.text();
+    return text ? JSON.parse(text) : {};
+  } catch {
+    return {};
+  }
+};
+
 const Popup = () => {
   const navigate = useNavigate();
   const { showPopup, openPopup, closePopup } = usePopup();
@@ -81,12 +100,15 @@ const Popup = () => {
       setLoading(true);
 
       const payload = {
-        fullName: fullName,
-        phone: phone,
-        mobile: phone,
-        email: email || "",
-        city: city || "",
-        marketSegment: marketSegment || "",
+        // "name"/"mobile" are what the registration API expects,
+        // "fullName"/"phone" are what the lead API expects.
+        name: fullName.trim(),
+        fullName: fullName.trim(),
+        phone: phone.trim(),
+        mobile: phone.trim(),
+        email: email.trim().toLowerCase(),
+        city: city.trim(),
+        marketSegment: marketSegment.trim(),
         referralcode: hasReferralCode ? referralCode : "",
       };
 
@@ -113,40 +135,56 @@ const Popup = () => {
         localLeadPromise,
       ]);
 
-      if (localLeadResult.status === "rejected") {
-        console.warn("Local Lead API network error:", localLeadResult.reason);
-      } else if (!localLeadResult.value.ok) {
+      // The lead submission decides what the user sees. The third party only
+      // gets logged - its errors must not block a captured lead.
+      if (thirdPartyResult.status === "rejected") {
+        console.warn("Registration API network error:", thirdPartyResult.reason);
+      } else if (!thirdPartyResult.value.ok) {
+        const thirdPartyData = await parseResponse(thirdPartyResult.value);
         console.warn(
-          "Local Lead API returned error response:",
-          localLeadResult.value.status,
+          "Registration API returned error response:",
+          thirdPartyResult.value.status,
+          thirdPartyData.message || "",
         );
       }
 
-      if (thirdPartyResult.status === "fulfilled") {
-        const response = thirdPartyResult.value;
-        const text = await response.text();
-        const data = text ? JSON.parse(text) : {};
+      if (localLeadResult.status === "rejected") {
+        console.warn("Local Lead API network error:", localLeadResult.reason);
+        throw localLeadResult.reason;
+      }
 
-        if (response.ok) {
-          setMessage(data.message || "Registration successful!");
-          setMessageType("success");
-          toast.success("Registration successful!");
+      const leadResponse = localLeadResult.value;
+      const leadData = await parseResponse(leadResponse);
 
-          // Switch view to thank-you modal confirmation
-          setStep("done");
+      // Lead API rejected a repeat mobile/email - stop here, no success view.
+      if (leadResponse.status === 409) {
+        const duplicateMessage =
+          leadData.message ||
+          "We have already received your request with this mobile number or email. Our team will contact you shortly.";
+        setMessage(duplicateMessage);
+        setMessageType("error");
+        toast.error(duplicateMessage);
+        return;
+      }
 
-          // Navigate after brief delay and auto-close modal
-          setTimeout(() => {
-            handleClose();
-            navigate("/login");
-          }, 2000);
-        } else {
-          setMessage(data.message || "Registration failed");
-          setMessageType("error");
-          toast.error(data.message || "Registration failed");
-        }
+      if (leadResponse.ok) {
+        setMessage("Registration successful!");
+        setMessageType("success");
+        toast.success("Registration successful!");
+
+        // Switch view to thank-you modal confirmation
+        setStep("done");
+
+        // Navigate after brief delay and auto-close modal
+        setTimeout(() => {
+          handleClose();
+          navigate("/login");
+        }, 2000);
       } else {
-        throw thirdPartyResult.reason;
+        const failureMessage = leadData.message || "Registration failed";
+        setMessage(failureMessage);
+        setMessageType("error");
+        toast.error(failureMessage);
       }
     } catch (error) {
       console.error("API Integration Error:", error);
@@ -210,11 +248,14 @@ const Popup = () => {
               />
               <input
                 type="tel"
+                inputMode="numeric"
                 placeholder="Phone*"
                 required
                 maxLength={10}
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) =>
+                  setPhone(e.target.value.replace(/\D/g, "").slice(0, 10))
+                }
                 className="w-full border border-gray-600 focus:border-[var(--primary-color)] bg-transparent text-white p-2 placeholder-gray-400 outline-none text-sm sm:text-base rounded"
               />
               <input
