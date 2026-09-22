@@ -163,7 +163,6 @@ const Popup = () => {
           "We have already received your request with this mobile number or email. Our team will contact you shortly.";
         setMessage(duplicateMessage);
         setMessageType("error");
-        toast.error(duplicateMessage);
         return;
       }
 
