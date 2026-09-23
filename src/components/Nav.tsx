@@ -43,6 +43,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Insights", path: "/blogs" },
+    { label: "Market AI", path: "/market-ai" },
     { label: "About Us", path: "/about" },
     { label: "Contact Us", path: "/Contact" },
     { label: "Features", path: "/features" },
