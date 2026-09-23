@@ -43,6 +43,7 @@ import TermsConditions from "./pages/footerPage/TermsConditions";
 import PrivacyPolicy from "./pages/footerPage/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import Market from "./pages/Market";
+import MarketAI from "./pages/MarketAI";
 import Products from "./pages/Products";
 import Knowledge from "./pages/Knowledge";
 // import RedirectToBlogs from "./components/RedirectToBlogs";
@@ -158,6 +159,7 @@ function App() {
           <Route path="/knowledge/equity-trading" element={<EquityTrading />} />
           <Route path="/knowledge/future-options" element={<FutureOptions />} />
           <Route path="/markets" element={<Market />} />
+          <Route path="/market-ai" element={<MarketAI />} />
           <Route path="/markets/nse-f-o" element={<NSEFOInfo />} />
           <Route path="/markets/mcx" element={<McxTradingPage />} />
           <Route path="/markets/crypto" element={<CryptoTradingPage />} />
