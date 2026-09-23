@@ -177,7 +177,7 @@ function App() {
           <Route path="/lead-form" element={<LeadForm />} />
         </Routes>
         <div>
-          <WhatsAppButton />
+          {/* <WhatsAppButton /> */}
           <ChatBot />
         </div>
         {/* Bottom Buttons */}
