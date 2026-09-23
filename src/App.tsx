@@ -16,7 +16,7 @@ import NewsletterForm from "./pages/Newsletter";
 import AdminPage from "./admin/AdminPage";
 import Blog2 from "./pages/Blog2";
 import Blog2Details from "./pages/Blog2Details";
-import WhatsAppButton from "./components/floatingBtn";
+// import WhatsAppButton from "./components/floatingBtn";
 import OfferPopup from "./components/OfferPopup";
 import Feature from "./pages/Features";
 
