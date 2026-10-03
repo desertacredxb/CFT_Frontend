@@ -5,7 +5,6 @@ import "./MarketAI.css";
 
 type NewsItem = { title: string; url: string; source: string; publishedAt: string };
 const sources = [
-  { name: "SEBI", description: "Regulatory releases and notices", url: "https://www.sebi.gov.in/media-and-notifications.html" },
   { name: "NSE", description: "Corporate announcements and market reports", url: "https://www.nseindia.com/companies-listing/corporate-filings-announcements" },
   { name: "MCX", description: "Commodity contracts and exchange notices", url: "https://www.mcxindia.com/market-data" },
   { name: "RBI", description: "Policy and monetary releases", url: "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx" },
