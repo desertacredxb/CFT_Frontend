@@ -7,7 +7,6 @@ type NewsItem = { title: string; url: string; source: string; publishedAt: strin
 const sources = [
   { name: "NSE", description: "Corporate announcements and market reports", url: "https://www.nseindia.com/companies-listing/corporate-filings-announcements" },
   { name: "MCX", description: "Commodity contracts and exchange notices", url: "https://www.mcxindia.com/market-data" },
-  { name: "RBI", description: "Policy and monetary releases", url: "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx" },
   { name: "Moneycontrol", description: "Indian market reporting on the original site", url: "https://www.moneycontrol.com/news/business/markets/" },
 ];
 const explainers = [
