@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import home from "../assets/Home.jpg";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { articleHref, loadInsights, type Insight } from "../data/publicInsights";
+import "../pages/HomeInsights.css";
 import axios from "axios";
-import { usePopup } from "../components/PopupContext";
+
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -20,7 +22,12 @@ type Offer = {
 const HeroSection: React.FC = () => {
   const [offers, setOffers] = useState<Offer[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { openPopup } = usePopup();
+  const [latest, setLatest] = useState<Insight | null>(null);
+  useEffect(() => {
+    const controller = new AbortController();
+    loadInsights(controller.signal).then(posts => setLatest(posts[0] ?? null)).catch(() => {});
+    return () => controller.abort();
+  }, []);
 
   useEffect(() => {
     const fetchOffer = async () => {
@@ -47,121 +54,36 @@ const HeroSection: React.FC = () => {
   }, [offers]);
 
   return (
-    <section className="relative min-h-[80vh] md:h-screen flex items-center overflow-hidden">
-      {/* Background Video */}
-      <img
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        src={home}
-        alt="Master Trader"
-      />
-
-      {/* Dark Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 z-0" />
-
-      {/* Main Content */}
-      <div className="relative z-10  w-11/12 md:w-5/6 mx-auto  flex flex-col md:flex-row justify-between items-center gap-10 py-12 md:py-0">
-        {/* Left Content */}
-        <div className="max-w-2xl text-white space-y-8">
-          <h1 className="text-4xl font-bold leading-tight text-start md:mt-10 mt-28">
-            India's #1 Online Trading Platform
-          </h1>
-          <h2 className="text-2xl font-semibold leading-tight text-start">
-            <span className="block mb-2">
-              500× Leverage{" "}
-              <span className="text-[var(--primary-color)]">|</span> Zero Tax{" "}
-              <span className="text-[var(--primary-color)]">| </span>
-              No Commission
-            </span>
-          </h2>
-
-          <p className="text-md">
-            Trade smarter with Master Trader, India's fastest-growing online
-            trading platform. Get up to 500x leverage, zero commission, and
-            instant execution across Forex, Crypto, NSE, MCX, and US Stocks, all
-            on one powerful dashboard, with no delays and no hidden charges.
-
-            <br />
-            <br />
-            Join 50,000+ traders who trust Master Trader for fast payouts and
-            round-the-clock support.
-          </p>
-
-          <button
-            onClick={openPopup}
-            className="mt-5 bg-[var(--primary-color)] text-black px-8 py-3 rounded-full font-semibold hover:bg-white shadow-[0_0_25px_var(--primary-color)] transition duration-300 w-fit"
-          >
-            Start Trading Now
-          </button>
-
-          <p className="text-sm italic">Trading involves risk, and profits are not guaranteed. Please trade responsibly.</p>
-
-
-          {/* Contact Info in Flex Row */}
-          {/* <div className="mt-10 text-white w-full max-w-4xl md:mx-auto flex justify-start">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <p className="font-semibold mb-2">Pay-in Number</p>
-                <a
-                  href="https://wa.link/v6tmxe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-[var(--primary-color)] hover:bg-[#5bb7b8] px-4 py-2 rounded-full text-black font-semibold transition"
-                >
-                  +1 (236) 305-9090‬
-                </a>
-              </div>
-
-              <div>
-                <p className="font-semibold mb-2">Withdrawal Number</p>
-                <a
-                  href="https://wa.link/tre4j4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-[var(--primary-color)] hover:bg-[#5bb7b8] px-4 py-2 rounded-full text-black font-semibold transition"
-                >
-                  +1 (236) 305-9092‬
-                </a>
-              </div>
-
-              <div>
-                <p className="font-semibold mb-2">Customer Support</p>
-                <a
-                  href="https://wa.me/917045263033?text=Hi%20Support%20Team%20%21%21"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-[var(--primary-color)] hover:bg-[#5bb7b8] px-4 py-2 rounded-full text-black font-semibold transition"
-                >
-                  +917045263033‬
-                </a>
-              </div>
+    <section className="mt-intro" aria-labelledby="market-heading">
+      <div className="mt-intro-inner">
+        <div className="mt-intro-grid">
+          <div className="mt-intro-copy">
+            <h1 id="market-heading">Futures, options <span>&amp; commodities.</span></h1>
+            <p>Your Master Trader dashboard, NSE and MCX market guides, and the latest articles from our Insights desk.</p>
+            <div className="mt-intro-actions">
+              <a href="https://v2.mastertrader.co.in/client/">Client login <ArrowUpRight size={18} /></a>
+              <a href="/blogs">Explore insights <ArrowRight size={17} /></a>
             </div>
           </div>
-
-          <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 text-sm sm:text-base font-medium">
-            <div className="flex items-center gap-4">
-              <span className="text-center sm:text-left leading-snug">
-                Trusted by <br className="hidden sm:block" />
-                50,000+ Local Traders
-              </span>
-              <div className="hidden sm:block h-10 w-[1.5px] bg-[var(--primary-color)]" />
+          <a className="mt-feature" href={latest ? articleHref(latest) : "/knowledge/future-options"}>
+            {latest?.coverImage && <img key={latest.coverImage} src={latest.coverImage} alt="" onError={event => { event.currentTarget.hidden = true; }} />}
+            <div className="mt-feature-body">
+              <div className="mt-feature-meta">{latest ? "Latest insight" : "Market guide"}
+                {latest && Number.isFinite(Date.parse(latest.datePublished)) && <time dateTime={latest.datePublished}>
+                  {new Date(latest.datePublished).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Kolkata" })}
+                </time>}
+              </div>
+              <h2>{latest?.title || "Understanding futures and options"}</h2>
+              <span className="mt-read">Read {latest ? "article" : "guide"} <ArrowRight size={17} /></span>
             </div>
-            <div className="flex items-center gap-4">
-              <span className="text-center sm:text-left leading-snug">
-                Instant Execution.
-                <br className="hidden sm:block" />
-                Zero Delays
-              </span>
-              <div className="hidden sm:block h-10 w-[1.5px] bg-[var(--primary-color)] opacity-60" />
-            </div>
-            <div className="flex items-center gap-4">
-              <span className="text-center sm:text-left leading-snug">
-                Lightning <br className="hidden sm:block" />
-                Fast Payouts
-              </span>
-            </div>
-          </div> */}
+          </a>
         </div>
-
+        <nav className="mt-guide-row" aria-label="Market guides">
+          <span>Market guides</span>
+          <a href="/markets/nse-f-o">NSE futures &amp; options <ArrowUpRight size={16} /></a>
+          <a href="/markets/mcx">MCX commodities <ArrowUpRight size={16} /></a>
+          <a href="/knowledge/margin-trading">Understanding margin <ArrowUpRight size={16} /></a>
+        </nav>
         {offers.length > 0 && (
           <div className=" backdrop-blur-md bg-transparent border border-white/30 rounded-2xl shadow-2xl overflow-hidden w-full max-w-sm animate-fade-in transition-all duration-500">
             <img

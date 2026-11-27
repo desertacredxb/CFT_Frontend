@@ -9,7 +9,11 @@
       "destination": "https://v2.mastertrader.co.in/api/:path*"
     },
     {
-      "source": "/:page(markets|market-ai|disclaimer)",
+      "source": "/",
+      "destination": "/page-html/home.html"
+    },
+    {
+      "source": "/:page(blogs|markets|market-ai|disclaimer)",
       "destination": "/page-html/:page.html"
     },
     {

@@ -1,33 +1,17 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import axios from "axios";
+import { articleHref, loadInsights, type Insight } from "../data/publicInsights";
+import { publicPageMetadata } from "../data/publicPageMetadata";
 import Fuse from "fuse.js";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
 
-// const baseURL = "https://cft-backend.onrender.com";
-const baseURL = import.meta.env.VITE_API_BASE_URL;
-
-console.log(baseURL);
-
-type BlogPost = {
-  _id: string;
-  title: string;
-  content: string;
-  excerpt: string;
-  coverImage: string;
-  author: string;
-  datePublished: string;
-  slug: string;
-  tags: string[];
-};
-
 const Blog2 = () => {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [blogPosts, setBlogPosts] = useState<Insight[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [attempt, setAttempt] = useState(0);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const postsPerPage = 9;
@@ -35,59 +19,21 @@ const Blog2 = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const pageFromURL = parseInt(params.get("page") || "1");
-    setCurrentPage(pageFromURL);
-    fetchBlogPosts();
-  }, [location.search]);
-
-  // const fetchBlogPosts = async () => {
-  //   try {
-  //     const response = await axios.get(`${baseURL}/api/blogs/viewblog`);
-  //     setBlogPosts(response.data);
-  //     setLoading(false);
-  //   } catch (err) {
-  //     setError("Failed to fetch blog posts");
-  //     setLoading(false);
-  //   }
-  // };
-
-  const fetchBlogPosts = async () => {
-    try {
-      const response = await axios.get(`${baseURL}/api/blogs/viewblog`);
-      // console.log("API Response:", response.data);
-
-      // ✅ SAFETY: always ensure array
-      const posts = Array.isArray(response.data)
-        ? response.data
-        : response.data?.data || [];
-
-      setBlogPosts(posts);
-      setLoading(false);
-    } catch (err) {
-      // console.error("Error fetching blog posts:", err);
-      setError("Failed to fetch blog posts");
-      setLoading(false);
-    }
-  };
-
-  // console.log(blogPosts);
+    const controller = new AbortController();
+    setLoading(true);
+    setError(null);
+    loadInsights(controller.signal).then(setBlogPosts).catch(() => {
+      if (!controller.signal.aborted) setError("The articles could not be loaded.");
+    }).finally(() => {
+      if (!controller.signal.aborted) setLoading(false);
+    });
+    return () => controller.abort();
+  }, [attempt]);
 
   const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    navigate(`?page=${page}`);
+    navigate(page === 1 ? location.pathname : `?page=${page}`);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  const handlePostClick = (slug: string) => {
-    navigate(`/blogs/${slug}`);
-  };
-
-  // Fuzzy search using Fuse.js
-  // const fuse = new Fuse(blogPosts, {
-  //   keys: ["title", "excerpt"],
-  //   threshold: 0.4,
-  // });
 
   const fuse = new Fuse(blogPosts ?? [], {
     keys: ["title", "excerpt"],
@@ -106,6 +52,8 @@ const Blog2 = () => {
   });
 
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  const requestedPage = Number(new URLSearchParams(location.search).get("page"));
+  const currentPage = Math.min(Math.max(1, Number.isInteger(requestedPage) ? requestedPage : 1), totalPages || 1);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
@@ -115,11 +63,11 @@ const Blog2 = () => {
       <div className="min-h-screen bg-white dark:bg-[var(--bg-color1)] text-black dark:text-white transition-colors">
         <Helmet>
           {/* Primary SEO */}
-          <title>Stock Market Blogs | Master Trader</title>
+          <title>{publicPageMetadata.blogs.title}</title>
 
           <meta
             name="description"
-            content="Read expert-written stock market blogs from Master Trader covering trading tips, intraday strategies, technical analysis, market updates, and practical insights to help you master the markets."
+            content={publicPageMetadata.blogs.description}
           />
 
           <meta
@@ -141,12 +89,12 @@ const Blog2 = () => {
 
           <meta
             property="og:title"
-            content="Stock Market Blogs | Master Trader"
+            content={publicPageMetadata.blogs.title}
           />
 
           <meta
             property="og:description"
-            content="Explore expert stock market blogs covering trading tips, intraday strategies, technical analysis, market updates, and practical trading insights."
+            content={publicPageMetadata.blogs.description}
           />
 
           <meta
@@ -174,12 +122,12 @@ const Blog2 = () => {
 
           <meta
             name="twitter:title"
-            content="Stock Market Blogs | Master Trader"
+            content={publicPageMetadata.blogs.title}
           />
 
           <meta
             name="twitter:description"
-            content="Read expert stock market blogs covering trading tips, intraday strategies, technical analysis, market updates, and more."
+            content={publicPageMetadata.blogs.description}
           />
 
           <meta
@@ -215,7 +163,8 @@ const Blog2 = () => {
           <div className="max-w-4xl mx-auto mt-10 flex flex-col md:flex-row items-center justify-between gap-4">
             <input
               type="text"
-              placeholder="Search by title or content"
+              aria-label="Search articles"
+              placeholder="Search by title or summary"
               value={searchTerm}
               disabled={loading || Boolean(error)}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -223,6 +172,7 @@ const Blog2 = () => {
             />
 
             <input
+              aria-label="Filter by publication date"
               type="date"
               value={selectedDate}
               disabled={loading || Boolean(error)}
@@ -235,7 +185,7 @@ const Blog2 = () => {
           {loading ? (
             <BlogGridSkeleton />
           ) : error ? (
-            <BlogErrorState error={error} onRetry={fetchBlogPosts} />
+            <BlogErrorState error={error} onRetry={() => setAttempt(n => n + 1)} />
           ) : (
             <>
               {/* Blog Cards */}
@@ -250,16 +200,16 @@ const Blog2 = () => {
                   currentPosts.map((post) => (
                     <a
                       key={post._id}
-                      href={`/blogs/${post.slug}`}
+                      href={articleHref(post)}
                       className="cursor-pointer relative rounded-lg p-[1.5px] hover:shadow-[0_0_15px_var(--primary-color)] transition-shadow duration-300"
                       style={{
                         background:
                           "linear-gradient(to bottom, #111, var(--primary-color))",
                       }}
-                      onClick={() => handlePostClick?.(post.slug)}
                     >
                       <div className="bg-white dark:bg-black rounded-lg h-[450px] flex flex-col overflow-hidden text-left">
                         <img
+                          loading="lazy"
                           src={post.coverImage}
                           alt={post.title}
                           className="w-full h-[240px] object-cover rounded-t-lg"
@@ -338,17 +288,15 @@ const Blog2 = () => {
           {/* Support CTA */}
           <div className="mt-16 max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <div className="bg-white dark:bg-[var(--bg-color1)] rounded-xl py-8 px-6 shadow-lg border border-gray-100 dark:border-gray-800">
-              <h3 className="text-3xl font-bold mb-4">Let’s Connect Today</h3>
+              <h3 className="text-3xl font-bold mb-4">Need account help?</h3>
               <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto mb-6">
-                Want a walkthrough? Need help? Or just curious? We’re just a
-                click or call away—reach out now and experience the difference
-                of Close Friends Traders.
+                Find contact details for the Master Trader support team.
               </p>
               <a
-                href="tel:+918368284948"
+                href="/contact"
                 className="inline-block px-8 py-3 bg-[var(--primary-color)] text-white font-semibold rounded-full hover:shadow-[0_0_15px_var(--primary-color)] transition duration-300"
               >
-                Talk to Support
+                Contact Master Trader
               </a>
             </div>
           </div>
