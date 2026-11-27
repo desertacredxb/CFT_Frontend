@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "../data/publicPageMetadata";
 import { Helmet } from "react-helmet-async";
 import ComparisonSection from "../components/Comparision";
 import DabbaMarkets from "../components/DabbaMarkets";
@@ -11,7 +12,6 @@ import Navbar from "../components/Nav";
 // import Popup from "../components/PopUp";
 // import RegulatoryDisclaimer from "../components/RegulatoryDisclaimer";
 import ScrollingIcons from "../components/ScrollingIcons";
-import StatsSection from "../components/Stats";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import Trusted from "../components/Trusted";
 import WhyChoose from "../components/WhyChooseUs";
@@ -21,13 +21,13 @@ export const Landing = () => {
   return (
     <div>
       <Helmet>
-        <title>Master Trader – Online Trading Platform</title>
+        <title>{publicPageMetadata[""].title}</title>
 
-        <meta name="title" content="Master Trader – Online Trading Platform" />
+        <meta name="title" content={publicPageMetadata[""].title} />
 
         <meta
           name="description"
-          content="Trade Forex, Crypto, NSE, MCX & more on Master Trader, India's trusted online trading platform. Zero commission, 500x leverage, fast withdrawals. Start now."
+          content={publicPageMetadata[""].description}
         />
 
         <meta
@@ -44,11 +44,11 @@ export const Landing = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Master Trader – Online Trading Platform"
+          content={publicPageMetadata[""].title}
         />
         <meta
           property="og:description"
-          content="Trade Forex, Crypto, NSE, MCX & more on Master Trader, India's trusted online trading platform. Zero commission, 500x leverage, fast withdrawals. Start now."
+          content={publicPageMetadata[""].description}
         />
         <meta
           property="og:url"
@@ -64,18 +64,18 @@ export const Landing = () => {
         />
         <meta
           property="og:image:alt"
-          content="Master Trader – Online Trading Platform"
+          content={publicPageMetadata[""].title}
         />
 
         {/* Twitter / X */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Master Trader – Online Trading Platform"
+          content={publicPageMetadata[""].title}
         />
         <meta
           name="twitter:description"
-          content="Trade Forex, Crypto, NSE, MCX & more on Master Trader, India's trusted online trading platform. Zero commission, 500x leverage, fast withdrawals. Start now."
+          content={publicPageMetadata[""].description}
         />
         <meta
           name="twitter:image"
@@ -91,7 +91,6 @@ export const Landing = () => {
       <WhyTrade />
 
       <Trusted />
-      <StatsSection />
       <HowItWorks />
       <ComparisonSection />
 

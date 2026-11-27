@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import faq_img from "../assets/FAQ with Text.png";
+import faq_img from "../assets/faq-illustration.webp";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -117,6 +117,7 @@ const ToggleFAQ = () => {
         <div className="flex flex-col md:flex-row justify-evenly py-3 items-start">
           <div className="md:flex items-start hidden mt-10">
             <img
+              loading="lazy" decoding="async"
               src={faq_img}
               alt="FAQ Illustration"
               className="w-72 max-w-sm"

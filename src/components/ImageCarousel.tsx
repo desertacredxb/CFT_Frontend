@@ -1,7 +1,7 @@
-import image1 from "../assets/S1.png";
-import image2 from "../assets/S2.jpg";
-import image3 from "../assets/S3.png";
-import image4 from "../assets/S4.png";
+import image1 from "../assets/home-slide-1.webp";
+import image2 from "../assets/home-slide-2.webp";
+import image3 from "../assets/home-slide-3.webp";
+import image4 from "../assets/home-slide-4.webp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,6 +44,7 @@ const Carousel = () => {
           {slides.map((slide, index) => (
             <div key={index} className="p-2">
               <img
+                loading="lazy" decoding="async"
                 src={slide.src}
                 alt={slide.alt}
                 className="w-full aspect-video object-cover rounded-lg border border-gray-300 dark:border-gray-700"

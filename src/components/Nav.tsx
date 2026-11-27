@@ -104,7 +104,7 @@ const Navbar = () => {
                 >
                   {darkMode ? <FiSun /> : <FiMoon />}
                 </button>
-                <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
+                <button aria-label="Open navigation" aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)} className="text-2xl">
                   <FiMenu />
                 </button>
               </div>
@@ -245,13 +245,13 @@ const Navbar = () => {
         {/* Mobile Dropdown */}
         {isOpen && (
           <div
-            className={`md:hidden fixed inset-0 z-[9999] flex flex-col pl-2 pr-5 pb-6 pt-3 mt-16 ${
+            className={`lg:hidden overflow-y-auto fixed inset-0 z-[9999] flex flex-col pl-2 pr-5 pb-6 pt-3 mt-16 ${
               darkMode ? "bg-black text-white" : "bg-white text-black"
             }`}
           >
             <div className="flex justify-between items-center mb-6">
-              <img src={"MT-logo.png"} alt="Master Trader" className="w-36" />
-              <button onClick={() => setIsOpen(false)} className="text-2xl">
+              <img src={"/MT-logo.png"} alt="Master Trader" className="w-36" />
+              <button aria-label="Close navigation" onClick={() => setIsOpen(false)} className="text-2xl">
                 ✕
               </button>
             </div>

@@ -26,7 +26,7 @@ export default defineConfig({
           ].join("\n  ");
           this.emitFile({
             type: "asset",
-            fileName: `page-html/${page}.html`,
+            fileName: `page-html/${page || "home"}.html`,
             source: shell.source.replace(/<title>[^<]*<\/title>/, tags),
           });
         }

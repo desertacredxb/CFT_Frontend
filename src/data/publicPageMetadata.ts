@@ -1,4 +1,12 @@
 export const publicPageMetadata = {
+  "": {
+    title: "Master Trader | Client Login, Market Guides & Insights",
+    description: "Access your Master Trader client dashboard and explore NSE futures, options, MCX commodities and market insights.",
+  },
+  blogs: {
+    title: "Market Insights & Trading Guides | Master Trader",
+    description: "Read Master Trader articles about futures, options, market structure and margin. Search by topic or publication date.",
+  },
   markets: {
     title: "Market guides | Master Trader",
     description: "Browse Master Trader’s guides to Indian and international markets, including equities, currencies, commodities and digital assets.",
