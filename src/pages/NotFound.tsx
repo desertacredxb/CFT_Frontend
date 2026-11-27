@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import notFound from "../assets/404page.png";
@@ -5,6 +6,10 @@ import notFound from "../assets/404page.png";
 const NotFound = () => {
   return (
     <>
+      <Helmet>
+        <title>Page not found | Master Trader</title>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <Navbar />
 
       <div className="bg-white dark:bg-black min-h-[100vh] flex flex-col items-center justify-center px-6 py-12 text-center mt-20">
