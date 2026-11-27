@@ -1,95 +1,59 @@
-import { readFile } from "node:fs/promises";
-
-const BLOG_ENDPOINT = "/api/blogs/viewblog";
 const SITE_URL = "https://www.mastertrader.co.in";
+const PUBLIC_PAGES = [
+  "/", "/about", "/features", "/contact", "/products", "/products/cfd-instrument",
+  "/products/stocks", "/products/commodity", "/products/indexes", "/products/forex",
+  "/products/comex", "/markets", "/markets/mcx", "/markets/crypto",
+  "/markets/us-stocks-indices", "/markets/forex", "/markets/comex", "/markets/nse-f-o",
+  "/market-ai", "/knowledge", "/knowledge/trading", "/knowledge/equity-trading",
+  "/knowledge/future-options", "/knowledge/commodity-trading", "/knowledge/margin-trading",
+  "/knowledge/intraday-trading", "/blogs", "/privacy-policy", "/terms-conditions", "/disclaimer",
+];
 
-const escapeXml = (value) =>
-  String(value).replace(/[<>&'\"]/g, (character) => ({
-    "<": "&lt;",
-    ">": "&gt;",
-    "&": "&amp;",
-    "'": "&apos;",
-    '"': "&quot;",
-  })[character]);
+function xmlText(value) {
+  return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+}
 
-const toDate = (value) => {
-  const date = new Date(value);
-  return Number.isNaN(date.getTime()) ? null : date.toISOString().slice(0, 10);
-};
+function sitemapEntry(path, modified) {
+  const date = modified ? new Date(modified) : null;
+  const lastmod = date && Number.isFinite(date.getTime())
+    ? `<lastmod>${date.toISOString().slice(0, 10)}</lastmod>` : "";
+  return `  <url><loc>${xmlText(SITE_URL + path)}</loc>${lastmod}</url>`;
+}
 
-const getOrigin = (request) => {
-  const protocol = request.headers["x-forwarded-proto"] || "https";
-  const host = request.headers["x-forwarded-host"] || request.headers.host;
-  if (!host) throw new Error("Request host is unavailable");
-  return `${protocol}://${host}`;
-};
-
-export default async function sitemapHandler(request, response) {
+export default async function sitemapHandler(_request, response) {
   try {
-    const staticXml = await readFile(
-      new URL("../public/sitemap.xml", import.meta.url),
-      "utf8",
-    );
-
-    // Entries can be added directly to public/sitemap.xml. Existing blog-detail
-    // entries are replaced with fresh values from the API on every refresh.
-    const staticEntries = (staticXml.match(/<url>\s*[\s\S]*?<\/url>/g) || [])
-      .filter((entry) => {
-        const location = entry.match(/<loc>\s*([^<]+)\s*<\/loc>/)?.[1]?.trim();
-        if (!location) return false;
-        try {
-          return !new URL(location).pathname.startsWith("/blogs/");
-        } catch {
-          return true;
-        }
-      });
-
-    const blogResponse = await fetch(new URL(BLOG_ENDPOINT, getOrigin(request)), {
+    // Use the same public CMS as Insights. The website's /api proxy serves the trading portal.
+    const cms = process.env.VITE_API_BASE_URL || "https://cft-backend.onrender.com";
+    const result = await fetch(new URL("/api/blogs/viewblog", cms), {
       headers: { accept: "application/json" },
+      signal: AbortSignal.timeout(12000),
     });
-    if (!blogResponse.ok) {
-      throw new Error(`Blog endpoint returned HTTP ${blogResponse.status}`);
+    if (!result.ok) throw new Error(`Public blog feed returned HTTP ${result.status}`);
+    const payload = await result.json();
+    const blogs = Array.isArray(payload) ? payload : payload?.data ?? payload?.blogs;
+    if (!Array.isArray(blogs)) throw new Error("Unexpected public blog feed format");
+
+    const entries = new Map(PUBLIC_PAGES.map((path) => [path, sitemapEntry(path)]));
+    for (const blog of blogs) {
+      const slug = typeof blog?.slug === "string" ? blog.slug.trim() : "";
+      if (!slug || slug === "." || slug === ".." || /[/\\?#]/.test(slug)) continue;
+      if (blog.status && blog.status !== "published") continue;
+      if (blog.scheduledAt && Date.parse(blog.scheduledAt) > Date.now()) continue;
+      const path = `/blogs/${encodeURIComponent(slug)}`;
+      entries.set(path, sitemapEntry(path, blog.lastUpdated || blog.updatedAt || blog.datePublished));
     }
 
-    const payload = await blogResponse.json();
-    const blogs = Array.isArray(payload) ? payload : payload.data || payload.blogs;
-    if (!Array.isArray(blogs)) throw new TypeError("Blog endpoint must return an array");
-
-    const uniqueBlogs = [...new Map(
-      blogs
-        .filter((blog) => typeof blog?.slug === "string" && blog.slug.trim())
-        .map((blog) => [blog.slug.trim(), blog]),
-    ).values()];
-
-    const blogEntries = uniqueBlogs.map((blog) => {
-      const lastmod = toDate(blog.lastUpdated || blog.datePublished);
-      return [
-        "  <url>",
-        `    <loc>${escapeXml(`${SITE_URL}/blogs/${encodeURIComponent(blog.slug.trim())}`)}</loc>`,
-        lastmod ? `    <lastmod>${lastmod}</lastmod>` : null,
-        "    <changefreq>weekly</changefreq>",
-        "    <priority>0.7</priority>",
-        "  </url>",
-      ].filter(Boolean).join("\n");
-    });
-
-    const sitemap = [
+    response.setHeader("Content-Type", "application/xml; charset=utf-8");
+    response.setHeader("Cache-Control", "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400");
+    return response.status(200).send([
       '<?xml version="1.0" encoding="UTF-8"?>',
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-      ...staticEntries,
-      ...blogEntries,
-      "</urlset>",
-      "",
-    ].join("\n");
-
-    response.setHeader("Content-Type", "application/xml; charset=utf-8");
-    response.setHeader(
-      "Cache-Control",
-      "public, s-maxage=3600, stale-while-revalidate=86400",
-    );
-    return response.status(200).send(sitemap);
-  } catch (error) {
-    console.error("Sitemap generation failed:", error);
-    return response.status(500).send("Sitemap generation failed");
+      ...entries.values(), "</urlset>", "",
+    ].join("\n"));
+  } catch {
+    // A temporary CMS failure must not advertise an incomplete list as a successful sitemap.
+    response.setHeader("Cache-Control", "no-store");
+    response.setHeader("Retry-After", "300");
+    return response.status(503).send("Sitemap temporarily unavailable");
   }
 }

@@ -16,6 +16,8 @@ interface BlogType {
   datePublished: string;
   content: string;
   slug: string;
+  metaTitle?: string;
+  metaDescription?: string;
   schemaMarkup?: string[]; // support array of JSON-LD strings
 }
 
@@ -90,20 +92,22 @@ const Blog2Details = () => {
       </div>
     );
 
-  const currentUrl = `https://www.mastertrader.co.in/blogs/${blog.slug}`;
+  const currentUrl = `https://www.mastertrader.co.in/blogs/${encodeURIComponent(blog.slug)}`;
+  const pageTitle = blog.metaTitle?.trim() || blog.title;
+  const description = blog.metaDescription?.trim() || blog.excerpt;
 
   return (
     <div className="bg-white text-black dark:bg-[var(--bg-color1)] dark:text-white">
       <Helmet>
         {/* Basic SEO */}
-        <title>{blog.title}</title>
-        <meta name="description" content={blog.excerpt} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={description} />
         <link rel="canonical" href={currentUrl} />
 
         {/* Open Graph (OG) Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={blog.title} />
-        <meta property="og:description" content={blog.excerpt} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={blog.coverImage} />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:site_name" content="Master Trader" />
@@ -112,8 +116,8 @@ const Blog2Details = () => {
 
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={blog.title} />
-        <meta name="twitter:description" content={blog.excerpt} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={blog.coverImage} />
       </Helmet>
 

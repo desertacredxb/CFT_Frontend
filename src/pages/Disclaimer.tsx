@@ -1,9 +1,11 @@
+import PublicPageHead from "../components/PublicPageHead";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 
 function Disclaimer() {
   return (
     <div className="flex flex-col min-h-screen">
+      <PublicPageHead page="disclaimer" />
       <div className="mb-20">
         <Navbar />
       </div>

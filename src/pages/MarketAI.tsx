@@ -1,3 +1,4 @@
+import PublicPageHead from "../components/PublicPageHead";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
@@ -61,7 +62,8 @@ export default function MarketAI() {
       return `${new Intl.DateTimeFormat("en-IN", { timeZone: "Asia/Kolkata", day: "numeric", month: "short", year: "numeric" }).format(day)} · ${days ? `${days} day${days > 1 ? "s" : ""} before` : "Expiry day"}`;
     });
   }, [expiry]);
-  return <div className="mai-page"><Navbar /><main className="mai-container">
+  return <div className="mai-page"><PublicPageHead page="market-ai" />
+      <Navbar /><main className="mai-container">
     <div className="mai-hero"><div><span className="mai-kicker">MASTER TRADER · MARKET INTELLIGENCE</span><h1>Understand the market.<br /><em>Move with clarity.</em></h1><p>Explore official market movers, news and simple explainers for NSE, options and MCX.</p><div className="mai-actions"><a href="#movers" className="mai-button">Explore market movers ↗</a><a href="#learn" className="mai-outline">Learn the basics</a></div></div><div className="mai-hero-panel"><span className="mai-kicker">MARKET DESK</span><strong>Indian market guide</strong><p>NSE regular cash session<br />9:15 AM – 3:30 PM IST, trading days</p><p>Exchange holidays and special sessions can change these hours. Check each MCX contract's current session.</p><a href="https://www.nseindia.com/market-data/market-timings" target="_blank" rel="noopener noreferrer">Check NSE hours ↗</a></div></div>
     <div className="mai-ticker"><span>MARKET PULSE</span><div>Indian market education &nbsp; ✦ &nbsp; Quotes may be delayed &nbsp; ✦ &nbsp; Verify execution prices on your trading platform</div></div>
     <section className="mai-section" id="rates"><div className="mai-heading"><div><span className="mai-kicker">INDIAN MARKET</span><h2>Market rates</h2></div><span className="mai-badge">TradingView · delayed data</span></div><p>Explore Indian index and share prices for education. Exchange data in this free widget may be delayed; check the widget's timestamp and your trading platform before any trade.</p><MarketRatesWidget /><small>Rates shown by TradingView. This is an external widget; availability and delay depend on its data provider.</small></section>
